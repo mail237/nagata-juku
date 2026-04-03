@@ -2,26 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   CSS Custom Properties
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #45B1C7;
+  --color-primary-dark: #0B6678;
+  --color-dark: #1C4A52;
+  --color-bg: #FFFFFF;
+  --color-white: #FFFFFF;
+  --color-gray-100: #F1F5F4;
+  --color-gray-200: #C7E5EB;
+  --color-gray-500: #777777;
+  --color-gray-700: #393939;
+
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-serif: 'Noto Serif JP', serif;
+
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================================
+   Base Reset & Global Styles
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* next/font の読み込み前・失敗時も日本語が表示されるようフォールバック */
+  font-family: var(--font-noto-sans), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'YuGothic', Meiryo, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* 見出しの改行バランス（対応ブラウザのみ） */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* ============================================================
+   Typography Utilities
+   ============================================================ */
+.font-serif {
+  font-family: var(--font-noto-serif), 'Hiragino Mincho ProN', 'Yu Mincho', var(--font-serif), serif;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+/* ============================================================
+   Scrollbar Styling
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   Selection Color
+   ============================================================ */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ============================================================
+   Focus Visible (Accessibility)
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
+  /* マーキーは「動きを減らす」でも完全停止にしない（iOS で帯が静止に見えるのを防ぐ）。速度だけ落とす */
+  .animate-marquee {
+    animation-duration: 70s !important;
+    animation-iteration-count: infinite !important;
+  }
+}
+
+/* ============================================================
+   Marquee（アニメーション本体は tailwind.config の marquee を使用）
+   ============================================================ */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================================
+   Counter Animation
+   ============================================================ */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   Utility Classes
+   ============================================================ */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-base {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#45B1C7] text-white font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#0B6678] hover:shadow-cta active:scale-[0.98];
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#1C4A52] text-[#1C4A52] font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#1C4A52] hover:text-white active:scale-[0.98];
+}
+
+.section-title {
+  @apply font-serif text-3xl md:text-4xl font-bold text-[#1C4A52] leading-tight;
+}
+
+.section-subtitle {
+  @apply text-[#45B1C7] font-bold text-sm tracking-widest uppercase mb-3;
 }
