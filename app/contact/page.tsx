@@ -135,20 +135,6 @@ export default function ContactPage() {
                         電話で問い合わせる
                       </a>
                     </div>
-
-                    <div className="bg-[#45B1C7]/5 border border-[#45B1C7]/20 rounded-xl p-5">
-                      <p className="text-xs font-bold text-[#45B1C7] mb-2">無料体験について</p>
-                      <ul className="flex flex-col gap-1.5">
-                        {['完全無料', '入会金・教材費不要', '体験後の勧誘なし', '当日〜翌日中に返信'].map((item) => (
-                          <li key={item} className="flex items-center gap-2 text-xs text-[#393939]">
-                            <svg className="w-3.5 h-3.5 text-[#45B1C7] shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
                 </FadeInSection>
               </div>

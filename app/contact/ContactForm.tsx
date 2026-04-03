@@ -84,7 +84,7 @@ export default function ContactForm() {
             </h3>
             <p className="text-sm text-[#777777] leading-relaxed max-w-md mx-auto">
               お問い合わせを受け付けました。
-              通常、当日〜翌営業日中にご連絡いたします。
+              当日〜翌日中に、塾長よりご連絡いたします。
               お急ぎの場合はお電話（072-940-7683）にてご連絡ください。
             </p>
           </motion.div>
