@@ -84,10 +84,12 @@ export default function FlowPage() {
               <h1 className="font-serif text-4xl md:text-5xl font-black text-[#1C4A52] leading-tight mb-4">
                 ご入塾までの流れ
               </h1>
-              <p className="text-[#555555] text-base max-w-xl">
-                永田塾では、新規塾生様の入塾を随時受け付けております。<br />
-                ※ 満席の際は募集を行いません。空席情報はご連絡ください。
-              </p>
+              <div className="text-[#555555] text-base max-w-xl space-y-2">
+                <p>永田塾では、新規塾生様の入塾を随時受け付けております。</p>
+                <p className="text-sm text-[#666666]">
+                  ※ 満席の際は募集を行いません。空席情報はご連絡ください。
+                </p>
+              </div>
             </FadeInSection>
           </div>
         </section>

@@ -21,8 +21,10 @@ export default function HighlightsSection() {
             <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
               <span className="w-6 h-px bg-[#45B1C7]" />永田塾のここが魅力！
             </span>
-            <h2 className="font-serif text-2xl md:text-3xl font-black text-[#1C4A52] leading-tight mb-6">
-              あなたの目標に合わせた<br />個別指導を提供します
+            <h2 className="font-serif text-2xl md:text-3xl font-black text-[#1C4A52] leading-tight mb-6 text-balance">
+              あなたの目標に合わせた
+              <br className="md:hidden" />
+              個別指導を提供します
             </h2>
             <ul className="flex flex-col gap-3 mb-8">
               {highlights.map((item, i) => (
@@ -69,11 +71,13 @@ export default function HighlightsSection() {
                   <p className="font-serif font-black text-lg text-[#1C4A52]">永田 知裕</p>
                 </div>
               </div>
-              <p className="text-sm text-[#393939] leading-loose mb-5">
-                大阪・八尾市の個別指導塾、永田塾です。<br /><br />
-                本気で成績を上げ、人生の目標に向かうために。勉強を吸収できる態度を整え、徹底的な繰り返し学習で点数をアップ、<br /><br />
-                勉強を通した成功体験から人生を変える塾です。お気軽にご相談ください。
-              </p>
+              <div className="space-y-3 text-sm text-[#393939] leading-loose mb-5">
+                <p>大阪・八尾市の個別指導塾、永田塾です。</p>
+                <p>
+                  本気で成績を上げ、人生の目標に向かうために。勉強を吸収できる態度を整え、徹底的な繰り返し学習で点数をアップさせます。
+                </p>
+                <p>勉強を通した成功体験から人生を変える塾です。お気軽にご相談ください。</p>
+              </div>
               <Link
                 href="/greeting"
                 className="inline-flex items-center gap-2 rounded-md text-sm font-bold text-[#45B1C7] transition-all duration-300 ease-out hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"

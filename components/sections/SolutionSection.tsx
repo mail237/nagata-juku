@@ -47,9 +47,9 @@ export default function SolutionSection() {
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
             <span className="w-5 h-px bg-[#45B1C7]" />Solution<span className="w-5 h-px bg-[#45B1C7]" />
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1C4A52] leading-tight">
+          <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1C4A52] leading-tight text-balance">
             原因は「難問」ではなく
-            <br />
+            <br className="md:hidden" />
             <span className="text-[#45B1C7]">「基礎の抜け」</span>にある
           </h2>
           <p className="mt-4 text-sm text-[#555555] max-w-lg mx-auto leading-relaxed">

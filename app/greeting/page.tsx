@@ -10,13 +10,13 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: '代表者ごあいさつ',
   description:
-    '永田塾代表・永田知裕のごあいさつ。全国学習塾向けセミナー講師の活動、講師歴17年の経験、「態度教育」への思い、進学実績をご紹介します。',
+    '永田塾代表・永田知裕のごあいさつ。全国学習塾向けセミナー講師の活動、指導の思い、「態度教育」、進学実績をご紹介します。',
 };
 
 const seminarIntro = {
   title: '全国の学習塾向けセミナーで講師も務める指導力',
   lead: '全国から集まる学習塾関係者向けのセミナーでの登壇や、長年の指導の積み重ねです。',
-  highlights: ['講師歴17年+', '全国セミナー講師', '大学在学中から一筋で指導'],
+  highlights: ['講師歴20年目', '全国セミナー講師', '大学在学中から一筋で指導'],
   paragraphs: [
     '全国から学習塾経営者や塾講師が集まる「学習塾（集団・個別指導塾）向けセミナー」の講師を務めるなど、指導方法を全国の学習塾の方に向けて紹介しています。',
     'セミナー受講者の中には「個別指導塾」の経営者の方や各地方で有名な塾がいらっしゃいました。永田式の勉強法や勉強のやり方のノウハウを多くの塾が参考にしてくださいました。',
@@ -68,16 +68,15 @@ export default function GreetingPage() {
                     <p className="text-sm text-[#777777] mb-4">ながた ともひろ</p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-[#393939]">
-                      <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">生年</span>1989年生まれ（37歳）／大阪府八尾市出身</div>
-                      <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">出身校</span>大阪府立夕陽丘高校 卒業</div>
+                      <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">生年</span>1987年生まれ／大阪府八尾市出身</div>
                       <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">大学</span>関西学院大学 商学部 卒業</div>
                       <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">中学</span>八尾市立成法中学校 卒業</div>
                       <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">趣味</span>ドラム・フットサル・部屋の模様替え</div>
-                      <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">好物</span>鯖の味噌煮</div>
+                      <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">好物</span>アクアパッツァ</div>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-4">
-                      {['講師歴17年+', '全国学習塾向けセミナー講師', '平成27年2月創業'].map((tag) => (
+                      {['講師歴20年目', '全国学習塾向けセミナー講師', '平成27年2月創業'].map((tag) => (
                         <span key={tag} className="text-xs bg-[#45B1C7]/10 border border-[#45B1C7]/20 text-[#0B6678] px-2.5 py-1 rounded-full">
                           {tag}
                         </span>
@@ -87,9 +86,14 @@ export default function GreetingPage() {
                 </div>
 
                 <div className="flex flex-col gap-4 text-sm text-[#393939] leading-loose">
-                  <p>皆様はじめまして。塾長の永田知裕（ながたともひろ）と申します。当塾のホームページをご覧下さり、ありがとうございます。</p>
-                  <p>学生時代には家庭教師・個別指導・集団指導を経験してきました。社会人となり八尾市の某学習塾で小学生・中学生・高校生を対象とした進学塾で教室長として勤務したのち、平成27年2月に永田塾をスタートし、今年で講師歴17年目となりました。</p>
-                  <p>これまでにたくさんの生徒を指導してきた経験をいかし、お子様の学習サポートに尽力致しますので、どうぞよろしくお願い致します。進路指導・相談もお任せください。</p>
+                  <p>皆様、はじめまして。塾長の永田知裕（ながたともひろ）です。当塾のホームページをご覧くださり、ありがとうございます。</p>
+                  <h3 className="font-serif text-lg md:text-[1.35rem] font-black text-[#1C4A52] leading-snug pt-1 pb-0.5 text-balance">
+                    「好きなこと」を仕事にする喜びを、次の世代へ。
+                  </h3>
+                  <p>大学に入った直後、友人の紹介で塾講師の道に足を踏み入れました。正社員として経験を積み、独立してから気づけば、今年で指導20年目を迎えます。</p>
+                  <p>これまで多くのお子さまと出会い、学びを共にし、成長を間近で見守ってきた時間は、私にとってかけがえのない財産です。いま、「好きなこと」を仕事にできる環境に身を置けることに、心から感謝しています。</p>
+                  <p>勉強を通じてお子さまに伝えたいのは、学力向上だけではありません。自分の「やりたいこと」を追い続ける楽しさ──そんな生き方の一端を、少しでも感じてもらえたらと思っています。「こういう大人もいるんだ」と思えるきっかけになれば、私にとってこれ以上の喜びはありません。</p>
+                  <p>自分の道を切り開き、人生をまっすぐに楽しむ。そんな大人へと成長していけるよう、これからも精一杯サポートしてまいります。</p>
                 </div>
 
                 <div className="mt-7 pt-6 border-t border-[#C7E5EB]/60 text-right">
