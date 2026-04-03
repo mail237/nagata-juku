@@ -60,11 +60,11 @@ export default function FAQSection() {
                   className="flex w-full items-center justify-between gap-4 rounded-xl px-6 py-5 text-left transition-colors hover:bg-[#FAFCFC]/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-inset"
                   aria-expanded={openIndex === i}
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex min-w-0 flex-1 items-start gap-3 pr-1">
                     <span className="shrink-0 font-serif font-black text-[#45B1C7] text-lg leading-none mt-0.5">
                       Q
                     </span>
-                    <span className="font-bold text-[#1C4A52] text-sm leading-snug">
+                    <span className="min-w-0 font-bold text-[#1C4A52] text-sm leading-snug text-balance">
                       {faq.q}
                     </span>
                   </div>

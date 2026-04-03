@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 };
 
 const seminarIntro = {
-  title: '全国の学習塾向けセミナーで講師も務める指導力',
+  titleLine1: '全国の学習塾向けセミナーで',
+  titleLine2: '講師も務める指導力',
   lead: '全国から集まる学習塾関係者向けのセミナーでの登壇や、長年の指導の積み重ねです。',
   highlights: ['講師歴20年目', '全国セミナー講師', '大学在学中から一筋で指導'],
   paragraphs: [
@@ -87,8 +88,10 @@ export default function GreetingPage() {
 
                 <div className="flex flex-col gap-4 text-sm text-[#393939] leading-loose">
                   <p>皆様、はじめまして。塾長の永田知裕（ながたともひろ）です。当塾のホームページをご覧くださり、ありがとうございます。</p>
-                  <h3 className="font-serif text-lg md:text-[1.35rem] font-black text-[#1C4A52] leading-snug pt-1 pb-0.5 text-balance">
-                    「好きなこと」を仕事にする喜びを、次の世代へ。
+                  <h3 className="font-serif text-lg md:text-[1.35rem] font-black text-[#1C4A52] leading-snug pt-1 pb-0.5 text-left">
+                    「好きなこと」を仕事にする
+                    <br />
+                    喜びを、次の世代へ。
                   </h3>
                   <p>大学に入った直後、友人の紹介で塾講師の道に足を踏み入れました。正社員として経験を積み、独立してから気づけば、今年で指導20年目を迎えます。</p>
                   <p>これまで多くのお子さまと出会い、学びを共にし、成長を間近で見守ってきた時間は、私にとってかけがえのない財産です。いま、「好きなこと」を仕事にできる環境に身を置けることに、心から感謝しています。</p>
@@ -129,7 +132,9 @@ export default function GreetingPage() {
                       塾長の経験・実績
                     </span>
                     <h2 className="font-serif text-xl font-black leading-tight text-[#1C4A52] md:text-2xl">
-                      {seminarIntro.title}
+                      {seminarIntro.titleLine1}
+                      <br />
+                      {seminarIntro.titleLine2}
                     </h2>
                     <p className="mt-3 text-sm text-[#777777] leading-relaxed">{seminarIntro.lead}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
@@ -158,8 +163,10 @@ export default function GreetingPage() {
                 <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-4">
                   <span className="w-5 h-px bg-[#45B1C7]" />指導理念
                 </span>
-                <h2 className="font-serif text-2xl font-black text-[#1C4A52] mb-6 leading-tight">
-                  「態度教育」——心のコップを上に向ける
+                <h2 className="font-serif text-2xl font-black text-[#1C4A52] mb-6 leading-tight text-left">
+                  「態度教育」——
+                  <br />
+                  心のコップを上に向ける
                 </h2>
                 <div className="flex flex-col gap-4 text-sm text-[#393939] leading-loose">
                   <p>学力をのばすためには、まず取り組む姿勢を正していくことが大切です。そのため、永田塾では「態度教育」を重視した指導を行っています。</p>

@@ -80,10 +80,10 @@ export default function ContactPage() {
                 <span className="w-6 h-px bg-[#45B1C7]" />
                 Contact
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl font-black text-[#1C4A52] leading-tight mb-4">
+              <h1 className="font-serif text-4xl md:text-5xl font-black text-[#1C4A52] leading-tight mb-4 text-balance">
                 お問合せ・無料体験申込み
               </h1>
-              <p className="text-[#555555] text-base max-w-xl">
+              <p className="text-[#555555] text-base max-w-xl text-balance">
                 お気軽にご連絡ください。無料体験後の勧誘は一切ありません。
               </p>
             </FadeInSection>

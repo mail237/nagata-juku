@@ -49,7 +49,7 @@ export default function ProblemSection() {
             Problem
             <span className="w-6 h-px bg-[#45B1C7]" />
           </span>
-          <h2 className="font-serif text-3xl md:text-[2.1rem] font-black text-[#1C4A52] leading-tight tracking-tight">
+          <h2 className="font-serif text-3xl md:text-[2.1rem] font-black text-[#1C4A52] leading-tight tracking-tight text-balance px-1">
             こんなお悩み、
             <br className="sm:hidden" />
             ありませんか？

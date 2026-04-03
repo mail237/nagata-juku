@@ -33,10 +33,10 @@ export default function HeroSection() {
           {/* 半透明白帯 */}
           <div className="absolute left-0 right-0 bottom-[18%] bg-white/80 backdrop-blur-[2px]">
             <div className="max-w-5xl mx-auto px-4 py-5 text-center">
-              <p className="font-serif font-black text-[clamp(1.4rem,3.5vw,2.4rem)] leading-tight tracking-tight text-[#1C1C1C]">
+              <p className="font-serif font-black text-[clamp(1.4rem,3.5vw,2.4rem)] leading-tight tracking-tight text-[#1C1C1C] text-balance">
                 <span className="text-[#D93025]">第一志望合格</span>も部活も！
               </p>
-              <p className="font-serif font-bold text-[clamp(1rem,2.4vw,1.35rem)] leading-snug tracking-tight text-[#393939] mt-1">
+              <p className="font-serif font-bold text-[clamp(1rem,2.4vw,1.35rem)] leading-snug tracking-tight text-[#393939] mt-1 text-balance px-1">
                 定期テストから受験まで、一人ひとりのペースで
               </p>
             </div>

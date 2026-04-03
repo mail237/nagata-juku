@@ -48,9 +48,9 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
         aria-expanded={open}
       >
-        <div className="flex items-start gap-3">
+        <div className="flex min-w-0 flex-1 items-start gap-3 pr-1">
           <span className="shrink-0 font-serif font-black text-[#45B1C7] text-base leading-none mt-0.5">Q</span>
-          <span className="font-medium text-[#1C4A52] text-sm leading-snug">{q}</span>
+          <span className="min-w-0 font-medium text-[#1C4A52] text-sm leading-snug text-balance">{q}</span>
         </div>
         <div className={`shrink-0 w-5 h-5 rounded-full border border-[#45B1C7] flex items-center justify-center text-[#45B1C7] transition-all duration-200 ${open ? 'bg-[#45B1C7] rotate-45' : ''}`}>
           <svg className={`w-2.5 h-2.5 ${open ? 'text-white' : 'text-[#45B1C7]'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">

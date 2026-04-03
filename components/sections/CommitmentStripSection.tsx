@@ -30,27 +30,28 @@ export default function CommitmentStripSection() {
           </span>
           <h2
             id="commitment-strip-heading"
-            className="font-serif text-2xl md:text-3xl font-black text-white leading-tight"
+            className="font-serif text-2xl md:text-3xl font-black text-white leading-tight text-balance"
           >
             永田塾が大切にしていること
           </h2>
-          <p className="mt-2 text-sm text-white/65 max-w-xl mx-auto">
+          <p className="mt-2 text-sm text-white/65 max-w-xl mx-auto text-balance px-1">
             数字ではなく、指導の姿勢と仕組みをまとめてご紹介します。
           </p>
         </FadeInSection>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8">
+        {/* スマホは1列にして長い見出しの改行を自然に（2列だと極端に狭くなる） */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-x-8">
           {COMMITMENT_STRIP_ITEMS.map((item, i) => (
             <FadeInSection key={item.headline} delay={i * 0.07}>
               <div
-                className={`text-center ${
+                className={`text-center min-w-0 px-0.5 ${
                   i > 0 ? 'lg:border-l lg:border-white/15 lg:pl-6' : ''
                 }`}
               >
-                <p className="font-serif font-black text-[clamp(1rem,2.8vw,1.35rem)] leading-snug text-white tracking-tight">
+                <p className="font-serif font-black text-[clamp(1rem,2.8vw,1.35rem)] leading-snug text-white tracking-tight text-balance">
                   {item.headline}
                 </p>
-                <p className="mt-2.5 text-xs md:text-sm text-white/70 leading-relaxed">
+                <p className="mt-2.5 text-xs md:text-sm text-white/70 leading-relaxed text-balance">
                   {item.sub}
                 </p>
               </div>
