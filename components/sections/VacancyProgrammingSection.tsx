@@ -83,7 +83,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                 満席の場合は、キャンセル待ち（順番待ち）としてご案内しております。
               </span>
               <span className="block">
-                状況は随時変わります。最終のご確認はお電話またはお問い合わせフォームにてお願いいたします。
+                状況は随時変わります。最終のご確認はお電話またはお問合せフォームにてお願いいたします。
               </span>
             </p>
             <div className="flex flex-wrap gap-3">
@@ -97,7 +97,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full border-2 border-[#45B1C7] text-[#1C4A52] px-5 py-2.5 text-sm font-bold hover:bg-[#E8F7FA] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2"
               >
-                お問い合わせ
+                お問合せ
               </Link>
             </div>
           </FadeInSection>

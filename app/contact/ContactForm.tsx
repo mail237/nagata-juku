@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SCHOOL } from '@/lib/constants';
 
 type FormData = {
   name: string;
@@ -42,6 +43,7 @@ const inquiryOptions = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -50,11 +52,35 @@ export default function ContactForm() {
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
-    // 実際の送信処理をここに実装してください
-    // 例: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-    console.log('Form data:', data);
-    setSubmitted(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const payload = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        code?: string;
+      };
+      if (res.ok && payload.ok) {
+        setSubmitted(true);
+        return;
+      }
+      if (payload.code === 'EMAIL_NOT_CONFIGURED') {
+        setSubmitError(
+          `フォームからのメール送信は、サーバーに Resend の設定（環境変数）が必要です。公開前に設定するか、お手数ですが ${SCHOOL.email} まで直接メールを送るか、お電話（${SCHOOL.phone}）でご連絡ください。`,
+        );
+        return;
+      }
+      setSubmitError(
+        '送信に失敗しました。時間をおいて再度お試しください。解消しない場合はお電話でご連絡ください。',
+      );
+    } catch {
+      setSubmitError(
+        `通信エラーが発生しました。${SCHOOL.email} までメール、またはお電話（${SCHOOL.phone}）でご連絡ください。`,
+      );
+    }
   };
 
   const inputClass = (hasError: boolean) =>
@@ -83,9 +109,9 @@ export default function ContactForm() {
               お送りいただきありがとうございます
             </h3>
             <p className="text-sm text-[#777777] leading-relaxed max-w-md mx-auto">
-              お問い合わせを受け付けました。
+              お問合せを受け付けました。
               当日〜翌日中に、塾長よりご連絡いたします。
-              お急ぎの場合はお電話（072-940-7683）にてご連絡ください。
+              お急ぎの場合はお電話（{SCHOOL.phone}）またはメール（{SCHOOL.email}）にてご連絡ください。
             </p>
           </motion.div>
         ) : (
@@ -99,6 +125,15 @@ export default function ContactForm() {
             <h2 className="font-serif font-black text-2xl text-[#1C4A52] mb-7">
               お問合せフォーム
             </h2>
+
+            {submitError ? (
+              <p
+                role="alert"
+                className="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800"
+              >
+                {submitError}
+              </p>
+            ) : null}
 
             <div className="flex flex-col gap-5">
               {/* お名前 */}
@@ -221,15 +256,15 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              {/* お問い合わせ種別 */}
+              {/* お問合せ種別 */}
               <div>
                 <label className="block text-xs font-bold text-[#393939] mb-1.5">
-                  お問い合わせ内容
+                  お問合せ内容
                   <span className="text-[#45B1C7] ml-1">*</span>
                 </label>
                 <select
                   className={`${inputClass(!!errors.inquiry)} appearance-none`}
-                  {...register('inquiry', { required: 'お問い合わせ内容を選択してください' })}
+                  {...register('inquiry', { required: 'お問合せ内容を選択してください' })}
                   defaultValue=""
                 >
                   <option value="" disabled>選択してください</option>
@@ -280,7 +315,7 @@ export default function ContactForm() {
               </button>
 
               <p className="text-xs text-[#777777] text-center">
-                ご入力いただいた個人情報は、お問い合わせへの返答にのみ使用し、第三者への提供は行いません。
+                ご入力いただいた個人情報は、お問合せへの返答にのみ使用し、第三者への提供は行いません。
               </p>
             </div>
           </motion.form>

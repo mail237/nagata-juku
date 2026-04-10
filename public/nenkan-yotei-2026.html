@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026年　永田塾　年間予定表</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #2a6570;
+      --ink: #1f1f1f;
+      --ink-soft: #4a4a4a;
+      --line: #cfd4d8;
+      --cal-kyu: #ffd4d4;
+      --cal-kou: #c8e8a8;
+      --cal-pro: #b4cbf0;
+    }
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    html { font-size: 9pt; }
+    body {
+      margin: 0;
+      min-height: 297mm;
+      font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+      color: var(--ink-soft);
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 7mm 9mm 6mm;
+      display: flex;
+      flex-direction: column;
+    }
+    .doc-title {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 15pt;
+      letter-spacing: 0.06em;
+      text-align: center;
+      color: var(--ink);
+      margin: 0 0 4mm;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 5mm 7mm;
+      padding: 2.5mm 4mm;
+      border: 1px solid var(--line);
+      border-radius: 3mm;
+      background: #fafbfc;
+      margin: 0 auto 3mm;
+      max-width: 100%;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .swatch {
+      width: 4.2mm;
+      height: 4.2mm;
+      border-radius: 0.6mm;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .swatch.kyu { background: var(--cal-kyu); }
+    .swatch.kou { background: var(--cal-kou); }
+    .swatch.pro { background: var(--cal-pro); }
+    .notices {
+      font-size: 7.5pt;
+      line-height: 1.5;
+      color: var(--ink-soft);
+      text-align: center;
+      margin: 0 0 3mm;
+    }
+    .notices p {
+      margin: 0 0 1.2mm;
+    }
+    .notices p:last-child {
+      margin-bottom: 0;
+    }
+    .year-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, minmax(0, 1fr));
+      gap: 3mm 2.6mm;
+      flex: 1;
+      min-height: 0;
+      margin-bottom: 1mm;
+    }
+    .month-block {
+      border: 1px solid var(--line);
+      border-radius: 2.5mm;
+      padding: 2mm 2.5mm 2.5mm;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      background: #fff;
+    }
+    .month-title {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      margin: 0 0 1.5mm;
+      color: var(--ink);
+      text-align: center;
+    }
+    .mini-cal {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 6.5pt;
+      flex: 1;
+    }
+    .mini-cal th {
+      font-weight: 700;
+      padding: 0.4mm 0;
+      color: var(--ink-soft);
+    }
+    .mini-cal th.sun { color: #c62828; }
+    .mini-cal th.sat { color: #1565c0; }
+    .mini-cal td {
+      text-align: center;
+      vertical-align: middle;
+      padding: 0.35mm 0;
+      line-height: 1.15;
+      border-radius: 0.8mm;
+    }
+    .mini-cal td.empty { opacity: 0; }
+    .mini-cal td.cal-kyu { background: var(--cal-kyu); color: var(--ink); font-weight: 600; }
+    .mini-cal td.cal-kou { background: var(--cal-kou); color: var(--ink); font-weight: 600; }
+    .mini-cal td.cal-pro { background: var(--cal-pro); color: var(--ink); font-weight: 600; }
+    .foot-insta {
+      margin-top: 3.5mm;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4mm;
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 2mm;
+      padding: 2.8mm 3.5mm 2.8mm 3mm;
+      background: #fafbfc;
+      text-align: left;
+    }
+    .foot-insta__text {
+      flex: 1;
+      min-width: 0;
+      padding-right: 1mm;
+    }
+    .foot-insta__title {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 8.75pt;
+      color: var(--ink);
+      margin: 0 0 1mm;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    }
+    .foot-insta__body {
+      margin: 0;
+      font-size: 7.35pt;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+    .foot-insta__line-title {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 8.35pt;
+      color: var(--ink);
+      margin: 2mm 0 0.5mm;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+    }
+    .foot-insta__line {
+      margin: 0;
+      font-size: 7.1pt;
+      font-weight: 400;
+      line-height: 1.45;
+      color: var(--ink-soft);
+      letter-spacing: 0.02em;
+    }
+    .foot-insta__line strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .foot-insta__qr {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1mm;
+      padding: 1.2mm;
+      border-radius: 1.5mm;
+      background: #fff;
+      border: 1px solid rgba(207, 212, 216, 0.9);
+    }
+    .foot-insta__qr img {
+      display: block;
+      width: 20mm;
+      height: 20mm;
+      object-fit: contain;
+    }
+    .foot-insta__url {
+      margin: 0;
+      font-size: 6.25pt;
+      line-height: 1.25;
+      color: var(--accent);
+      font-weight: 700;
+      word-break: break-all;
+      max-width: 26mm;
+      text-align: center;
+    }
+    @media print {
+      body { background: #fff !important; }
+      .sheet { padding: 6mm 8mm 5mm !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <h1 class="doc-title">2026年　永田塾　年間予定表</h1>
+    <div class="legend" role="group" aria-label="凡例">
+      <span class="legend-item"><span class="swatch kyu"></span>休塾日</span>
+      <span class="legend-item"><span class="swatch kou"></span>講習会</span>
+      <span class="legend-item"><span class="swatch pro"></span>プログラミング</span>
+    </div>
+    <div class="notices">
+      <p>※水曜日がプログラミング（表の色付き）の日でも、夜の部（19:30〜22:00）の授業は通常どおり行います。</p>
+    </div>
+    <div class="year-grid">
+<article class="month-block">
+  <h2 class="month-title">2026年　1月</h2>
+  <table class="mini-cal" aria-label="1月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d cal-kyu">1</td><td class="cal-d cal-kyu">2</td><td class="cal-d">3</td></tr><tr><td class="cal-d cal-kyu">4</td><td class="cal-d cal-kou">5</td><td class="cal-d cal-kou">6</td><td class="cal-d cal-kou">7</td><td class="cal-d cal-kou">8</td><td class="cal-d">9</td><td class="cal-d cal-pro">10</td></tr><tr><td class="cal-d cal-kyu">11</td><td class="cal-d cal-kyu">12</td><td class="cal-d">13</td><td class="cal-d cal-pro">14</td><td class="cal-d">15</td><td class="cal-d">16</td><td class="cal-d">17</td></tr><tr><td class="cal-d cal-kyu">18</td><td class="cal-d">19</td><td class="cal-d">20</td><td class="cal-d cal-pro">21</td><td class="cal-d">22</td><td class="cal-d">23</td><td class="cal-d cal-pro">24</td></tr><tr><td class="cal-d cal-kyu">25</td><td class="cal-d">26</td><td class="cal-d">27</td><td class="cal-d cal-pro">28</td><td class="cal-d">29</td><td class="cal-d">30</td><td class="cal-d">31</td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　2月</h2>
+  <table class="mini-cal" aria-label="2月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d cal-kyu">1</td><td class="cal-d">2</td><td class="cal-d">3</td><td class="cal-d cal-pro">4</td><td class="cal-d">5</td><td class="cal-d">6</td><td class="cal-d">7</td></tr><tr><td class="cal-d cal-kyu">8</td><td class="cal-d">9</td><td class="cal-d">10</td><td class="cal-d cal-kyu">11</td><td class="cal-d">12</td><td class="cal-d">13</td><td class="cal-d cal-pro">14</td></tr><tr><td class="cal-d cal-kyu">15</td><td class="cal-d">16</td><td class="cal-d">17</td><td class="cal-d cal-pro">18</td><td class="cal-d">19</td><td class="cal-d">20</td><td class="cal-d">21</td></tr><tr><td class="cal-d cal-kyu">22</td><td class="cal-d cal-kyu">23</td><td class="cal-d">24</td><td class="cal-d cal-pro">25</td><td class="cal-d">26</td><td class="cal-d">27</td><td class="cal-d cal-pro">28</td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　3月</h2>
+  <table class="mini-cal" aria-label="3月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d cal-kyu">1</td><td class="cal-d">2</td><td class="cal-d">3</td><td class="cal-d cal-pro">4</td><td class="cal-d">5</td><td class="cal-d">6</td><td class="cal-d">7</td></tr><tr><td class="cal-d cal-kyu">8</td><td class="cal-d">9</td><td class="cal-d">10</td><td class="cal-d cal-pro">11</td><td class="cal-d">12</td><td class="cal-d">13</td><td class="cal-d cal-pro">14</td></tr><tr><td class="cal-d cal-kyu">15</td><td class="cal-d">16</td><td class="cal-d">17</td><td class="cal-d cal-pro">18</td><td class="cal-d cal-kyu">19</td><td class="cal-d cal-kyu">20</td><td class="cal-d">21</td></tr><tr><td class="cal-d cal-kyu">22</td><td class="cal-d cal-kou">23</td><td class="cal-d cal-kou">24</td><td class="cal-d cal-kou">25</td><td class="cal-d cal-kou">26</td><td class="cal-d cal-kou">27</td><td class="cal-d">28</td></tr><tr><td class="cal-d cal-kyu">29</td><td class="cal-d cal-kou">30</td><td class="cal-d cal-kou">31</td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　4月</h2>
+  <table class="mini-cal" aria-label="4月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d cal-pro">1</td><td class="cal-d cal-kou">2</td><td class="cal-d cal-kou">3</td><td class="cal-d">4</td></tr><tr><td class="cal-d cal-kyu">5</td><td class="cal-d">6</td><td class="cal-d">7</td><td class="cal-d cal-pro">8</td><td class="cal-d">9</td><td class="cal-d">10</td><td class="cal-d cal-pro">11</td></tr><tr><td class="cal-d cal-kyu">12</td><td class="cal-d">13</td><td class="cal-d">14</td><td class="cal-d cal-pro">15</td><td class="cal-d">16</td><td class="cal-d">17</td><td class="cal-d">18</td></tr><tr><td class="cal-d cal-kyu">19</td><td class="cal-d">20</td><td class="cal-d">21</td><td class="cal-d cal-pro">22</td><td class="cal-d">23</td><td class="cal-d">24</td><td class="cal-d cal-pro">25</td></tr><tr><td class="cal-d cal-kyu">26</td><td class="cal-d">27</td><td class="cal-d">28</td><td class="cal-d cal-kyu">29</td><td class="cal-d cal-kyu">30</td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　5月</h2>
+  <table class="mini-cal" aria-label="5月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d cal-kyu">1</td><td class="cal-d">2</td></tr><tr><td class="cal-d cal-kyu">3</td><td class="cal-d cal-kyu">4</td><td class="cal-d cal-kyu">5</td><td class="cal-d cal-kyu">6</td><td class="cal-d">7</td><td class="cal-d">8</td><td class="cal-d cal-pro">9</td></tr><tr><td class="cal-d cal-kyu">10</td><td class="cal-d">11</td><td class="cal-d">12</td><td class="cal-d cal-pro">13</td><td class="cal-d">14</td><td class="cal-d">15</td><td class="cal-d">16</td></tr><tr><td class="cal-d cal-kyu">17</td><td class="cal-d">18</td><td class="cal-d">19</td><td class="cal-d cal-pro">20</td><td class="cal-d">21</td><td class="cal-d">22</td><td class="cal-d cal-pro">23</td></tr><tr><td class="cal-d cal-kyu">24</td><td class="cal-d">25</td><td class="cal-d">26</td><td class="cal-d cal-pro">27</td><td class="cal-d">28</td><td class="cal-d">29</td><td class="cal-d">30</td></tr><tr><td class="cal-d cal-kyu">31</td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　6月</h2>
+  <table class="mini-cal" aria-label="6月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d">1</td><td class="cal-d">2</td><td class="cal-d cal-pro">3</td><td class="cal-d cal-kyu">4</td><td class="cal-d cal-kyu">5</td><td class="cal-d">6</td></tr><tr><td class="cal-d cal-kyu">7</td><td class="cal-d">8</td><td class="cal-d">9</td><td class="cal-d cal-pro">10</td><td class="cal-d">11</td><td class="cal-d">12</td><td class="cal-d cal-pro">13</td></tr><tr><td class="cal-d cal-kyu">14</td><td class="cal-d">15</td><td class="cal-d">16</td><td class="cal-d cal-pro">17</td><td class="cal-d">18</td><td class="cal-d">19</td><td class="cal-d">20</td></tr><tr><td class="cal-d cal-kyu">21</td><td class="cal-d">22</td><td class="cal-d">23</td><td class="cal-d cal-pro">24</td><td class="cal-d">25</td><td class="cal-d">26</td><td class="cal-d cal-pro">27</td></tr><tr><td class="cal-d cal-kyu">28</td><td class="cal-d">29</td><td class="cal-d">30</td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　7月</h2>
+  <table class="mini-cal" aria-label="7月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d cal-pro">1</td><td class="cal-d">2</td><td class="cal-d">3</td><td class="cal-d">4</td></tr><tr><td class="cal-d cal-kyu">5</td><td class="cal-d">6</td><td class="cal-d">7</td><td class="cal-d cal-pro">8</td><td class="cal-d">9</td><td class="cal-d">10</td><td class="cal-d cal-pro">11</td></tr><tr><td class="cal-d cal-kyu">12</td><td class="cal-d">13</td><td class="cal-d">14</td><td class="cal-d cal-pro">15</td><td class="cal-d">16</td><td class="cal-d">17</td><td class="cal-d">18</td></tr><tr><td class="cal-d cal-kyu">19</td><td class="cal-d cal-kyu">20</td><td class="cal-d">21</td><td class="cal-d cal-pro">22</td><td class="cal-d">23</td><td class="cal-d">24</td><td class="cal-d cal-pro">25</td></tr><tr><td class="cal-d cal-kyu">26</td><td class="cal-d cal-kou">27</td><td class="cal-d cal-kou">28</td><td class="cal-d cal-kou">29</td><td class="cal-d cal-kou">30</td><td class="cal-d cal-kou">31</td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　8月</h2>
+  <table class="mini-cal" aria-label="8月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d">1</td></tr><tr><td class="cal-d cal-kyu">2</td><td class="cal-d cal-kou">3</td><td class="cal-d cal-kou">4</td><td class="cal-d cal-pro">5</td><td class="cal-d cal-kou">6</td><td class="cal-d cal-kou">7</td><td class="cal-d">8</td></tr><tr><td class="cal-d cal-kyu">9</td><td class="cal-d cal-kyu">10</td><td class="cal-d cal-kyu">11</td><td class="cal-d cal-kyu">12</td><td class="cal-d cal-kyu">13</td><td class="cal-d cal-kyu">14</td><td class="cal-d">15</td></tr><tr><td class="cal-d cal-kyu">16</td><td class="cal-d">17</td><td class="cal-d">18</td><td class="cal-d cal-pro">19</td><td class="cal-d">20</td><td class="cal-d">21</td><td class="cal-d cal-pro">22</td></tr><tr><td class="cal-d cal-kyu">23</td><td class="cal-d">24</td><td class="cal-d">25</td><td class="cal-d cal-pro">26</td><td class="cal-d">27</td><td class="cal-d">28</td><td class="cal-d">29</td></tr><tr><td class="cal-d cal-kyu">30</td><td class="cal-d">31</td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　9月</h2>
+  <table class="mini-cal" aria-label="9月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d">1</td><td class="cal-d cal-pro">2</td><td class="cal-d">3</td><td class="cal-d">4</td><td class="cal-d">5</td></tr><tr><td class="cal-d cal-kyu">6</td><td class="cal-d">7</td><td class="cal-d">8</td><td class="cal-d cal-pro">9</td><td class="cal-d">10</td><td class="cal-d">11</td><td class="cal-d cal-pro">12</td></tr><tr><td class="cal-d cal-kyu">13</td><td class="cal-d">14</td><td class="cal-d">15</td><td class="cal-d cal-pro">16</td><td class="cal-d">17</td><td class="cal-d">18</td><td class="cal-d">19</td></tr><tr><td class="cal-d cal-kyu">20</td><td class="cal-d cal-kyu">21</td><td class="cal-d cal-kyu">22</td><td class="cal-d cal-kyu">23</td><td class="cal-d">24</td><td class="cal-d">25</td><td class="cal-d cal-pro">26</td></tr><tr><td class="cal-d cal-kyu">27</td><td class="cal-d">28</td><td class="cal-d">29</td><td class="cal-d cal-pro">30</td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　10月</h2>
+  <table class="mini-cal" aria-label="10月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d">1</td><td class="cal-d">2</td><td class="cal-d">3</td></tr><tr><td class="cal-d cal-kyu">4</td><td class="cal-d">5</td><td class="cal-d">6</td><td class="cal-d cal-pro">7</td><td class="cal-d">8</td><td class="cal-d">9</td><td class="cal-d cal-pro">10</td></tr><tr><td class="cal-d cal-kyu">11</td><td class="cal-d cal-kyu">12</td><td class="cal-d">13</td><td class="cal-d cal-pro">14</td><td class="cal-d">15</td><td class="cal-d">16</td><td class="cal-d">17</td></tr><tr><td class="cal-d cal-kyu">18</td><td class="cal-d">19</td><td class="cal-d">20</td><td class="cal-d cal-pro">21</td><td class="cal-d">22</td><td class="cal-d">23</td><td class="cal-d cal-pro">24</td></tr><tr><td class="cal-d cal-kyu">25</td><td class="cal-d">26</td><td class="cal-d">27</td><td class="cal-d cal-pro">28</td><td class="cal-d">29</td><td class="cal-d">30</td><td class="cal-d">31</td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　11月</h2>
+  <table class="mini-cal" aria-label="11月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d cal-kyu">1</td><td class="cal-d">2</td><td class="cal-d cal-kyu">3</td><td class="cal-d cal-pro">4</td><td class="cal-d">5</td><td class="cal-d">6</td><td class="cal-d cal-pro">7</td></tr><tr><td class="cal-d cal-kyu">8</td><td class="cal-d">9</td><td class="cal-d">10</td><td class="cal-d cal-pro">11</td><td class="cal-d">12</td><td class="cal-d">13</td><td class="cal-d">14</td></tr><tr><td class="cal-d cal-kyu">15</td><td class="cal-d">16</td><td class="cal-d">17</td><td class="cal-d cal-pro">18</td><td class="cal-d">19</td><td class="cal-d">20</td><td class="cal-d cal-pro">21</td></tr><tr><td class="cal-d cal-kyu">22</td><td class="cal-d">23</td><td class="cal-d">24</td><td class="cal-d cal-pro">25</td><td class="cal-d">26</td><td class="cal-d">27</td><td class="cal-d">28</td></tr><tr><td class="cal-d cal-kyu">29</td><td class="cal-d">30</td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+<article class="month-block">
+  <h2 class="month-title">2026年　12月</h2>
+  <table class="mini-cal" aria-label="12月">
+    <thead><tr><th class="wdsun">日</th><th class="wdmon">月</th><th class="wdtue">火</th><th class="wdwed">水</th><th class="wdthu">木</th><th class="wdfri">金</th><th class="wdsat">土</th></tr></thead>
+    <tbody><tr><td class="cal-d empty"></td><td class="cal-d empty"></td><td class="cal-d">1</td><td class="cal-d cal-pro">2</td><td class="cal-d">3</td><td class="cal-d">4</td><td class="cal-d">5</td></tr><tr><td class="cal-d cal-kyu">6</td><td class="cal-d">7</td><td class="cal-d">8</td><td class="cal-d cal-pro">9</td><td class="cal-d">10</td><td class="cal-d">11</td><td class="cal-d cal-pro">12</td></tr><tr><td class="cal-d cal-kyu">13</td><td class="cal-d">14</td><td class="cal-d">15</td><td class="cal-d cal-pro">16</td><td class="cal-d">17</td><td class="cal-d">18</td><td class="cal-d">19</td></tr><tr><td class="cal-d cal-kyu">20</td><td class="cal-d cal-kou">21</td><td class="cal-d cal-kou">22</td><td class="cal-d cal-kou">23</td><td class="cal-d cal-kou">24</td><td class="cal-d cal-kou">25</td><td class="cal-d">26</td></tr><tr><td class="cal-d cal-kyu">27</td><td class="cal-d cal-kyu">28</td><td class="cal-d cal-kyu">29</td><td class="cal-d cal-kyu">30</td><td class="cal-d cal-kyu">31</td><td class="cal-d empty"></td><td class="cal-d empty"></td></tr></tbody>
+  </table>
+</article>
+    </div>
+    <footer class="foot-insta">
+      <div class="foot-insta__text">
+        <p class="foot-insta__title">【インスタ開設のお知らせ】</p>
+        <p class="foot-insta__body">公式Instagramを開設しました。授業の様子やイベント情報などを発信しています。よろしければフォローをお願いします。</p>
+        <p class="foot-insta__line-title">【LINEでのご連絡】</p>
+        <p class="foot-insta__line">振替・欠席などのご連絡は、LINEでも承っております。<strong>LINE ID：201502012015</strong>（友だち追加はID検索より）</p>
+      </div>
+      <div class="foot-insta__qr">
+        <img src="images/instagram-qr.png" width="132" height="132" alt="永田塾公式InstagramのQRコード" />
+        <p class="foot-insta__url">instagram.com/nagatajuku.yao/</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

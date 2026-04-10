@@ -3,6 +3,8 @@ export const SCHOOL = {
   tagline: '本気で成績を上げるなら大阪・八尾市の個別指導塾',
   address: '〒581-0071 大阪府八尾市北久宝寺1-4-80',
   phone: '072-940-7683',
+  /** お問合せ用メール（サイト表示・フォーム送信先の既定値と揃える） */
+  email: 'mail@nagata-juku.net',
   access: '近鉄久宝寺口から徒歩5分程度',
   hours: '15:00〜22:00',
   closed: '日曜・祝日',
@@ -24,12 +26,19 @@ export const VACANCY_ROWS = [
   { label: 'プログラミング', status: '残り一席' },
 ] as const;
 
+/** 最終盤: 「お問合せ」「お問い合わせ」など表記をサイト全体で一度に確定する */
 export const NAV_LINKS = [
   { href: '/service', label: '授業・料金' },
   { href: '/greeting', label: '講師紹介' },
   { href: '/voice', label: '生徒の声' },
   { href: '/access', label: '教室案内' },
   { href: '/contact', label: 'お問合せ' },
+] as const;
+
+/** ヘッダー用（トップの左端に「ホーム」を出す。フッターは NAV_LINKS のみ） */
+export const HEADER_NAV_LINKS = [
+  { href: '/', label: 'ホーム' },
+  ...NAV_LINKS,
 ] as const;
 
 export const FOOTER_LINKS = [

@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>入塾のご案内（印刷用）｜永田塾</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    /* 入塾案内パンフレット（サイトとは別トーン・落ち着いた紙面） */
+    :root {
+      --paper: #fff;
+      --paper-tint: #f5f5f5;
+      --ink: #1f1f1f;
+      --ink-soft: #4a4a4a;
+      --ink-muted: #5c6366;
+      --ink-faint: #6e7579;
+      --accent: #2a6570;
+      --accent-light: #e2ecee;
+      --line: #c8ccd0;
+      --line-strong: #b8bdc2;
+      --white: #fff;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --table-head-bg: #e9ecef;
+      --head-bar: 3px;
+      --head-pad: 3.5mm;
+      /* 帯見出し（h2 / lead / 塾則h2）の上下を対称に（印刷8枚の範囲で確保） */
+      --head-band-pad-y: 1.75mm;
+      /* 紙面の余白スケール（全ページで統一） */
+      --page-pad-x: 15mm;
+      --page-pad-y-top: 13mm;
+      --page-pad-y-bottom: 15mm;
+      --inner-top: 8mm;
+      --space-1: 2.5mm;
+      --space-2: 3.5mm;
+      --space-3: 4.5mm;
+      --space-4: 5.5mm;
+      --space-5: 7mm;
+      --after-title: 4.5mm;
+      --after-lead: 4mm;
+      --section-gap: 5mm;
+      /* 表紙：3ゾーン（ヘッダー／リード／CTA）の縦リズムを揃える */
+      --cover-pad-y: 9mm;
+      --cover-pad-y-bottom: 11mm;
+      --cover-gap-tight: var(--space-3);
+      --cover-gap: var(--space-4);
+      --cover-gap-zone: var(--space-5);
+      --cover-box-pad-y: var(--space-4);
+      --cover-box-pad-x: var(--space-5);
+      /* A4 1枚の高さから .sheet の上下パディングを除いた内側の最小高さ（はみ出し防止） */
+      --sheet-inner-min: calc(297mm - var(--page-pad-y-top) - var(--page-pad-y-bottom));
+    }
+
+    @page { size: A4; margin: 0; }
+
+    * { box-sizing: border-box; }
+    html {
+      font-size: 10.5pt;
+      color-scheme: light;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+      font-weight: 400;
+      color: var(--ink-soft);
+      line-height: 1.84;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: "palt" 1;
+      font-kerning: normal;
+    }
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 14mm;
+      padding: var(--page-pad-y-top) var(--page-pad-x) var(--page-pad-y-bottom);
+      page-break-after: always;
+      break-after: page;
+      position: relative;
+      background: var(--paper);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    .sheet:last-child {
+      page-break-after: auto;
+      break-after: auto;
+      margin-bottom: 0;
+    }
+
+    .sheet--inner {
+      padding-top: var(--inner-top);
+      display: flex;
+      flex-direction: column;
+      min-height: var(--sheet-inner-min);
+    }
+    .sheet--inner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2.5mm;
+      background: var(--accent);
+    }
+
+    .page-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: var(--space-3);
+      padding-bottom: var(--space-3);
+      margin-bottom: var(--space-4);
+      border-bottom: 1px solid var(--line-strong);
+    }
+    .page-brand {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 12pt;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+    }
+    .page-brand-sub {
+      display: block;
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 7pt;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--ink-soft);
+      margin-top: 1mm;
+    }
+    /* 見出し左線＋字揃えを統一（lead / h2） */
+    .lead-label {
+      display: flex;
+      align-items: center;
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--accent);
+      padding: var(--head-band-pad-y) 0 var(--head-band-pad-y) var(--head-pad);
+      margin: 0 0 var(--after-lead);
+      letter-spacing: 0.08em;
+      line-height: 1.35;
+      border-left: var(--head-bar) solid var(--accent);
+      box-sizing: border-box;
+    }
+
+    h1.title-page {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 16pt;
+      color: var(--ink);
+      line-height: 1.38;
+      margin: 0 0 var(--after-title);
+      letter-spacing: 0.03em;
+      font-feature-settings: "palt" 1;
+    }
+
+    h2.section-title {
+      display: flex;
+      align-items: center;
+      font-family: "Noto Serif JP", serif;
+      font-weight: 700;
+      font-size: 11pt;
+      color: var(--ink);
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      margin: var(--section-gap) 0 var(--space-3);
+      padding: var(--head-band-pad-y) 0 var(--head-band-pad-y) var(--head-pad);
+      border-left: var(--head-bar) solid var(--accent);
+      background: linear-gradient(90deg, var(--accent-light) 0%, rgba(226, 236, 238, 0) 72%);
+      box-sizing: border-box;
+      font-feature-settings: "palt" 1;
+    }
+    /* 見出し直後のリード文（余白を揃える） */
+    .sheet--inner > h1.title-page + p.muted {
+      margin-top: 0;
+      margin-bottom: var(--space-4);
+    }
+
+    h3.block-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--accent);
+      margin: var(--space-4) 0 var(--space-2);
+    }
+    .card .block-title:first-child {
+      margin-top: 0;
+    }
+
+    p { margin: 0 0 var(--space-3); }
+    .muted { color: var(--ink-soft); font-size: 9.5pt; letter-spacing: 0.02em; }
+    .muted--tight-top {
+      margin-top: var(--space-1);
+    }
+    .small { font-size: 8.5pt; color: var(--ink-soft); line-height: 1.72; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    strong { color: var(--ink); font-weight: 700; }
+
+    ul.plain { margin: 0 0 var(--space-4); padding: 0; list-style: none; }
+    ul.plain li {
+      position: relative;
+      padding-left: 7mm;
+      margin-bottom: var(--space-2);
+      font-size: 9.5pt;
+    }
+    ul.plain li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 2.5mm;
+      height: 2.5mm;
+      border-radius: 1px;
+      background: var(--accent);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+      margin: var(--space-3) 0 var(--space-4);
+    }
+    .card-grid--split {
+      grid-template-columns: 1.2fr 1fr;
+      margin-top: var(--space-2);
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 2mm;
+      padding: var(--space-3) var(--space-4);
+      box-shadow: var(--shadow-card);
+    }
+    .card .card-h {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: var(--ink);
+      margin: 0 0 var(--space-2);
+      line-height: 1.35;
+    }
+    .card p { font-size: 8.5pt; color: var(--ink-soft); margin: 0; line-height: 1.68; }
+    .card--section-gap {
+      margin: var(--space-3) 0;
+    }
+
+    .feature-block {
+      margin-bottom: var(--space-4);
+      padding: var(--space-3) var(--space-4);
+      background: var(--paper-tint);
+      border-radius: 2mm;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .feature-block .num {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--accent);
+      display: inline-block;
+      padding: 0.5mm 2mm;
+      border-radius: 1mm;
+      margin-bottom: 1mm;
+    }
+    .feature-block .ttl {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 700;
+      font-size: 10.5pt;
+      color: var(--ink);
+      margin: 0 0 1mm;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 13mm 1fr;
+      gap: var(--space-3) var(--space-4);
+      align-items: start;
+      margin-bottom: var(--space-3);
+      padding: var(--space-3);
+      background: var(--white);
+      border-radius: 2mm;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .flow-step .badge {
+      width: 11mm;
+      height: 11mm;
+      border-radius: 2mm;
+      background: var(--accent-light);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      font-size: 8pt;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .flow-step .ttl {
+      font-weight: 700;
+      font-size: 10pt;
+      color: var(--ink);
+      margin: 0 0 1mm;
+    }
+    .flow-intro {
+      margin-bottom: var(--space-4);
+    }
+
+    .price-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      background: var(--accent-light);
+      border: 1px solid var(--line);
+      border-bottom: none;
+      color: var(--ink);
+      padding: var(--space-3) var(--space-4);
+      border-radius: 2mm 2mm 0 0;
+      margin-top: var(--space-2);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+    .price-banner strong {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .price-banner span.pill {
+      font-size: 7.5pt;
+      font-weight: 700;
+      background: var(--white);
+      padding: 1mm 2.5mm;
+      border-radius: 2mm;
+      border: 1px solid var(--line);
+    }
+
+    table.price {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+      margin: 0 0 var(--space-4);
+      border: 1px solid var(--line);
+      border-top: none;
+      border-radius: 0 0 2mm 2mm;
+      overflow: hidden;
+    }
+    table.price th,
+    table.price td {
+      border: 1px solid var(--line);
+      padding: 2mm 1.8mm;
+      text-align: center;
+      vertical-align: middle;
+    }
+    table.price thead th {
+      background: var(--table-head-bg);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 7.5pt;
+      letter-spacing: 0.04em;
+    }
+    table.price tbody td:first-child {
+      text-align: left;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    table.price .hl {
+      background: var(--accent-light);
+      font-weight: 700;
+      color: var(--ink);
+    }
+    table.price td.note-left { text-align: left; font-weight: 600; }
+
+    .cta-box {
+      background: var(--paper-tint);
+      border: 1px solid var(--line);
+      border-radius: 2mm;
+      padding: var(--space-4) var(--space-5);
+      text-align: center;
+      margin: var(--space-3) 0;
+    }
+    .cta-box .cta-k {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1.5mm;
+    }
+    .cta-box .tel {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 17pt;
+      color: var(--ink);
+      letter-spacing: 0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+    .cta-box .cta-sub { font-size: 8pt; color: var(--ink-soft); margin-top: 1mm; }
+
+    /* ----- 表紙（1枚目・プロ仕上げ） ----- */
+    .sheet--cover {
+      padding: var(--cover-pad-y) 0 var(--cover-pad-y-bottom);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      min-height: 297mm;
+      overflow: hidden;
+      background: linear-gradient(165deg, #fafcfc 0%, #ffffff 38%, #ffffff 100%);
+    }
+    .cover-stack {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .cover-header-inner,
+    .cover-main-inner,
+    .cover-bottom-inner {
+      max-width: 165mm;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1mm;
+    }
+    .cover-header {
+      position: relative;
+      flex-shrink: 0;
+      padding: 0 var(--page-pad-x) var(--cover-gap);
+      text-align: center;
+      color: var(--ink);
+    }
+    .cover-logo-img {
+      display: block;
+      width: min(100%, 60mm);
+      max-height: 27mm;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto var(--cover-gap-tight);
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.04));
+    }
+    .cover-kicker {
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--ink-muted);
+      margin: 0 0 var(--cover-gap-tight);
+      text-transform: none;
+    }
+    .cover-title-block {
+      margin-bottom: var(--cover-gap);
+    }
+    .cover-doc-sub {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.22em;
+      margin: 0 0 2mm;
+    }
+    .cover-doc-title {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 25pt;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.12;
+      letter-spacing: 0.06em;
+      font-feature-settings: "palt" 1;
+    }
+    .cover-tag {
+      font-size: 9.75pt;
+      font-weight: 600;
+      color: #4a5054;
+      letter-spacing: 0.02em;
+      margin: var(--cover-gap) 0 var(--cover-gap-tight);
+      line-height: 1.65;
+    }
+    .cover-hero-impact {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 16.5pt;
+      line-height: 1.5;
+      letter-spacing: 0.06em;
+      margin: 0 0 var(--cover-gap);
+      color: var(--ink);
+      font-feature-settings: "palt" 1;
+    }
+    .cover-hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2mm 2.5mm;
+      margin: 0;
+    }
+    .cover-hero-chips span {
+      font-size: 7.25pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 1.5mm 3.5mm;
+      border-radius: 999px;
+      background: var(--paper-tint);
+      border: none;
+      color: var(--ink-soft);
+    }
+    .cover-main {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+      display: block;
+      padding: var(--cover-gap-zone) var(--page-pad-x) 0;
+      max-width: 100%;
+    }
+    .cover-lead-box {
+      background: var(--paper-tint);
+      border: none;
+      border-radius: 3mm;
+      padding: var(--cover-box-pad-y) var(--cover-box-pad-x);
+      margin-bottom: var(--cover-gap-tight);
+      box-shadow: none;
+      position: relative;
+    }
+    .cover-lead-box p {
+      margin: 0;
+      padding-left: 0;
+      font-size: 10pt;
+      line-height: 1.88;
+      color: var(--ink-soft);
+      font-weight: 400;
+    }
+    .cover-disclaimer {
+      text-align: center;
+      color: var(--ink-faint);
+      margin-top: var(--cover-gap-tight);
+      padding-top: 0;
+      font-size: 8.25pt;
+      line-height: 1.55;
+      letter-spacing: 0.02em;
+    }
+    .cover-bottom {
+      position: relative;
+      z-index: 1;
+      padding: 0 var(--page-pad-x) 0;
+      margin-top: var(--cover-gap-zone);
+    }
+    .cover-note {
+      text-align: center;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: var(--cover-gap);
+      letter-spacing: 0.1em;
+    }
+    .cover-cta-wrap {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+    .cover-cta-wrap .cta-box {
+      margin: 0;
+      padding: var(--cover-box-pad-y) var(--cover-box-pad-x);
+      background: var(--paper-tint);
+      border: none;
+      border-radius: 3mm;
+      box-shadow: none;
+    }
+    .cover-cta-wrap .cta-box .cta-k {
+      font-size: 7.75pt;
+      letter-spacing: 0.14em;
+      margin-bottom: 2mm;
+    }
+    .cover-cta-wrap .cta-box .tel {
+      font-size: 18pt;
+      letter-spacing: 0.08em;
+      font-variant-numeric: tabular-nums;
+    }
+    .cover-address {
+      margin-top: var(--cover-gap);
+      text-align: center;
+      font-size: 8.25pt;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+    }
+    .cover-address strong { color: var(--ink); font-weight: 700; }
+
+    @supports (text-wrap: balance) {
+      .cover-doc-title,
+      .cover-hero-impact {
+        text-wrap: balance;
+      }
+    }
+
+    @media screen {
+      body { background: #fff; padding: 10mm 0; }
+      .sheet {
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        margin-bottom: 16mm;
+        border-radius: 1mm;
+      }
+    }
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      html {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        background: #fff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, "Noto Sans JP", Meiryo, sans-serif !important;
+        font-feature-settings: "palt" 1 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .sheet--cover {
+        background: #fff !important;
+      }
+      .cover-logo-img {
+        max-height: 19mm !important;
+        width: auto !important;
+        filter: none !important;
+      }
+      .cover-lead-box {
+        box-shadow: none !important;
+        background: #f5f5f5 !important;
+      }
+      .cover-cta-wrap .cta-box {
+        box-shadow: none !important;
+        background: #f5f5f5 !important;
+      }
+      .page-brand,
+      h1,
+      h2,
+      .cover-doc-title,
+      .cover-hero-impact,
+      .cta-box .tel,
+      .form-head h2,
+      .rules-h2 {
+        font-family: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, "Noto Serif JP", serif !important;
+      }
+      .sheet--rules .rules-h3 {
+        font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, "Noto Sans JP", Meiryo, sans-serif !important;
+      }
+      .sheet {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        min-height: 297mm !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        page-break-after: always;
+        break-after: page;
+      }
+      .sheet:last-child {
+        page-break-after: auto;
+        break-after: auto;
+      }
+      .sheet.sheet--cover {
+        min-height: 297mm;
+        overflow: visible !important;
+      }
+      .sheet--inner {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: var(--sheet-inner-min) !important;
+      }
+      .card,
+      .feature-block,
+      .flow-step,
+      .cover-lead-box,
+      .cover-cta-wrap,
+      .price-banner {
+        box-shadow: none !important;
+      }
+      table.price {
+        overflow: visible !important;
+      }
+      /* 孤児行・寡婦行を軽減（break-inside は長いブロックで余計な改ページを生むため使わない） */
+      p,
+      li {
+        orphans: 2;
+        widows: 2;
+      }
+      /* p.2：1枚に収める（ベース余白アップに合わせて僅かに緩める） */
+      .sheet--intro .page-top {
+        margin-bottom: 3mm !important;
+        padding-bottom: 2.5mm !important;
+      }
+      .sheet--intro .title-page {
+        margin-bottom: 3mm !important;
+      }
+      .sheet--intro .card-grid {
+        gap: 2.5mm !important;
+        margin: 2.5mm 0 3.5mm !important;
+      }
+      .sheet--intro .card {
+        padding: 2.5mm 3mm !important;
+      }
+      .sheet--intro .card .card-h {
+        margin-bottom: 1.2mm !important;
+      }
+      .sheet--intro h2.section-title {
+        margin-top: 3.5mm !important;
+        margin-bottom: 2.5mm !important;
+      }
+      .sheet--intro .plain li {
+        margin-bottom: 2mm !important;
+      }
+      .sheet--intro p {
+        margin-bottom: 3mm !important;
+      }
+      /* 料金ページ：1枚に収める */
+      .sheet--dense .page-top {
+        margin-bottom: 2.5mm !important;
+        padding-bottom: 2mm !important;
+      }
+      .sheet--dense .title-page {
+        margin-bottom: 2.5mm !important;
+        font-size: 13.5pt !important;
+      }
+      .sheet--dense .price-banner {
+        padding: 2.5mm 3.5mm !important;
+        margin-top: 1.2mm !important;
+      }
+      .sheet--dense table.price {
+        margin-bottom: 3mm !important;
+      }
+      .sheet--dense table.price th,
+      .sheet--dense table.price td {
+        padding: 1.4mm 1.4mm !important;
+      }
+      .sheet--dense h2.section-title {
+        margin-top: 2.5mm !important;
+        margin-bottom: 1.5mm !important;
+        padding: 1.5mm 0 1.5mm var(--head-pad) !important;
+      }
+      .sheet--dense .plain.small li {
+        margin-bottom: 1.2mm !important;
+      }
+      .sheet--dense .card--section-gap {
+        margin: 2.5mm 0 !important;
+      }
+      .sheet--dense .card-grid--split {
+        gap: 2.5mm !important;
+        margin: 2.5mm 0 3mm !important;
+      }
+      .sheet--dense .block-title {
+        margin: 2mm 0 0.6mm !important;
+      }
+      /* 塾則：印刷（他ページと同系の見出し・行間でA4 1枚） */
+      .sheet--rules {
+        background: #fff !important;
+        font-size: 8.05pt !important;
+        line-height: 1.53 !important;
+        padding: 4mm 11mm 4mm !important;
+        box-sizing: border-box !important;
+      }
+      .sheet--rules .page-top {
+        margin-bottom: 1mm !important;
+        padding-bottom: 0.8mm !important;
+      }
+      .sheet--rules .title-row {
+        margin-bottom: 0 !important;
+      }
+      .sheet--rules h1.title-page {
+        font-size: 13pt !important;
+        line-height: 1.22 !important;
+        margin-bottom: 1mm !important;
+      }
+      .sheet--rules .rules-lead-note {
+        font-size: 7.35pt !important;
+        line-height: 1.4 !important;
+        margin: 0 0 2mm !important;
+      }
+      .sheet--rules .rules-columns {
+        column-count: 1 !important;
+      }
+      .sheet--rules .rules-h2 {
+        font-size: 8.3pt !important;
+        padding: 0.4mm 0 0.4mm 2.5mm !important;
+        margin-bottom: 0.55mm !important;
+        line-height: 1.3 !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+      }
+      .sheet--rules .rules-h3 {
+        font-size: 7.65pt !important;
+        margin: 0.5mm 0 0.35mm !important;
+        line-height: 1.44 !important;
+      }
+      .sheet--rules .rules-content p {
+        margin: 0 0 0.55mm !important;
+        line-height: 1.52 !important;
+      }
+      .sheet--rules .rules-ol {
+        margin: 0 0 0.55mm !important;
+        padding-left: 3.6mm !important;
+      }
+      .sheet--rules .rules-ol li {
+        margin: 0 0 0.28mm !important;
+        line-height: 1.5 !important;
+      }
+      .sheet--rules .rules-block {
+        margin-bottom: 0.85mm !important;
+      }
+      .sheet.sheet--inner.sheet--form {
+        padding: var(--space-4) 11mm var(--space-5) !important;
+      }
+    }
+
+    .sheet--dense {
+      font-size: 10pt;
+      line-height: 1.74;
+    }
+    .sheet--dense .title-page { font-size: 14.5pt; }
+    .sheet--dense h2.section-title { font-size: 10pt; margin-top: var(--space-4); }
+    .sheet--dense .price-banner { padding: var(--space-3) var(--space-4); }
+    .sheet--dense table.price { font-size: 8pt; }
+
+    .title-row {
+      margin-bottom: var(--space-2);
+    }
+
+    /* 入塾申込書（記入しやすい行高・罫線） */
+    .sheet.sheet--inner.sheet--form {
+      padding: var(--space-4) var(--page-pad-x) var(--space-5);
+    }
+    .sheet--form {
+      font-size: 9.25pt;
+      line-height: 1.45;
+    }
+    .sheet--form .page-top {
+      margin-bottom: 2mm;
+      padding-bottom: 2mm;
+    }
+    .sheet--form .lead-label {
+      margin-bottom: 0.5mm;
+    }
+    .sheet--form .title-page {
+      font-size: 12pt;
+      margin-bottom: 1.5mm;
+      line-height: 1.25;
+    }
+    .form-guide {
+      border: 1px solid var(--line);
+      padding: 2mm 3mm;
+      margin-bottom: 2mm;
+      font-size: 7.75pt;
+      line-height: 1.45;
+      background: var(--white);
+    }
+    .form-guide ul {
+      margin: 0.5mm 0 0;
+      padding-left: 3mm;
+    }
+    .form-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 3mm;
+      margin-bottom: 2mm;
+      padding-bottom: 1.5mm;
+      border-bottom: 2px solid var(--ink);
+    }
+    .form-head h2 {
+      font-family: "Noto Serif JP", serif;
+      font-size: 12pt;
+      font-weight: 900;
+      margin: 0;
+      letter-spacing: 0.08em;
+      line-height: 1.15;
+    }
+    .form-head .juku-meta {
+      font-size: 7.75pt;
+      text-align: right;
+      line-height: 1.45;
+      flex-shrink: 0;
+    }
+    .form-row-date {
+      margin-bottom: 2mm;
+      font-size: 8.5pt;
+      font-weight: 700;
+    }
+    .form-row-date .u {
+      display: inline-block;
+      min-width: 12mm;
+      min-height: 4.5mm;
+      border-bottom: 0.6pt solid var(--ink);
+      margin: 0 1mm;
+      vertical-align: bottom;
+    }
+    .form-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5mm;
+    }
+    .form-table th,
+    .form-table td {
+      border: 1px solid var(--ink);
+      padding: 1.4mm 2mm;
+      vertical-align: top;
+    }
+    .form-table th {
+      width: 24%;
+      background: var(--paper-tint);
+      font-weight: 700;
+      font-size: 8pt;
+      text-align: left;
+    }
+    .form-req { color: #b00020; font-size: 7pt; font-weight: 700; }
+    .form-line {
+      display: block;
+      min-height: 6mm;
+      border-bottom: 0.6pt solid var(--ink-soft);
+      margin-top: 0.5mm;
+    }
+    .form-line--tall { min-height: 13mm; }
+    .form-inline {
+      display: inline-block;
+      min-width: 16mm;
+      min-height: 4.5mm;
+      border-bottom: 0.6pt solid var(--ink-soft);
+      margin: 0 1mm;
+      vertical-align: bottom;
+    }
+    .form-note {
+      font-size: 7.35pt;
+      color: var(--ink-soft);
+      margin-top: 0.5mm;
+      line-height: 1.4;
+    }
+    .form-chkline {
+      font-size: 8pt;
+      margin: 0.6mm 0;
+      line-height: 1.5;
+    }
+    .form-sep {
+      display: flex;
+      align-items: center;
+      margin: 2mm 0 1mm;
+      padding: var(--head-band-pad-y) 0 var(--head-band-pad-y) var(--head-pad);
+      border-left: var(--head-bar) solid var(--accent);
+      font-weight: 700;
+      font-size: 9pt;
+      line-height: 1.3;
+      box-sizing: border-box;
+    }
+    .form-office th { width: 18%; }
+    .form-subhead {
+      font-weight: 700;
+      margin: 1.5mm 0 0.6mm;
+      font-size: 8.25pt;
+      line-height: 1.3;
+    }
+    .sheet--form .form-kawai-note {
+      margin: 0 0 1mm;
+      font-size: 7.5pt;
+      line-height: 1.5;
+    }
+    .sheet--form .form-sheet-note {
+      margin-top: 1mm;
+      margin-bottom: 0;
+      font-size: 7.5pt;
+    }
+
+    /* ----- 塾則（パンフ他ページと統一：リード＋title-page＋section系見出し） ----- */
+    .sheet--rules {
+      font-size: 9.75pt;
+      line-height: 1.78;
+      background: #fff;
+      color: var(--ink-soft);
+    }
+    .sheet--rules .page-top {
+      margin-bottom: var(--space-3);
+      padding-bottom: var(--space-3);
+    }
+    .sheet--rules .title-row {
+      margin-bottom: var(--space-2);
+    }
+    .sheet--rules h1.title-page {
+      font-size: 15pt;
+      margin-bottom: var(--space-2);
+    }
+    .rules-lead-note {
+      font-size: 9pt;
+      margin: 0 0 var(--space-4);
+      letter-spacing: 0.02em;
+    }
+    .rules-columns {
+      column-count: 1;
+      max-width: 100%;
+    }
+    .rules-block {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 1.1rem;
+      vertical-align: top;
+    }
+    .rules-h2 {
+      display: flex;
+      align-items: center;
+      font-family: "Noto Serif JP", serif;
+      font-weight: 700;
+      font-size: 9.75pt;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin: 0 0 0.45rem;
+      padding: 0.28rem 0 0.28rem var(--head-pad);
+      border-left: var(--head-bar) solid var(--accent);
+      background: linear-gradient(90deg, var(--accent-light) 0%, rgba(226, 236, 238, 0) 72%);
+      line-height: 1.3;
+      box-sizing: border-box;
+      font-feature-settings: "palt" 1;
+    }
+    .rules-content {
+      padding-left: 0;
+    }
+    .rules-h3 {
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: 8.85pt;
+      color: var(--accent);
+      margin: 0.65rem 0 0.3rem;
+      line-height: 1.48;
+      letter-spacing: 0.02em;
+    }
+    .rules-h3:first-child {
+      margin-top: 0;
+    }
+    .rules-content p {
+      margin: 0 0 0.65rem;
+      text-align: left;
+      line-height: 1.75;
+      color: var(--ink-soft);
+    }
+    .rules-ol {
+      margin: 0 0 0.7rem;
+      padding: 0 0 0 1.6em;
+      list-style-position: outside;
+    }
+    .rules-ol li {
+      margin: 0 0 0.45rem;
+      line-height: 1.68;
+      color: var(--ink-soft);
+    }
+    .rules-ol li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- 表紙（全体を縦方向のおおよそ中央に配置） -->
+  <section class="sheet sheet--cover">
+    <div class="cover-stack">
+      <header class="cover-header">
+        <div class="cover-header-inner">
+          <img src="images/nagata-juku-logo.png" alt="永田塾" class="cover-logo-img" width="196" height="80" />
+          <p class="cover-kicker">大阪府八尾市　個別指導塾</p>
+          <div class="cover-title-block">
+            <p class="cover-doc-sub">ご家庭向け資料</p>
+            <h1 class="cover-doc-title">入塾のご案内</h1>
+          </div>
+          <p class="cover-tag">定期テストから受験まで、一人ひとりのペースで</p>
+          <p class="cover-hero-impact">基礎を固めて、<br />着実に伸ばす。</p>
+          <div class="cover-hero-chips" aria-hidden="true">
+            <span>ICT×診断</span>
+            <span>反復で定着</span>
+            <span>通い放題・定額</span>
+          </div>
+        </div>
+      </header>
+      <div class="cover-main">
+        <div class="cover-main-inner">
+          <div class="cover-lead-box">
+            <p>お子さまのペースを大切に、基礎から丁寧に。ICTで弱点を可視化し、反復で定着を図ります。定期テストから受験まで、一貫してサポートします。</p>
+          </div>
+          <p class="small cover-disclaimer">※料金・条件は変更になる場合があります。最新の内容はホームページまたはお電話でご確認ください。</p>
+        </div>
+      </div>
+      <div class="cover-bottom">
+        <div class="cover-bottom-inner">
+          <p class="cover-note">無料体験・ご相談　随時承っております</p>
+          <div class="cover-cta-wrap">
+            <div class="cta-box">
+              <p class="cta-k">お電話でのお問合せ</p>
+              <p class="tel">072-940-7683</p>
+              <p class="cta-sub">受付 15:00〜22:00（定休：日曜・祝日）</p>
+              <p class="cta-sub" style="margin-top:2.5mm">メール　mail@nagata-juku.net</p>
+            </div>
+          </div>
+          <p class="cover-address">
+            <strong>〒581-0071 大阪府八尾市北久宝寺1-4-80</strong><br />
+            近鉄久宝寺口駅から徒歩約5分
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- p.2 -->
+  <section class="sheet sheet--inner sheet--intro">
+    <div class="page-top">
+      <div>
+        <span class="page-brand">永田塾<span class="page-brand-sub">入塾案内資料</span></span>
+      </div>
+    </div>
+    <div class="title-row">
+      <span class="lead-label">はじめに</span>
+    </div>
+    <h1 class="title-page">永田塾について</h1>
+
+    <p class="muted">
+      永田塾は、大阪府八尾市で学習塾を営んでいます。小学生から高校生までを対象に、学校の授業や定期テスト、受験に向けた学びを、個別のペースで支えています。お子さまの性格や生活リズム、ご家庭のご希望も踏まえながら、無理のない範囲で続けられる学習を一緒に組み立てます。
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-h">ICT×診断</p>
+        <p>つまずきをデータで把握し、お子さま一人ひとりに合わせた学びを支えます。</p>
+      </div>
+      <div class="card">
+        <p class="card-h">反復で基礎定着</p>
+        <p>飽きさせない工夫と十分な反復で、基礎を確実に身につけます。</p>
+      </div>
+      <div class="card">
+        <p class="card-h">一人ひとりに合わせた指導</p>
+        <p>進捗管理から保護者面談、カリキュラムまで、一気通貫でサポートします。</p>
+      </div>
+      <div class="card">
+        <p class="card-h">通い放題・定額</p>
+        <p>複数科目でも追加の授業料はかかりません。週に何回通っても月謝は同じです。</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">こんなお子さまに</h2>
+    <ul class="plain">
+      <li>志望校対策の受験指導、学校の進度に沿った定期テスト対策</li>
+      <li>理解できるところまでさかのぼってつなぎ直す指導</li>
+      <li>通う曜日・時間を選べる（部活との両立もしやすい）</li>
+      <li>苦手科目の克服、得意教科のさらなる伸長</li>
+    </ul>
+    <p class="muted muted--tight-top">
+      学習に向き合える態度を整え、反復で点数アップにつなげます。小さな成功体験を重ねながら、力を伸ばせる環境です。ご家庭には、学習の様子や今後の方針を分かりやすくお伝えし、安心してお任せいただけるよう心がけています。
+    </p>
+
+    <h2 class="section-title">指導の考え方（抜粋）</h2>
+    <p>
+      多くのつまずきは「難問」よりも<strong>「基礎の抜け」</strong>に起因していると考え、ICTで弱点を可視化したうえで、反復により基礎を固め、応用・入試へとつなげます。
+    </p>
+    <p>
+      暗記や演習だけで終わらせず、「なぜそうなるか」を言葉にできるところまで伴走します。分からない単元は飛ばさず、理解の土台ができるまで丁寧に積み上げることで、テスト本番や志望校対策でも力を発揮しやすい学びを目指します。
+    </p>
+    <p class="small">※詳しくはホームページの「授業・料金」「代表者ごあいさつ」もご覧ください。</p>
+
+  </section>
+
+  <!-- p.3 -->
+  <section class="sheet sheet--inner">
+    <div class="page-top">
+      <div>
+        <span class="page-brand">永田塾<span class="page-brand-sub">入塾案内資料</span></span>
+      </div>
+    </div>
+    <div class="title-row">
+      <span class="lead-label">私たちのこと</span>
+    </div>
+    <h1 class="title-page">永田塾の特長</h1>
+
+    <div class="feature-block">
+      <div class="num">01</div>
+      <p class="ttl">塾長が全生徒を直接指導</p>
+      <p class="muted" style="margin-bottom:1.5mm">進捗管理・カリキュラム・保護者面談まで、すべて塾長が担当します</p>
+      <p>アルバイト講師任せにしません。塾長が一人ひとりの進捗を把握し、最適なカリキュラムを組み、保護者面談にも直接対応します。指導の一貫性を保ち、成果につなげます。</p>
+      <ul class="plain small" style="margin-top:2mm">
+        <li>全生徒の進捗を塾長が直接管理</li>
+        <li>保護者面談も塾長が担当</li>
+        <li>ICTを活用し、弱点単元の把握や復習の効率化に取り組みます</li>
+      </ul>
+    </div>
+
+    <div class="feature-block">
+      <div class="num">02</div>
+      <p class="ttl">授業料定額・通い放題</p>
+      <p class="muted" style="margin-bottom:1.5mm">複数科目OK・週に何回通っても月謝は定額</p>
+      <p>月謝は定額制です。受講回数や科目数にかかわらず、追加の授業料はいただきません。必要な分だけ学べる環境です。自習室のご利用も可能です。</p>
+    </div>
+
+    <div class="feature-block">
+      <div class="num">03</div>
+      <p class="ttl">ICTの活用</p>
+      <p class="muted" style="margin-bottom:1.5mm">タブレット・学習アプリと紙教材の組み合わせ</p>
+      <p>紙の教材に加え、タブレット・学習アプリ・Web教材などを場面に応じて組み合わせます。ご自宅からのオンライン受講にも対応しています（パソコン・タブレット）。</p>
+    </div>
+
+  </section>
+
+  <!-- p.4 -->
+  <section class="sheet sheet--inner">
+    <div class="page-top">
+      <div>
+        <span class="page-brand">永田塾<span class="page-brand-sub">入塾案内資料</span></span>
+      </div>
+    </div>
+    <div class="title-row">
+      <span class="lead-label">スケジュール</span>
+    </div>
+    <h1 class="title-page">ご入塾までの流れ</h1>
+    <p class="muted flow-intro">
+      入塾のご案内は随時行っております。募集状況は時期により異なります。まずはお気軽にお問合せください。
+    </p>
+
+    <div class="flow-step">
+      <div class="badge">01</div>
+      <div>
+        <p class="ttl">お問合せ</p>
+        <p class="small">ホームページのフォーム、メール（mail@nagata-juku.net）、またはお電話で、ご相談・無料体験をお申し込みいただけます。072-940-7683（月〜土 15:00〜22:00）</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="badge">02</div>
+      <div>
+        <p class="ttl">個別面談</p>
+        <p class="small">成績・学習状況・ご希望を伺い、お子さまに合った方針をご提案します。直近のテストの解答や通知表があると、よりスムーズです。</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="badge">03</div>
+      <div>
+        <p class="ttl">体験授業</p>
+        <p class="small">通常授業と同じ時間枠での無料体験が可能です。体験後の強引な勧誘はいたしません。</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="badge">04</div>
+      <div>
+        <p class="ttl">授業後面談</p>
+        <p class="small">体験の様子をご報告し、改めてご提案します。ご納得いただいたうえで入塾のお手続きとなります。押し売りはいたしません。</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="badge">05</div>
+      <div>
+        <p class="ttl">入塾</p>
+        <p class="small">月の途中からの入塾にも対応しております。翌日より授業を開始できる場合もあります。入塾金は10,000円です。教材費等の詳細は、ご案内の際にご説明します。</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- p.5 -->
+  <section class="sheet sheet--inner sheet--dense">
+    <div class="page-top">
+      <div>
+        <span class="page-brand">永田塾<span class="page-brand-sub">入塾案内資料</span></span>
+      </div>
+    </div>
+    <div class="title-row">
+      <span class="lead-label">料金・連絡先</span>
+    </div>
+    <h1 class="title-page">授業料・教室案内</h1>
+
+    <div class="price-banner">
+      <strong>通いホーダイコース</strong>
+      <span class="pill">週何回でも定額</span>
+    </div>
+    <table class="price">
+      <thead>
+        <tr>
+          <th>学年（対象科目）</th>
+          <th>1科目</th>
+          <th>2科目</th>
+          <th class="hl">3科目〜</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>小学生<span style="font-weight:500;opacity:0.8">（英・算・国）</span></td>
+          <td>5,900円</td>
+          <td>9,900円</td>
+          <td class="hl">13,900円</td>
+        </tr>
+        <tr>
+          <td>中学生<span style="font-weight:500;opacity:0.8">（英・数・国・理・社）</span></td>
+          <td>12,900円</td>
+          <td>18,900円</td>
+          <td class="hl">24,300円</td>
+        </tr>
+        <tr>
+          <td>高校生<span style="font-weight:500;opacity:0.8">（英・数・国・理・社）</span> <span style="font-size:7pt;color:var(--accent);font-weight:700">※紹介のみ</span></td>
+          <td>14,900円</td>
+          <td>24,900円</td>
+          <td class="hl">29,700円</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="note-left" style="background:var(--paper-tint)">
+            <strong style="color:var(--ink)">プログラミング</strong>（別コース）　<span style="color:var(--ink);font-weight:900">10,500円／月</span>
+            <span style="opacity:0.85;font-weight:500">　※上記「通いホーダイ」の学習塾料金とは別コースです</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">お申し込みにあたって</h2>
+    <ul class="plain small">
+      <li>授業料は定額です。週に何度通っても追加の授業料はかかりません</li>
+      <li>別途、<strong>入塾金（10,000円）・教材費・教室維持費（月額1,000円）</strong>がかかります</li>
+      <li>高校生は<strong>卒業生または塾生のご紹介に限り</strong>募集しております</li>
+      <li>料金・条件は変更になる場合があります。最新の内容はお問合せください</li>
+    </ul>
+
+    <div class="card card--section-gap">
+      <p class="card-h">プログラミング（コードアドベンチャー八尾校）</p>
+      <p class="small" style="margin:0">マインクラフトを教材としたコースです。内容や無料体験については、特設ページをご覧ください。</p>
+      <p class="small" style="margin-top:2mm;font-weight:700;color:var(--accent)">https://codeadventure.jp/lp/yao/</p>
+    </div>
+
+    <h2 class="section-title">教室案内・お問合せ</h2>
+    <div class="card-grid card-grid--split">
+      <div class="card">
+        <h3 class="block-title" style="margin-top:0">所在地</h3>
+        <p class="small" style="margin:0;color:var(--ink-soft)">
+          <strong style="color:var(--ink)">〒581-0071<br />大阪府八尾市北久宝寺1-4-80</strong><br />近鉄久宝寺口駅から徒歩約5分
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="block-title" style="margin-top:0">連絡先</h3>
+        <p class="small" style="margin:0">
+          <strong style="color:var(--ink)">072-940-7683</strong><br />
+          <strong style="color:var(--ink)">mail@nagata-juku.net</strong><br />受付 15:00〜22:00（日祝定休）<br />
+          お問合せは、サイトの「お問合せ」ページから可能です。原則<strong>当日〜翌日中に塾長より返信</strong>いたします。<br />
+          募集枠・体験の日程も、こちらからお受けしております。
+        </p>
+      </div>
+    </div>
+
+    <h3 class="block-title">公式 Instagram</h3>
+    <p class="small" style="margin-bottom:2mm">https://www.instagram.com/nagatajuku.yao/</p>
+
+  </section>
+
+  <!-- p.6–7 入塾申込書（片面印刷・2枚続き・手書き用） -->
+  <section class="sheet sheet--inner sheet--form">
+    <div class="page-top">
+      <div>
+        <span class="page-brand">永田塾<span class="page-brand-sub">入塾案内資料</span></span>
+      </div>
+    </div>
+    <p class="lead-label">書類</p>
+    <h1 class="title-page">入塾申込書</h1>
+
+    <div class="form-guide">
+      <strong>＜記入事項＞</strong>
+      <ul>
+        <li>黒色または青色のボールペン等でご記入ください。</li>
+        <li>太枠で囲まれた部分にご記入ください。</li>
+        <li><span class="form-req">※</span>印の項目は必ずご記入ください。□の項目はチェック（レ）でお願いします。</li>
+      </ul>
+    </div>
+
+    <div class="form-head">
+      <h2>入塾申込書</h2>
+      <div class="juku-meta">
+        <strong>永田塾</strong><br />
+        ℡ 072-940-7683<br />
+        mail@nagata-juku.net<br />
+        〒581-0071 大阪府八尾市北久宝寺1-4-80
+      </div>
+    </div>
+
+    <p class="form-row-date">
+      入塾日　令和<span class="u"></span>年<span class="u"></span>月<span class="u"></span>日
+    </p>
+
+    <p class="form-sep">お子様について</p>
+    <table class="form-table">
+      <tr>
+        <th>生徒氏名<span class="form-req">※</span></th>
+        <td>
+          氏名<span class="form-line"></span>
+          <span class="form-note">ふりがな</span><span class="form-line"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>生年月日<span class="form-req">※</span></th>
+        <td>西暦<span class="form-inline"></span>年<span class="form-inline"></span>月<span class="form-inline"></span>日</td>
+      </tr>
+      <tr>
+        <th>学校名又は園名<span class="form-req">※</span></th>
+        <td>
+          正式名称<span class="form-line"></span>
+          <span class="form-note">よみがな</span><span class="form-line"></span>
+          学年　年少□　年中□　年長□　（<span class="form-inline" style="min-width:8mm"></span>）年
+        </td>
+      </tr>
+      <tr>
+        <th>住所<span class="form-req">※</span></th>
+        <td>〒<span class="form-inline"></span>ー<span class="form-inline"></span><span class="form-line"></span><span class="form-line"></span></td>
+      </tr>
+      <tr>
+        <th>連絡先<span class="form-req">※</span></th>
+        <td><span class="form-line"></span><span class="form-note">（自宅電話等）</span></td>
+      </tr>
+      <tr>
+        <th>第2連絡先</th>
+        <td>（携帯電話等）<span class="form-line"></span></td>
+      </tr>
+      <tr>
+        <th>メールアドレス<span class="form-req">※</span></th>
+        <td>
+          （PCメール）<span class="form-line"></span>
+          <p class="form-note">当塾からお知らせメールをお送りする場合があります。よろしければ □ にチェックを入れてください。</p>
+        </td>
+      </tr>
+      <tr>
+        <th>他の習い事</th>
+        <td><span class="form-line"></span></td>
+      </tr>
+    </table>
+
+    <p class="form-sep">保護者</p>
+    <table class="form-table">
+      <tr>
+        <th>保護者氏名<span class="form-req">※</span></th>
+        <td>
+          氏名<span class="form-line"></span>
+          <span class="form-note">ふりがな</span><span class="form-line"></span>
+        </td>
+      </tr>
+      <tr>
+        <th>続柄<span class="form-req">※</span></th>
+        <td>（<span class="form-inline" style="min-width:25mm"></span>）</td>
+      </tr>
+    </table>
+
+    <p class="small form-sheet-note">※続きの用紙に、家族構成・学習のご希望などをご記入ください</p>
+
+  </section>
+
+  <section class="sheet sheet--inner sheet--form">
+    <div class="page-top">
+      <div>
+        <span class="page-brand">永田塾<span class="page-brand-sub">入塾案内資料</span></span>
+      </div>
+    </div>
+    <p class="lead-label">書類</p>
+    <h1 class="title-page">入塾申込書（続き）</h1>
+
+    <p class="form-sep">家族構成</p>
+    <p class="form-note" style="margin-bottom:1mm">
+      該当する場合は□にチェックのうえ、お名前・人数・続柄・生年月日などをご記入ください（枠に収まらない場合は別紙可）。
+    </p>
+    <div class="form-chkline">□ 兄弟・姉妹（<span class="form-inline" style="min-width:6mm"></span>人）</div>
+    <div class="form-chkline">□ 父（氏名）<span class="form-line"></span>　生年月日 西暦<span class="form-inline"></span>年<span class="form-inline"></span>月<span class="form-inline"></span>日</div>
+    <div class="form-chkline">□ 母（氏名）<span class="form-line"></span>　生年月日 西暦<span class="form-inline"></span>年<span class="form-inline"></span>月<span class="form-inline"></span>日</div>
+    <div class="form-chkline">□ 当塾に家族・親戚がいる</div>
+    <span class="form-line form-line--tall"></span>
+
+    <p class="form-sep">学習について</p>
+    <table class="form-table">
+      <tr>
+        <th>希望コース</th>
+        <td><span class="form-line"></span></td>
+      </tr>
+      <tr>
+        <th>希望曜日<span class="form-req">※</span></th>
+        <td class="form-chkline">月□　火□　水□　木□　金□　土□　日□</td>
+      </tr>
+    </table>
+
+    <p class="form-subhead">入塾動機（あてはまるものにチェック）</p>
+    <div class="form-chkline">□ HPを見て　□ 広告チラシを見て　□ 知り合いに紹介されて　□ その他（<span class="form-inline" style="min-width:28mm"></span>）</div>
+    <p class="form-chkline" style="margin-top:0.3mm">紹介者：<span class="form-inline" style="min-width:40mm"></span></p>
+
+    <p class="form-subhead">要望等</p>
+    <span class="form-line"></span><span class="form-line form-line--tall"></span>
+
+    <p class="form-chkline" style="margin-top:1mm">□ 退塾する場合は、1か月前までにご連絡ください（確認用）。</p>
+
+    <p class="form-sep">お支払い（カワイアシスト）</p>
+    <p class="small form-kawai-note">
+      カワイアシストをご利用の場合、取り扱い金融機関の一覧は分量が多いため、<strong>印刷済みの一覧</strong>が必要な方は事務所までお申し出ください（お預かりしているPDFと同内容をご用意できます）。
+    </p>
+
+    <p class="form-sep">塾事務記入欄</p>
+    <table class="form-table form-office">
+      <tr><th>記入者</th><td><span class="form-line"></span></td></tr>
+      <tr><th>コード</th><td><span class="form-line"></span></td></tr>
+      <tr><th>担当者</th><td><span class="form-line"></span></td></tr>
+      <tr><th>保管場所</th><td><span class="form-line"></span></td></tr>
+      <tr><th>受付日</th><td>（西暦<span class="form-inline"></span>年<span class="form-inline"></span>月<span class="form-inline"></span>日）</td></tr>
+    </table>
+
+  </section>
+
+  <!-- 塾則（内ページと同じヘッダー・見出しトーン） -->
+  <section class="sheet sheet--inner sheet--rules">
+    <div class="page-top">
+      <div>
+        <span class="page-brand">永田塾<span class="page-brand-sub">入塾案内資料</span></span>
+      </div>
+    </div>
+
+    <div class="title-row">
+      <span class="lead-label">規程</span>
+    </div>
+    <h1 class="title-page">永田塾塾則</h1>
+    <p class="muted rules-lead-note">入塾案内に同封の資料</p>
+
+    <div class="rules-columns">
+      <section class="rules-block" aria-labelledby="r1">
+        <h2 id="r1" class="rules-h2">１条　対象</h2>
+        <div class="rules-content">
+          <p>永田塾の対象となる生徒は、一人でトイレに行ける幼児から、大学受験を目指す十代の生徒までです。授業中に平静を保って受講いただけない場合は、ご入塾をお断りすることがあります。</p>
+        </div>
+      </section>
+
+      <section class="rules-block" aria-labelledby="r2">
+        <h2 id="r2" class="rules-h2">２条　授業</h2>
+        <div class="rules-content">
+          <h3 class="rules-h3">①　通塾するにあたっての規則</h3>
+          <ol class="rules-ol">
+            <li>礼儀作法を正しくする。「挨拶をはっきり言う」「言葉遣いをしっかりする」など</li>
+            <li>授業に関係のないものを持ち込まない。特に不要な金品の持ち込みは禁止とします。紛失した場合も、責任を負いかねます。</li>
+            <li>身だしなみは学生らしいものにする。</li>
+            <li>小中学生の染毛・ピアスは禁止する。</li>
+            <li>授業前に携帯電話の電源を必ず切っておく。</li>
+            <li>飲み物を持参の場合は、蓋のできる「お茶」「水」のみとする。</li>
+            <li>授業終了後は速やかに帰宅する。</li>
+            <li>寄り道・寄り店をしない。</li>
+            <li>自習室での私語は厳禁です。</li>
+            <li>以上、常識的な態度をもって授業に臨むこと。</li>
+          </ol>
+          <h3 class="rules-h3">②　欠席・振替について</h3>
+          <ol class="rules-ol">
+            <li>欠席の事前連絡があれば、振替授業を行います。</li>
+            <li>無断欠席の場合は、振替授業を実施いたしかねます。</li>
+            <li>連絡のない遅刻の場合、その日の授業には参加できません。</li>
+          </ol>
+          <h3 class="rules-h3">③　その他注意事項</h3>
+          <ol class="rules-ol">
+            <li>連絡事項は、教室への掲示またはプリントの配布によりお知らせします。</li>
+            <li>塾の備品を汚損・破損しないよう心がけること。</li>
+            <li>原則的に祝日は休塾日です。</li>
+            <li>意欲のない者、塾の指示に従わない者、周りの生徒に迷惑をかける者、または上記塾則を守れない者は退塾していただきます。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="rules-block" aria-labelledby="r3">
+        <h2 id="r3" class="rules-h2">３条　授業料・その他費用について</h2>
+        <div class="rules-content">
+          <h3 class="rules-h3">①　毎月の授業料（口座振替・自動引き落とし）</h3>
+          <p>毎月3日（金融機関の休日にあたる場合は前後することがあります）に、当月分のお月謝を自動引き落としさせていただきます。未納の場合、再引き落としはいたしませんので、その際は月謝袋にて徴収いたします。（※資金不足の場合、手数料として200円をいただくことがあります。あらかじめご了承ください。）</p>
+          <p>なお、入塾金（10,000円）・教材管理費・初回月謝は現金にて徴収いたします。預金口座振替依頼書にご記入のうえ、毎月3日までに塾へご提出いただけた場合、翌月分から自動引き落としの対象となります。</p>
+          <h3 class="rules-h3">②　教室維持費</h3>
+          <p>教室維持費として、毎月1,000円をお納めいただきます。</p>
+          <h3 class="rules-h3">③　講習会</h3>
+          <p>中学生の年三回の講習会は通常授業の一環です。やむを得ない事情がある場合を除き、原則として参加していただきます。（※講習会費は別途必要です。講習会費袋にて徴収いたします。）</p>
+          <h3 class="rules-h3">④　滞納時の取り扱い</h3>
+          <p>授業料の滞納が2か月以上にわたる場合は、原則として停塾処分とさせていただきます。ただし、納入方法については、個別にご相談に応じられる場合がありますので、一度お問合せください。</p>
+          <h3 class="rules-h3">⑤　退塾時</h3>
+          <p>退塾届にご記入のうえ、必ず1か月前までにご提出ください。自動引き落とし完了後の返金はいたしかねますので、退塾は次月となります。あらかじめご了承ください。</p>
+          <h3 class="rules-h3">⑥　休塾時</h3>
+          <p>授業を1か月以上休塾される場合、在籍料として月額2,000円をいただきます。</p>
+        </div>
+      </section>
+
+      <section class="rules-block" aria-labelledby="r4">
+        <h2 id="r4" class="rules-h2">４条　警報発令時の対応</h2>
+        <div class="rules-content">
+          <h3 class="rules-h3">①　暴風警報</h3>
+          <p>授業開始1時間前の時点で暴風警報が発令されている場合、その日の授業は休講とします。この場合、振替授業はありません。あらかじめご了承ください。</p>
+          <h3 class="rules-h3">②　その他警報</h3>
+          <p>原則として授業は開講します。ただし、お住まいの環境によっては、お子さまの外出が危険な場合もあります。そのような場合は各ご家庭のご判断にお任せしますが、欠席される場合はご連絡ください。</p>
+          <h3 class="rules-h3">③　注意報発令時</h3>
+          <p>注意報の種類にかかわらず、開講いたします。</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</body>
+</html>

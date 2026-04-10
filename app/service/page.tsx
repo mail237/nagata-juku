@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const flow = [
-  { step: '01', title: 'お問い合わせ', desc: 'フォームまたはお電話にてご連絡ください。' },
+  { step: '01', title: 'お問合せ', desc: 'フォームまたはお電話にてご連絡ください。' },
   { step: '02', title: '無料体験授業', desc: '実際に授業を体験していただきます。完全無料・勧誘なし。' },
   { step: '03', title: 'カウンセリング', desc: '現状の学習状況・目標をお聞きし、最適なプランをご提案。' },
   { step: '04', title: 'ご入塾', desc: '月の途中からでも翌日から授業開始可能。' },
@@ -116,7 +116,7 @@ export default function ServicePage() {
                   <ul className="flex flex-col gap-1">
                     {[
                       '授業料は定額で週に何度でも通えます',
-                      '別途、入会金・教材費・教室維持費（1,000円/月）がかかります',
+                      '別途、入塾金（10,000円）・教材費・教室維持費（1,000円/月）がかかります',
                       '高校生は卒業生または塾生紹介のみの募集となります',
                       'プログラミング（10,500円/月）は通いホーダイの学習塾料金とは別コースです',
                     ].map((note, i) => (
@@ -131,7 +131,7 @@ export default function ServicePage() {
 
             <FadeInSection delay={0.1} className="text-center">
               <p className="text-xs text-[#777777] mb-5">
-                料金についてのご不明点は、お気軽にお問い合わせください。
+                料金についてのご不明点は、お気軽にお問合せください。
               </p>
               <Link
                 href="/contact"

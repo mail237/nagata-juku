@@ -4,7 +4,12 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { NAV_LINKS } from '@/lib/constants';
+import { HEADER_NAV_LINKS } from '@/lib/constants';
+
+function isNavLinkActive(pathname: string, href: string): boolean {
+  if (href === '/') return pathname === '/';
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 /** iOS / 一部ブラウザで window.scrollY だけだと 0 のままになることがある */
 function getScrollY(): number {
@@ -80,8 +85,8 @@ export default function Header() {
 
           {/* デスクトップ ナビ */}
           <nav className="hidden lg:flex items-center gap-8">
-            {NAV_LINKS.map((link) => {
-              const active = pathname.startsWith(link.href);
+            {HEADER_NAV_LINKS.map((link) => {
+              const active = isNavLinkActive(pathname, link.href);
               return (
                 <Link
                   key={link.href}
@@ -177,8 +182,8 @@ export default function Header() {
               </div>
 
               <div className="flex flex-col flex-1 p-6 gap-1">
-                {NAV_LINKS.map((link) => {
-                  const active = pathname.startsWith(link.href);
+                {HEADER_NAV_LINKS.map((link) => {
+                  const active = isNavLinkActive(pathname, link.href);
                   return (
                     <Link
                       key={link.href}
