@@ -1,6 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
-
-const DEFAULT_TO = 'mail@nagata-juku.net';
+type Env = {
+  RESEND_API_KEY?: string;
+  CONTACT_EMAIL_FROM?: string;
+  CONTACT_EMAIL_TO?: string;
+};
 
 type Body = {
   name?: string;
@@ -13,17 +15,41 @@ type Body = {
   message?: string;
 };
 
-export async function POST(req: NextRequest) {
+const DEFAULT_TO = 'mail@nagata-juku.net';
+
+// Cloudflare Pages Functions entrypoint
+export const onRequestPost = async (context: {
+  request: Request;
+  env: Env;
+}) => {
+  const { request, env } = context;
   let body: Body;
   try {
-    body = await req.json();
+    body = (await request.json()) as Body;
   } catch {
-    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+    return new Response(JSON.stringify({ error: 'Invalid JSON' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+    });
   }
 
   const { name, email, phone, grade, inquiry, message, furigana, subjects } = body;
   if (!name?.trim() || !email?.trim() || !phone?.trim() || !grade?.trim() || !inquiry?.trim()) {
-    return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    return new Response(JSON.stringify({ error: 'Missing required fields' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+    });
+  }
+
+  const apiKey = env.RESEND_API_KEY;
+  const from = env.CONTACT_EMAIL_FROM;
+  const to = env.CONTACT_EMAIL_TO?.trim() || DEFAULT_TO;
+
+  if (!apiKey || !from) {
+    return new Response(JSON.stringify({ ok: false, code: 'EMAIL_NOT_CONFIGURED' }), {
+      status: 503,
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+    });
   }
 
   const text = [
@@ -38,14 +64,6 @@ export async function POST(req: NextRequest) {
   ]
     .filter(Boolean)
     .join('\n');
-
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.CONTACT_EMAIL_FROM;
-  const to = process.env.CONTACT_EMAIL_TO?.trim() || DEFAULT_TO;
-
-  if (!apiKey || !from) {
-    return NextResponse.json({ ok: false, code: 'EMAIL_NOT_CONFIGURED' as const }, { status: 503 });
-  }
 
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -65,8 +83,15 @@ export async function POST(req: NextRequest) {
   if (!res.ok) {
     const errText = await res.text();
     console.error('Resend API error:', res.status, errText);
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 502 });
+    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+      status: 502,
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+    });
   }
 
-  return NextResponse.json({ ok: true });
-}
+  return new Response(JSON.stringify({ ok: true }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+  });
+};
+

@@ -12,6 +12,13 @@ git commit -m "update: 文言修正"
 git push
 ```
 
+## Pages（静的）ビルド設定
+
+Cloudflare Pages の Build 設定を以下にします。
+
+- **Build command**: `npm run build`
+- **Build output directory**: `out`
+
 ## お問合せフォーム（Resend）
 
 Cloudflare Pages の環境変数に以下を設定します。
@@ -22,10 +29,11 @@ Cloudflare Pages の環境変数に以下を設定します。
 
 ## 旧サイト移管向けリダイレクト
 
-コード側で最低限の互換リダイレクトを用意しています。
+Cloudflare Pages のリダイレクト（`public/_redirects`）で最低限の互換リダイレクトを用意しています。
 
 - `/feature` → `/service`（301）
-- `http` → `https`（301、Cloudflare 側でも通常は強制）
+- `http` → `https`（Cloudflare 側で通常は強制）
+- `/nyujuku-annai` → `/nyujuku-annai.html`（301）
 
-実装: `middleware.ts` と `next.config.mjs`（両方に入れてあります）
+実装: `public/_redirects` と `next.config.mjs`
 
