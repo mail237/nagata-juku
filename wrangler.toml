@@ -3,3 +3,8 @@
 name = "nagata-juku"
 compatibility_date = "2024-12-01"
 pages_build_output_dir = "./out"
+
+# 平文の環境変数は wrangler に書く（ダッシュボードは Secret のみ追加可）。
+# Resend で許可した送信元アドレスに合わせて変更してください。
+[vars]
+CONTACT_EMAIL_FROM = "永田塾 <mail@nagata-juku.net>"
