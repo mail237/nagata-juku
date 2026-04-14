@@ -84,7 +84,7 @@ export default function ServicePage() {
                     </thead>
                     <tbody>
                       {[
-                        { grade: '小学生', subjects: '英・算・国', p1: '5,500円', p2: '9,900円', p3: '13,900円' },
+                        { grade: '小学生', subjects: '英・算・国', p1: '5,900円', p2: '9,900円', p3: '13,900円' },
                         { grade: '中学生', subjects: '英・数・国・理・社', p1: '12,900円', p2: '18,900円', p3: '24,300円' },
                         { grade: '高校生', subjects: '英・数・国・理・社', p1: '14,900円', p2: '24,900円', p3: '29,700円', note: true },
                         {
