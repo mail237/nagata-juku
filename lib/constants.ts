@@ -22,7 +22,7 @@ export const CODE_ADVENTURE_YAO_LP = 'https://codeadventure.jp/lp/yao/' as const
 export const VACANCY_ROWS = [
   { label: '高校生', status: '満席' },
   { label: '中学生', status: '満席' },
-  { label: '小学生', status: '満席' },
+  { label: '小学生', status: '残り一席' },
   { label: 'プログラミング', status: '残り一席' },
 ] as const;
 
