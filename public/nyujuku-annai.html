@@ -650,25 +650,27 @@
         margin: 0 !important;
         box-shadow: none !important;
         border-radius: 0 !important;
-        min-height: 297mm !important;
-        height: auto !important;
+        /* A4ぴったりに固定（はみ出し→空白ページ化を防ぐ） */
+        height: 297mm !important;
         max-height: none !important;
-        overflow: visible !important;
+        overflow: hidden !important;
         page-break-after: always;
         break-after: page;
+        box-sizing: border-box !important;
       }
       .sheet:last-child {
         page-break-after: auto;
         break-after: auto;
       }
       .sheet.sheet--cover {
-        min-height: 297mm;
-        overflow: visible !important;
+        height: 297mm !important;
+        overflow: hidden !important;
       }
       .sheet--inner {
         display: flex !important;
         flex-direction: column !important;
-        min-height: var(--sheet-inner-min) !important;
+        /* 高さは親（.sheet）の 297mm に合わせる */
+        min-height: auto !important;
       }
       .card,
       .feature-block,
