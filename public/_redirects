@@ -5,3 +5,32 @@
 # 印刷用HTML（拡張子なしでも開けるように）
 /nyujuku-annai /nyujuku-annai.html 301
 
+# index.html はトップへ
+/index.html / 301
+
+# 末尾スラッシュ正規化（主要ページ）
+/service/ /service 301
+/greeting/ /greeting 301
+/voice/ /voice 301
+/access/ /access 301
+/contact/ /contact 301
+/flow/ /flow 301
+/faq/ /faq 301
+/case/ /case 301
+/column/ /column 301
+/nyujuku-annai.html/ /nyujuku-annai.html 301
+
+# 年間予定表（拡張子なし／末尾スラッシュ）
+/2026-nenkan-yotei /2026-nenkan-yotei.html 301
+/2026-nenkan-yotei/ /2026-nenkan-yotei.html 301
+/nenkan-yotei-2026 /nenkan-yotei-2026.html 301
+/nenkan-yotei-2026/ /nenkan-yotei-2026.html 301
+
+# ボット等がよく叩くWordPress系は「存在しない」を明示（Search Console の404ノイズ削減）
+/wp-admin/* 410
+/wp-content/* 410
+/wp-includes/* 410
+/xmlrpc.php 410
+/wp-login.php 410
+/wp-json/* 410
+
