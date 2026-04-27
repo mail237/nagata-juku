@@ -2,8 +2,8 @@
 # - /feature は旧サイト互換で /service へ
 /feature /service 301
 
-# 印刷用HTML（拡張子なしでも開けるように）
-/nyujuku-annai /nyujuku-annai.html 301
+# 印刷用HTML（Cloudflare側で .html → 拡張子なし に寄るため、拡張子なしを正にする）
+/nyujuku-annai.html /nyujuku-annai 301
 
 # index.html はトップへ
 /index.html / 301
@@ -27,10 +27,18 @@
 /nenkan-yotei-2026/ /nenkan-yotei-2026.html 301
 
 # ボット等がよく叩くWordPress系は「存在しない」を明示（Search Console の404ノイズ削減）
+/wp-admin 410
+/wp-admin/ 410
 /wp-admin/* 410
+/wp-content 410
+/wp-content/ 410
 /wp-content/* 410
+/wp-includes 410
+/wp-includes/ 410
 /wp-includes/* 410
 /xmlrpc.php 410
 /wp-login.php 410
+/wp-json 410
+/wp-json/ 410
 /wp-json/* 410
 
