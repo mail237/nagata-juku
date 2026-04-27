@@ -27,18 +27,19 @@
 /nenkan-yotei-2026/ /nenkan-yotei-2026.html 301
 
 # ボット等がよく叩くWordPress系は「存在しない」を明示（Search Console の404ノイズ削減）
-/wp-admin 410
-/wp-admin/ 410
-/wp-admin/* 410
-/wp-content 410
-/wp-content/ 410
-/wp-content/* 410
-/wp-includes 410
-/wp-includes/ 410
-/wp-includes/* 410
-/xmlrpc.php 410
-/wp-login.php 410
-/wp-json 410
-/wp-json/ 410
-/wp-json/* 410
+# Pages の _redirects は「行き先(to)」が必要なので /404.html に落として 410 を返す
+/wp-admin /404.html 410
+/wp-admin/ /404.html 410
+/wp-admin/* /404.html 410
+/wp-content /404.html 410
+/wp-content/ /404.html 410
+/wp-content/* /404.html 410
+/wp-includes /404.html 410
+/wp-includes/ /404.html 410
+/wp-includes/* /404.html 410
+/xmlrpc.php /404.html 410
+/wp-login.php /404.html 410
+/wp-json /404.html 410
+/wp-json/ /404.html 410
+/wp-json/* /404.html 410
 
