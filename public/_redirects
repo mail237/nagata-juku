@@ -27,6 +27,8 @@
 /15749440854758 /service 301
 /15479440845758 /service 301
 /page_id /service 301
+/[page_id] /service 301
+/[page_id]/ /service 301
 
 # 年間予定表（拡張子なし／末尾スラッシュ）
 /2026-nenkan-yotei /2026-nenkan-yotei.html 301
