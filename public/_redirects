@@ -20,6 +20,14 @@
 /column/ /column 301
 /nyujuku-annai.html/ /nyujuku-annai.html 301
 
+# Search Consoleで見つかった旧/ダミーURL（旧サイト由来）をサービスページへ正規化
+/service1 /service 301
+/service2 /service 301
+/service3 /service 301
+/15749440854758 /service 301
+/15479440845758 /service 301
+/page_id /service 301
+
 # 年間予定表（拡張子なし／末尾スラッシュ）
 /2026-nenkan-yotei /2026-nenkan-yotei.html 301
 /2026-nenkan-yotei/ /2026-nenkan-yotei.html 301
