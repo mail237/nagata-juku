@@ -33,6 +33,10 @@
 /%5Bpage_id:%5D /service 301
 /%5Bpage_id:%5D/ /service 301
 
+# 角括弧がそのまま来るケース（Search Console 表示対策）
+/[page_id:] /service 301
+/[page_id:]/ /service 301
+
 # 年間予定表（拡張子なし／末尾スラッシュ）
 /2026-nenkan-yotei /2026-nenkan-yotei.html 301
 /2026-nenkan-yotei/ /2026-nenkan-yotei.html 301
