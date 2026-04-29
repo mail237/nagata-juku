@@ -27,10 +27,9 @@
 /15749440854758 /service 301
 /15479440845758 /service 301
 /page_id /service 301
-# 「[page_id]」のようなプレースホルダURLは [] の扱いでマッチしない場合があるため、
-# page_id を含むものを広めに /service へ寄せる
-/*page_id* /service 301
+# Search Console に出ているプレースホルダURL（URLエンコード版）
 /%5Bpage_id%5D /service 301
+/%5Bpage_id%5D/ /service 301
 
 # 年間予定表（拡張子なし／末尾スラッシュ）
 /2026-nenkan-yotei /2026-nenkan-yotei.html 301
