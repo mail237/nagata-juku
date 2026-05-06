@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 /** 画像差し替え時はクエリを変えるとキャッシュを避けられる */
-const HERO_BANNER_SRC = '/images/hero-banner.png?v=hair-neat';
+const HERO_BANNER_SRC = '/images/hero-banner.png?v=restore-pre-edit';
 
 const features = [
   '志望校に合わせた受験指導',
