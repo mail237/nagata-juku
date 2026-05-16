@@ -1,0 +1,10 @@
+# HTML は常に再検証（スマホ Safari の強いキャッシュ対策）
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ビルド成果物（ハッシュ付き）は長期キャッシュ
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=86400
