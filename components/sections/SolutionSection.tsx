@@ -47,10 +47,12 @@ export default function SolutionSection() {
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
             <span className="w-5 h-px bg-[#45B1C7]" />Solution<span className="w-5 h-px bg-[#45B1C7]" />
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-[#1C4A52] leading-snug">
-            原因は「難問」ではなく
-            <span className="text-[#45B1C7]">「基礎の抜け」</span>
-            にある
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-[#1C4A52] leading-snug [overflow-wrap:normal] [word-break:keep-all]">
+            <span className="block sm:inline">原因は「難問」ではなく</span>
+            <span className="block sm:inline">
+              <span className="text-[#45B1C7]">「基礎の抜け」</span>
+              にある
+            </span>
           </h2>
           <p className="mt-4 text-sm text-[#555555] max-w-lg mx-auto leading-relaxed">
             定期テストで400点に届いていないなら、難しい問題に手を出す前に、まずは基礎を固めることが最優先です。
