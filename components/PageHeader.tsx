@@ -8,7 +8,7 @@ interface Props {
 
 export default function PageHeader({ label, title, description }: Props) {
   return (
-    <section className="bg-gradient-to-br from-[#EBF2F3] via-[#F1F5F4] to-white pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
+    <section className="bg-gradient-to-br from-[#EBF6F8] via-[#F2F9FA] to-white pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
       <div
         aria-hidden
         className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-[0.06]"

@@ -52,7 +52,7 @@ export default function GreetingPage() {
         <section className="py-14 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeInSection>
-              <div className="bg-[#F1F5F4] rounded-2xl p-8 md:p-10 border border-[#C7E5EB]/60 mb-10">
+              <div className="bg-[#F2F9FA] rounded-2xl p-8 md:p-10 border border-[#C7E5EB]/60 mb-10">
                 <div className="flex flex-col sm:flex-row gap-7 items-start mb-7">
                   <div className="relative w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 border-2 border-[#C7E5EB]">
                     <Image
@@ -78,7 +78,7 @@ export default function GreetingPage() {
 
                     <div className="flex flex-wrap gap-2 mt-4">
                       {['講師歴20年目', '全国学習塾向けセミナー講師', '平成27年2月創業'].map((tag) => (
-                        <span key={tag} className="text-xs bg-[#45B1C7]/10 border border-[#45B1C7]/20 text-[#0B6678] px-2.5 py-1 rounded-full">
+                        <span key={tag} className="text-xs bg-[#45B1C7]/10 border border-[#45B1C7]/20 text-[#2D8FA4] px-2.5 py-1 rounded-full">
                           {tag}
                         </span>
                       ))}
@@ -109,7 +109,7 @@ export default function GreetingPage() {
               <div className="mb-10 rounded-2xl border border-[#C7E5EB]/50 bg-gradient-to-br from-[#FAFCFC] via-white to-[#F4F9F8] p-7 shadow-[0_4px_32px_rgba(28,74,82,0.06)] sm:p-8 md:p-10">
                 <div className="flex flex-col gap-9 md:flex-row md:items-start md:gap-10 lg:gap-12">
                   <figure className="mx-auto w-full max-w-[320px] shrink-0 md:mx-0 md:w-[42%] md:max-w-none lg:w-[40%]">
-                    <div className="overflow-hidden rounded-[1.15rem] bg-[#E8EEED] shadow-[0_12px_40px_rgba(28,74,82,0.12)] ring-1 ring-[#1C4A52]/[0.06]">
+                    <div className="overflow-hidden rounded-[1.15rem] bg-[#E5F4F7] shadow-[0_12px_40px_rgba(28,74,82,0.12)] ring-1 ring-[#1C4A52]/[0.06]">
                       <Image
                         src="/images/principal-seminar.jpg?v=no-text-2026"
                         alt="学習塾向けセミナーで講師を務める様子（実際の写真）"
@@ -139,7 +139,7 @@ export default function GreetingPage() {
                       {seminarIntro.highlights.map((h) => (
                         <span
                           key={h}
-                          className="rounded-full border border-[#45B1C7]/25 bg-white/80 px-3 py-1 text-xs font-bold text-[#0B6678] shadow-sm"
+                          className="rounded-full border border-[#45B1C7]/25 bg-white/80 px-3 py-1 text-xs font-bold text-[#2D8FA4] shadow-sm"
                         >
                           {h}
                         </span>
@@ -157,7 +157,7 @@ export default function GreetingPage() {
 
             {/* 態度教育 */}
             <FadeInSection delay={0.12}>
-              <div className="bg-[#EBF2F3] rounded-2xl p-8 md:p-10 border border-[#C7E5EB]/60 mb-10">
+              <div className="bg-[#EBF6F8] rounded-2xl p-8 md:p-10 border border-[#C7E5EB]/60 mb-10">
                 <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-4">
                   <span className="w-5 h-px bg-[#45B1C7]" />指導理念
                 </span>
@@ -176,7 +176,7 @@ export default function GreetingPage() {
 
             {/* 進学実績 */}
             <FadeInSection delay={0.2}>
-              <div className="bg-[#F1F5F4] rounded-2xl p-7 border border-[#C7E5EB]/60">
+              <div className="bg-[#F2F9FA] rounded-2xl p-7 border border-[#C7E5EB]/60">
                 <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
                   <span className="w-5 h-px bg-[#45B1C7]" />進学実績
                 </span>

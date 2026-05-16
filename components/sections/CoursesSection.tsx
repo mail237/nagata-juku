@@ -53,7 +53,7 @@ export default function CoursesSection() {
                 {/* ヘッダー */}
                 <div
                   className={`px-7 py-6 ${
-                    feature.accent ? 'bg-[#45B1C7]' : 'bg-[#0B6678]'
+                    feature.accent ? 'bg-[#45B1C7]' : 'bg-[#2D8FA4]'
                   }`}
                 >
                   <div className="flex items-center gap-3 mb-3 text-white/80">
@@ -69,7 +69,7 @@ export default function CoursesSection() {
                 </div>
 
                 {/* ボディ */}
-                <div className="p-7 flex flex-col flex-1 bg-[#F1F5F4]">
+                <div className="p-7 flex flex-col flex-1 bg-[#F2F9FA]">
                   <p className="text-sm text-[#393939] leading-relaxed mb-6">
                     {feature.lead}
                   </p>

@@ -34,7 +34,7 @@ export default function FeaturePointCards({ eyebrow, title, lead, cta, className
           {FEATURE_POINT_CARDS.map((f, i) => (
             <FadeInSection key={f.num} delay={i * 0.12}>
               <article className="group bg-white rounded-2xl overflow-hidden border border-[#C7E5EB]/50 shadow-[0_4px_28px_rgba(28,74,82,0.07)] hover:shadow-[0_12px_40px_rgba(28,74,82,0.12)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#E8EEED]">
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#E5F4F7]">
                   <Image
                     src={f.image}
                     alt={f.imageAlt}

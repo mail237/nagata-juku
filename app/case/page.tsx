@@ -47,7 +47,7 @@ export default function CasePage() {
     <>
       <Header />
       <main>
-        <section className="bg-gradient-to-br from-[#EBF2F3] via-[#F1F5F4] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
+        <section className="bg-gradient-to-br from-[#EBF6F8] via-[#F2F9FA] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
           <div aria-hidden className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-[0.06]"
             style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #45B1C7 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -66,7 +66,7 @@ export default function CasePage() {
         </section>
 
         {/* びっくり成績アップ事例 */}
-        <section className="py-16 md:py-24 bg-[#F1F5F4]">
+        <section className="py-16 md:py-24 bg-[#F2F9FA]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeInSection className="mb-10">
               <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
@@ -94,7 +94,7 @@ export default function CasePage() {
                   </thead>
                   <tbody>
                     {cases.map((c, i) => (
-                      <tr key={i} className={`border-b border-[#E0F2F4] last:border-0 ${i % 2 === 0 ? '' : 'bg-[#F1F5F4]/50'}`}>
+                      <tr key={i} className={`border-b border-[#E0F2F4] last:border-0 ${i % 2 === 0 ? '' : 'bg-[#F2F9FA]/50'}`}>
                         <td className="px-5 py-3.5 text-sm font-bold text-[#1C4A52]">{c.name}</td>
                         <td className="px-5 py-3.5 text-sm text-[#393939]">{c.school}</td>
                         <td className="px-5 py-3.5 text-sm text-[#393939]">{c.grade}</td>
@@ -139,7 +139,7 @@ export default function CasePage() {
                   <h3 className="text-xs font-bold text-[#45B1C7] tracking-widest uppercase mb-4">国・公立高校</h3>
                   <div className="flex flex-wrap gap-2">
                     {achievements.public.map((s) => (
-                      <span key={s} className="text-xs bg-[#F1F5F4] border border-[#C7E5EB] text-[#393939] px-2.5 py-1.5 rounded-lg">
+                      <span key={s} className="text-xs bg-[#F2F9FA] border border-[#C7E5EB] text-[#393939] px-2.5 py-1.5 rounded-lg">
                         {s}
                       </span>
                     ))}
@@ -149,7 +149,7 @@ export default function CasePage() {
                   <h3 className="text-xs font-bold text-[#45B1C7] tracking-widest uppercase mb-4">私立高校</h3>
                   <div className="flex flex-wrap gap-2">
                     {achievements.private.map((s) => (
-                      <span key={s} className="text-xs bg-[#F1F5F4] border border-[#C7E5EB] text-[#393939] px-2.5 py-1.5 rounded-lg">
+                      <span key={s} className="text-xs bg-[#F2F9FA] border border-[#C7E5EB] text-[#393939] px-2.5 py-1.5 rounded-lg">
                         {s}
                       </span>
                     ))}

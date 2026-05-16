@@ -7,11 +7,13 @@
    ============================================================ */
 :root {
   --color-primary: #45B1C7;
-  --color-primary-dark: #0B6678;
+  --color-primary-dark: #2D8FA4;
   --color-dark: #1C4A52;
   --color-bg: #FFFFFF;
   --color-white: #FFFFFF;
-  --color-gray-100: #F1F5F4;
+  --color-surface: #F2F9FA;
+  --color-surface-alt: #EBF6F8;
+  --color-gray-100: #F2F9FA;
   --color-gray-200: #C7E5EB;
   --color-gray-500: #777777;
   --color-gray-700: #393939;
@@ -163,7 +165,7 @@ a:focus-visible {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#45B1C7] text-white font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#0B6678] hover:shadow-cta active:scale-[0.98];
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#45B1C7] text-white font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta active:scale-[0.98];
 }
 
 .btn-outline {

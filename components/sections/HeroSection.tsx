@@ -72,13 +72,13 @@ export default function HeroSection() {
             </div>
 
             <div className="w-72 shrink-0">
-              <div className="bg-[#F1F5F4] rounded-2xl p-6 border border-[#C7E5EB]/60 text-center">
+              <div className="bg-[#F2F9FA] rounded-2xl p-6 border border-[#C7E5EB]/60 text-center">
                 <p className="text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-4">
                   無料体験 受付中
                 </p>
                 <Link
                   href="/contact"
-                  className="block w-full py-4 bg-[#45B1C7] text-white font-bold rounded-full text-sm transition-all duration-300 ease-out hover:bg-[#0B6678] hover:shadow-cta mb-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#45B1C7]"
+                  className="block w-full py-4 bg-[#45B1C7] text-white font-bold rounded-full text-sm transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta mb-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#45B1C7]"
                 >
                   無料体験を申し込む
                 </Link>

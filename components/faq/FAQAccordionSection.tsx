@@ -41,7 +41,7 @@ const categories = [
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`border rounded-xl overflow-hidden transition-colors duration-200 ${open ? 'border-[#45B1C7]/40 bg-[#F1F5F4]' : 'border-[#C7E5EB] bg-white'}`}>
+    <div className={`border rounded-xl overflow-hidden transition-colors duration-200 ${open ? 'border-[#45B1C7]/40 bg-[#F2F9FA]' : 'border-[#C7E5EB] bg-white'}`}>
       <button
         type="button"
         onClick={() => setOpen(!open)}

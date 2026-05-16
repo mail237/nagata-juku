@@ -6,7 +6,7 @@ import { SCHOOL } from '@/lib/constants';
 
 export default function ContactCTASection() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-[#0B6678] to-[#45B1C7] relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-gradient-to-br from-[#2D8FA4] to-[#45B1C7] relative overflow-hidden">
       {/* 背景装飾 */}
       <div
         aria-hidden

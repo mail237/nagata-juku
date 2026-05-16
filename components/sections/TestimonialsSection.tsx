@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
 
   return (
-    <section className="pt-10 pb-16 md:pt-14 md:pb-24 bg-[#F1F5F4]">
+    <section className="pt-10 pb-16 md:pt-14 md:pb-24 bg-[#F2F9FA]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="text-center mb-8 md:mb-10">
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">

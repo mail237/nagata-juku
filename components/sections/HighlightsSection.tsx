@@ -39,7 +39,7 @@ export default function HighlightsSection() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#45B1C7] text-white font-bold rounded-full text-sm transition-all duration-300 ease-out hover:bg-[#0B6678] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#45B1C7] text-white font-bold rounded-full text-sm transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
               >
                 無料体験を申し込む
               </Link>
@@ -54,7 +54,7 @@ export default function HighlightsSection() {
 
           {/* 右側：代表あいさつ */}
           <FadeInSection delay={0.15} direction="left">
-            <div className="bg-[#F1F5F4] rounded-2xl p-8 border border-[#E0F2F4]">
+            <div className="bg-[#F2F9FA] rounded-2xl p-8 border border-[#E0F2F4]">
               <div className="flex items-center gap-4 mb-5">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-[#C7E5EB]">
                   <Image

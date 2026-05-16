@@ -10,11 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#45B1C7',
-        'primary-dark': '#0B6678',
+        'primary-dark': '#2D8FA4',
         dark: '#1C4A52',
         bg: '#FFFFFF',
+        surface: '#F2F9FA',
+        'surface-alt': '#EBF6F8',
         'gray-custom': {
-          100: '#F1F5F4',
+          100: '#F2F9FA',
           200: '#C7E5EB',
           500: '#777777',
           700: '#393939',

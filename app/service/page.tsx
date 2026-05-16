@@ -26,7 +26,7 @@ export default function ServicePage() {
     <>
       <Header />
       <main>
-        <section className="bg-gradient-to-br from-[#EBF2F3] via-[#F1F5F4] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
+        <section className="bg-gradient-to-br from-[#EBF6F8] via-[#F2F9FA] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
           <div aria-hidden className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-[0.06]"
             style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #45B1C7 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -45,7 +45,7 @@ export default function ServicePage() {
         </section>
 
         <FeaturePointCards
-          className="py-16 md:py-24 bg-[#F1F5F4]"
+          className="py-16 md:py-24 bg-[#F2F9FA]"
           eyebrow="Features"
           title="永田塾の特長"
           lead="トップページ「選ばれる3つの理由」と同じレイアウトのあと、下のセクションで詳しくご紹介します。"
@@ -67,7 +67,7 @@ export default function ServicePage() {
 
             {/* 通いホーダイ料金表 */}
             <FadeInSection className="mb-10">
-              <div className="bg-[#F1F5F4] rounded-2xl overflow-hidden border border-[#C7E5EB]/60">
+              <div className="bg-[#F2F9FA] rounded-2xl overflow-hidden border border-[#C7E5EB]/60">
                 <div className="bg-[#45B1C7] px-6 py-4 flex items-center gap-3">
                   <span className="text-white font-black font-serif text-lg">通いホーダイコース</span>
                   <span className="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-bold">週何回でも定額</span>
@@ -75,7 +75,7 @@ export default function ServicePage() {
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
-                      <tr className="bg-[#EBF2F3] text-[#1C4A52]">
+                      <tr className="bg-[#EBF6F8] text-[#1C4A52]">
                         <th className="px-5 py-3 text-left font-bold text-xs">学年</th>
                         <th className="px-5 py-3 text-center font-bold text-xs">1科目</th>
                         <th className="px-5 py-3 text-center font-bold text-xs">2科目</th>
@@ -106,13 +106,13 @@ export default function ServicePage() {
                           </td>
                           <td className={`px-5 py-4 text-center font-bold ${'programming' in row && row.programming ? 'text-[#45B1C7] font-black text-base' : 'text-[#393939]'}`}>{row.p1}</td>
                           <td className="px-5 py-4 text-center font-bold text-[#393939]">{row.p2}</td>
-                          <td className="px-5 py-4 text-center font-black text-[#45B1C7] bg-[#EBF2F3]">{row.p3}</td>
+                          <td className="px-5 py-4 text-center font-black text-[#45B1C7] bg-[#EBF6F8]">{row.p3}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <div className="px-6 py-4 bg-[#F1F5F4] border-t border-[#C7E5EB]/40">
+                <div className="px-6 py-4 bg-[#F2F9FA] border-t border-[#C7E5EB]/40">
                   <ul className="flex flex-col gap-1">
                     {[
                       '授業料は定額で週に何度でも通えます',
@@ -135,7 +135,7 @@ export default function ServicePage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#45B1C7] px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 ease-out hover:bg-[#0B6678] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#45B1C7] px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
               >
                 無料体験・お問合せはこちら
               </Link>
@@ -165,7 +165,7 @@ export default function ServicePage() {
                 <FadeInSection key={i} delay={i * 0.1} className="h-full min-h-0 w-full">
                   <div
                     className={`flex h-full min-h-[11.5rem] flex-col justify-start gap-2 rounded-xl p-5 text-center border ${
-                      i === 0 ? 'bg-[#45B1C7] border-[#45B1C7] text-white' : 'bg-[#F1F5F4] border-[#E0F2F4]'
+                      i === 0 ? 'bg-[#45B1C7] border-[#45B1C7] text-white' : 'bg-[#F2F9FA] border-[#E0F2F4]'
                     }`}
                   >
                     <p className={`font-serif font-black text-2xl shrink-0 leading-none ${i === 0 ? 'text-white' : 'text-[#45B1C7]'}`}>

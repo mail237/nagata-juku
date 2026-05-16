@@ -13,7 +13,7 @@ export default function MarqueeSection() {
         <div className="inline-flex w-max max-w-none flex-nowrap animate-marquee whitespace-nowrap will-change-[transform] shrink-0 [backface-visibility:hidden]">
           {repeated.map((item, i) => (
             <span key={i} className="inline-flex items-center gap-4 mx-6">
-              <span className="text-sm font-bold tracking-widest text-[#0B6678] uppercase">
+              <span className="text-sm font-bold tracking-widest text-[#2D8FA4] uppercase">
                 {item}
               </span>
               <span aria-hidden className="text-[#45B1C7]/40 text-lg">◆</span>

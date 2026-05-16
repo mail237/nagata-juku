@@ -9,7 +9,7 @@ import { COMMITMENT_STRIP_ITEMS } from '@/lib/constants';
 export default function CommitmentStripSection() {
   return (
     <section
-      className="relative pt-12 pb-10 md:pt-16 md:pb-14 bg-gradient-to-br from-[#0B6678] via-[#134E59] to-[#1C4A52] overflow-hidden"
+      className="relative pt-12 pb-10 md:pt-16 md:pb-14 bg-gradient-to-br from-[#2D8FA4] via-[#256E80] to-[#1C4A52] overflow-hidden"
       aria-labelledby="commitment-strip-heading"
     >
       <div

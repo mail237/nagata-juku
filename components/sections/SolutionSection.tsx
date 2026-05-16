@@ -38,7 +38,7 @@ const steps = [
 
 export default function SolutionSection() {
   return (
-    <section className="pt-12 pb-14 md:pt-16 md:pb-20 bg-[#EBF2F3] relative overflow-hidden">
+    <section className="pt-12 pb-14 md:pt-16 md:pb-20 bg-surface-alt relative overflow-hidden">
       <div aria-hidden className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-[0.04]"
         style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #45B1C7 1px, transparent 0)`, backgroundSize: '36px 36px' }} />
 

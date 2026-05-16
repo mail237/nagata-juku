@@ -109,7 +109,7 @@ export default function Header() {
           {/* デスクトップ CTA */}
           <Link
             href="/contact"
-            className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-[#45B1C7] text-white text-sm font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#0B6678] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+            className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-[#45B1C7] text-white text-sm font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
           >
             無料体験を申し込む
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -191,7 +191,7 @@ export default function Header() {
                       className={`flex items-center py-3.5 px-3 rounded-lg text-sm font-medium transition-colors ${
                         active
                           ? 'text-[#45B1C7] bg-blue-50'
-                          : 'text-[#1C4A52] hover:text-[#45B1C7] hover:bg-[#F1F5F4]'
+                          : 'text-[#1C4A52] hover:text-[#45B1C7] hover:bg-[#F2F9FA]'
                       }`}
                     >
                       {link.label}
@@ -203,7 +203,7 @@ export default function Header() {
               <div className="p-6 border-t border-[#E0F2F4] flex flex-col gap-3">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-2 rounded-full bg-[#45B1C7] px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-[#0B6678] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  className="flex items-center justify-center gap-2 rounded-full bg-[#45B1C7] px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-[#2D8FA4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                 >
                   無料体験を申し込む
                 </Link>

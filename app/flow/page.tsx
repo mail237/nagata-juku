@@ -73,7 +73,7 @@ export default function FlowPage() {
     <>
       <Header />
       <main>
-        <section className="bg-gradient-to-br from-[#EBF2F3] via-[#F1F5F4] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
+        <section className="bg-gradient-to-br from-[#EBF6F8] via-[#F2F9FA] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
           <div aria-hidden className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-[0.06]"
             style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #45B1C7 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -94,7 +94,7 @@ export default function FlowPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-[#F1F5F4]">
+        <section className="py-16 md:py-24 bg-[#F2F9FA]">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative">
               {/* 縦ライン */}
@@ -136,7 +136,7 @@ export default function FlowPage() {
             <FadeInSection delay={0.5} className="mt-12 text-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[#45B1C7] px-8 py-4 text-sm font-black text-white transition-all duration-300 ease-out hover:bg-[#0B6678] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#45B1C7] px-8 py-4 text-sm font-black text-white transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
               >
                 無料体験を申し込む（STEP 01へ）
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

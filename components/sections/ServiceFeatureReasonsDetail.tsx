@@ -42,12 +42,12 @@ export default function ServiceFeatureReasonsDetail() {
                 </div>
               </div>
 
-              <div className="bg-[#F1F5F4] rounded-2xl p-7 md:p-9 border border-[#C7E5EB]/60">
+              <div className="bg-[#F2F9FA] rounded-2xl p-7 md:p-9 border border-[#C7E5EB]/60">
                 <div className="flex flex-wrap gap-2 mb-5">
                   {reason.highlights.map((h) => (
                     <span
                       key={h}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold bg-[#45B1C7]/10 text-[#0B6678] px-3 py-1.5 rounded-full"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold bg-[#45B1C7]/10 text-[#2D8FA4] px-3 py-1.5 rounded-full"
                     >
                       ✔ {h}
                     </span>
@@ -79,7 +79,7 @@ export default function ServiceFeatureReasonsDetail() {
           <h3 className="font-serif text-xl font-black text-[#1C4A52] mb-6">その他の特徴</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             {SERVICE_FEATURE_EXTRAS.map((f, i) => (
-              <div key={i} className="flex gap-4 p-5 bg-[#F1F5F4] rounded-xl border border-[#C7E5EB]/60">
+              <div key={i} className="flex gap-4 p-5 bg-[#F2F9FA] rounded-xl border border-[#C7E5EB]/60">
                 <div className="w-7 h-7 rounded-full bg-[#45B1C7]/15 flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-[#45B1C7] text-xs font-bold">✔</span>
                 </div>

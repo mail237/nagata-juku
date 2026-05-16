@@ -89,7 +89,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             <div className="flex flex-wrap gap-3">
               <a
                 href={`tel:${SCHOOL.phone}`}
-                className="inline-flex items-center justify-center rounded-full bg-[#1C4A52] text-white px-5 py-2.5 text-sm font-bold shadow-cta hover:bg-[#2A5F6A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-full bg-[#1C4A52] text-white px-5 py-2.5 text-sm font-bold shadow-cta hover:bg-[#358FA3] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2"
               >
                 {SCHOOL.phone} に電話
               </a>

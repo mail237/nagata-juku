@@ -43,7 +43,7 @@ export default function VoicePage() {
       <Header />
       <main>
         {/* ページヘッダー */}
-        <section className="bg-gradient-to-br from-[#EBF2F3] via-[#F1F5F4] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
+        <section className="bg-gradient-to-br from-[#EBF6F8] via-[#F2F9FA] to-[#F2F9FA] pt-32 pb-16 md:pb-20 relative overflow-hidden border-b border-[#C7E5EB]/60">
           <div
             aria-hidden
             className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-[0.06]"
@@ -69,7 +69,7 @@ export default function VoicePage() {
         </section>
 
         {/* 声一覧 */}
-        <section className="py-16 md:py-24 bg-[#F1F5F4]">
+        <section className="py-16 md:py-24 bg-[#F2F9FA]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-7">
               {voices.map((v, i) => (
@@ -77,7 +77,7 @@ export default function VoicePage() {
                   <div className="bg-white rounded-2xl overflow-hidden border border-[#E0F2F4] shadow-sm hover:shadow-md transition-shadow duration-300">
                     {/* Before/After */}
                     <div className="grid grid-cols-2 border-b border-[#E0F2F4]">
-                      <div className="px-6 py-4 bg-[#F1F5F4] border-r border-[#E0F2F4]">
+                      <div className="px-6 py-4 bg-[#F2F9FA] border-r border-[#E0F2F4]">
                         <p className="text-xs font-bold text-[#777777] mb-1">Before</p>
                         <p className="text-sm font-bold text-[#393939]">{v.before}</p>
                       </div>
@@ -121,7 +121,7 @@ export default function VoicePage() {
                         <GradePeriodBadge
                           range={v.gradeRange}
                           duration={v.gradeDuration}
-                          className="block w-fit max-w-full border border-[#C7E5EB] bg-[#F1F5F4]"
+                          className="block w-fit max-w-full border border-[#C7E5EB] bg-[#F2F9FA]"
                         />
                       </div>
                     </div>
