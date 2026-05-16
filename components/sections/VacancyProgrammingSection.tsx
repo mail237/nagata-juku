@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function VacancyProgrammingSection({ compact }: Props) {
-  const py = compact ? 'py-12 md:py-16' : 'py-16 md:py-20';
+  const py = compact ? 'py-12 md:py-16' : 'pt-10 pb-14 md:pt-12 md:pb-20';
 
   return (
     <section className={`${py} bg-[#FAFCFC] border-y border-[#C7E5EB]/50`}>
@@ -102,7 +102,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             </div>
           </FadeInSection>
 
-          <FadeInSection delay={0.1}>
+          <FadeInSection delay={0.1} className="mt-12 md:mt-0">
             <span className="inline-block text-xs font-bold text-[#45B1C7] tracking-wider uppercase mb-2">
               プログラミングコース
             </span>

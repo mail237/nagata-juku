@@ -38,7 +38,7 @@ const steps = [
 
 export default function SolutionSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#EBF2F3] relative overflow-hidden">
+    <section className="pt-12 pb-14 md:pt-16 md:pb-20 bg-[#EBF2F3] relative overflow-hidden">
       <div aria-hidden className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-[0.04]"
         style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #45B1C7 1px, transparent 0)`, backgroundSize: '36px 36px' }} />
 
@@ -47,12 +47,12 @@ export default function SolutionSection() {
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
             <span className="w-5 h-px bg-[#45B1C7]" />Solution<span className="w-5 h-px bg-[#45B1C7]" />
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1C4A52] leading-tight text-balance px-1">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-[#1C4A52] leading-snug">
             原因は「難問」ではなく
-            <br className="md:hidden" />
-            <span className="text-[#45B1C7]">「基礎の抜け」</span>にある
+            <span className="text-[#45B1C7]">「基礎の抜け」</span>
+            にある
           </h2>
-          <p className="mt-4 text-sm text-[#555555] max-w-lg mx-auto leading-relaxed text-balance px-1">
+          <p className="mt-4 text-sm text-[#555555] max-w-lg mx-auto leading-relaxed">
             定期テストで400点に届いていないなら、難しい問題に手を出す前に、まずは基礎を固めることが最優先です。
           </p>
         </FadeInSection>

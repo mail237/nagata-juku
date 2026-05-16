@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FadeInSection from '@/components/ui/FadeInSection';
 import ContactCTASection from '@/components/sections/ContactCTASection';
+import GradePeriodBadge from '@/components/ui/GradePeriodBadge';
 
 export const metadata: Metadata = {
   title: '生徒の声',
@@ -16,7 +17,8 @@ const voices = [
     name: 'K.T ちゃん',
     photo: '/images/voice-hs-kt.png',
     detail: '天王寺高校卒 → 大阪市立大学 卒業',
-    type: '小6〜中3（4年間）',
+    gradeRange: '小6〜中3',
+    gradeDuration: '4年間',
     before: '塾は堅いイメージで不安だった',
     after: '第一志望校（天王寺高校）合格 → 大阪市立大学 卒業',
     body: '私は小学6年生から中学3年生までの4年間、永田先生に勉強を教えてもらいました。初めは、塾は堅いイメージだったのですが、実際は先生が気さくで何でも質問できるぐらいフレンドリーでした。授業もわかりやすく、勉強をすることに慣れていない自分に、優しく声をかけてくれて細かく勉強の仕方についても指導してもらいました。また高校受験の時は、先生が勉強だけでなく進路の話も真剣に聞いてくれました。その結果、見事に第一志望校高校へ合格することができました。今は社会人となりましたが、今でも付き合いがあります。先生には本当に感謝しています。',
@@ -26,7 +28,8 @@ const voices = [
     name: 'Y.N くん',
     photo: '/images/voice-hs-yn.png',
     detail: '八尾高校卒 → 大阪教育大学 在学（現・永田塾講師）',
-    type: '小6〜高3（7年間）',
+    gradeRange: '小6〜高3',
+    gradeDuration: '7年間',
     before: '授業態度が悪く、成績も低迷していた',
     after: '八尾高校・大阪教育大学に進学。現在は永田塾の講師として活躍',
     body: '僕は小6の時から高3までの7年間、永田先生に勉強を教えてもらいました。永田塾は一人ひとりで指導してもらえる塾なので、わからなかったところが、相談できるのがうれしかったです。今考えると、授業態度の悪かった僕を見捨てずにしっかりと教えてくれていたと思います。ラーメンなどにもよく連れていってもらい、とても嬉しかったです。今では永田塾の講師として子ども達に指導をさせていただいています。将来は教育関係の仕事をしたいと考えているので、永田先生に色々と相談にのってもらっています。',
@@ -99,23 +102,27 @@ export default function VoicePage() {
                       </span>
 
                       {/* プロフィール */}
-                      <div className="flex items-center gap-4 border-t border-[#E0F2F4] pt-5">
-                        <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full ring-2 ring-[#C7E5EB]/60">
-                          <Image
-                            src={v.photo}
-                            alt="高校生在学イメージ（実在の特定個人ではありません）"
-                            fill
-                            className="object-cover"
-                            sizes="44px"
-                          />
+                      <div className="border-t border-[#E0F2F4] pt-5 space-y-3">
+                        <div className="flex items-center gap-4 min-w-0">
+                          <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full ring-2 ring-[#C7E5EB]/60">
+                            <Image
+                              src={v.photo}
+                              alt="高校生在学イメージ（実在の特定個人ではありません）"
+                              fill
+                              className="object-cover"
+                              sizes="44px"
+                            />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="font-bold text-[#1C4A52] text-sm">{v.name}</p>
+                            <p className="text-xs text-[#777777] leading-relaxed">{v.detail}</p>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <p className="font-bold text-[#1C4A52] text-sm">{v.name}</p>
-                          <p className="text-xs text-[#777777]">{v.detail}</p>
-                        </div>
-                        <span className="text-xs bg-[#F1F5F4] text-[#393939] border border-[#C7E5EB] font-bold px-2.5 py-1 rounded-md shrink-0">
-                          {v.type}
-                        </span>
+                        <GradePeriodBadge
+                          range={v.gradeRange}
+                          duration={v.gradeDuration}
+                          className="block w-fit max-w-full border border-[#C7E5EB] bg-[#F1F5F4]"
+                        />
                       </div>
                     </div>
                   </div>

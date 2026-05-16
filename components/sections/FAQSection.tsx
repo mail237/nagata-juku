@@ -64,7 +64,7 @@ export default function FAQSection() {
                     <span className="shrink-0 font-serif font-black text-[#45B1C7] text-lg leading-none mt-0.5">
                       Q
                     </span>
-                    <span className="min-w-0 font-bold text-[#1C4A52] text-sm leading-snug text-balance">
+                    <span className="min-w-0 font-bold text-[#1C4A52] text-sm leading-relaxed">
                       {faq.q}
                     </span>
                   </div>

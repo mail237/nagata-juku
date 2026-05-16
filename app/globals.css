@@ -47,11 +47,26 @@ body {
   font-family: var(--font-noto-sans), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'YuGothic', Meiryo, sans-serif;
 }
 
-/* 見出しの改行バランス（対応ブラウザのみ） */
+/* 日本語は text-balance だと不自然な改行になりやすいため wrap を基本に */
 h1,
 h2,
-h3 {
-  text-wrap: balance;
+h3,
+h4,
+p,
+li {
+  text-wrap: wrap;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+
+@layer utilities {
+  .text-jp {
+    text-wrap: wrap;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-break: strict;
+  }
 }
 
 /* ============================================================

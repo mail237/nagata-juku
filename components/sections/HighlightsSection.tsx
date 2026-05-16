@@ -14,17 +14,15 @@ const highlights = [
 
 export default function HighlightsSection() {
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section className="pt-10 pb-14 md:pt-12 md:pb-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <FadeInSection>
             <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
               <span className="w-6 h-px bg-[#45B1C7]" />永田塾のここが魅力！
             </span>
-            <h2 className="font-serif text-2xl md:text-3xl font-black text-[#1C4A52] leading-tight mb-6 text-balance">
-              あなたの目標に合わせた
-              <br className="md:hidden" />
-              個別指導を提供します
+            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-black text-[#1C4A52] leading-snug mb-6">
+              あなたの目標に合わせた個別指導を提供します
             </h2>
             <ul className="flex flex-col gap-3 mb-8">
               {highlights.map((item, i) => (
@@ -34,7 +32,7 @@ export default function HighlightsSection() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-sm font-bold text-[#1C4A52] leading-relaxed">{item}</span>
+                  <span className="text-sm font-bold text-[#1C4A52] leading-relaxed break-keep">{item}</span>
                 </li>
               ))}
             </ul>

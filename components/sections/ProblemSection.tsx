@@ -5,25 +5,26 @@ import FadeInSection from '@/components/ui/FadeInSection';
 const problems = [
   {
     label: 'つまずき',
-    text: '文章題・応用で\n手が止まる',
+    textLine1: '文章題・応用で',
+    textLine2: '手が止まる',
     desc:
       '計算の型はなんとなくわかるのに、問題文を読むと「何を求められているか」が掴めず、そこで止まってしまう。式に落とすまでの一歩が抜けていることが多いです。',
   },
   {
     label: '直前勉強',
-    text: 'テスト前に頑張っても\n点数が上がらない',
+    text: 'テスト前に頑張っても点数が上がらない',
     desc:
       '一夜漬けで「覚えた気」になっても、単元同士のつながりが整理できていないと、別の出題形式では再現できません。復習の回し方が課題です。',
   },
   {
     label: '優先順位',
-    text: '勉強しようとしても\n何から始めるか決められない',
+    text: '勉強しようとしても何から始めるか決められない',
     desc:
       '教科書・プリント・問題集の山の前でフリーズする。やる気はあるのに「今日は何を何分」が決められず、結局後回しにしてしまう。',
   },
   {
     label: '塾とのギャップ',
-    text: '塾に通っているのに\n成績が伸びない',
+    text: '塾に通っているのに成績が伸びない',
     desc:
       '「通っている安心」だけで、自習で弱点を掘る時間や、授業の復習が足りていないケースがあります。塾と家の両方で学習がつながっていますか。',
   },
@@ -31,7 +32,7 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-b from-white via-[#FAFCFC] to-white overflow-hidden">
+    <section className="relative pt-12 pb-16 md:pt-16 md:pb-24 bg-gradient-to-b from-white via-[#FAFCFC] to-white overflow-hidden">
       {/* 背景の淡い装飾 */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35]"
@@ -49,14 +50,11 @@ export default function ProblemSection() {
             Problem
             <span className="w-6 h-px bg-[#45B1C7]" />
           </span>
-          <h2 className="font-serif text-3xl md:text-[2.1rem] font-black text-[#1C4A52] leading-tight tracking-tight text-balance px-1">
-            こんなお悩み、
-            <br className="sm:hidden" />
-            ありませんか？
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-[2.1rem] font-black text-[#1C4A52] leading-snug tracking-tight">
+            こんなお悩み、ありませんか？
           </h2>
-          <p className="mt-4 text-[#393939] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            成績のことだけでなく、<strong className="font-bold text-[#1C4A52]">勉強の習慣・親子の関係・志望校とのギャップ</strong>
-            まで、多くの生徒さま・保護者さまが同じように悩んでいます。ひとりで抱え込まず、まずは原因を一緒に整理しましょう。
+          <p className="mt-4 text-[#393939] text-sm md:text-base leading-relaxed max-w-2xl mx-auto text-left sm:text-center">
+            成績のことだけでなく、勉強の習慣・親子の関係・志望校とのギャップまで、多くの生徒さま・保護者さまが同じように悩んでいます。ひとりで抱え込まず、まずは原因を一緒に整理しましょう。
           </p>
         </FadeInSection>
 
@@ -69,8 +67,15 @@ export default function ProblemSection() {
                     {p.label}
                   </span>
                 </div>
-                <h3 className="font-serif font-black text-[#1C4A52] text-[1.05rem] md:text-lg leading-snug mb-3 whitespace-pre-line">
-                  {p.text}
+                <h3 className="font-serif font-black text-[#1C4A52] text-base md:text-lg leading-snug mb-3">
+                  {'textLine1' in p ? (
+                    <>
+                      <span className="block">{p.textLine1}</span>
+                      <span className="block">{p.textLine2}</span>
+                    </>
+                  ) : (
+                    p.text
+                  )}
                 </h3>
                 <p className="text-xs md:text-sm text-[#555555] leading-[1.75]">{p.desc}</p>
 
