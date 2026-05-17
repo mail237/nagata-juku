@@ -5,8 +5,8 @@ import FadeInSection from '@/components/ui/FadeInSection';
 const problems = [
   {
     label: 'つまずき',
-    textLine1: '文章題・応用で',
-    textLine2: '手が止まる',
+    textLine1: '文章題・応用',
+    textLine2: 'で手が止まる',
     desc:
       '計算の型はなんとなくわかるのに、問題文を読むと「何を求められているか」が掴めず、そこで止まってしまう。式に落とすまでの一歩が抜けていることが多いです。',
   },
@@ -67,7 +67,7 @@ export default function ProblemSection() {
                     {p.label}
                   </span>
                 </div>
-                <h3 className="font-serif font-black text-[#1C4A52] text-base md:text-lg leading-snug mb-3">
+                <h3 className="font-serif font-black text-[#1C4A52] text-base md:text-lg leading-snug mb-3 [overflow-wrap:normal] [word-break:keep-all]">
                   {'textLine1' in p ? (
                     <>
                       <span className="block">{p.textLine1}</span>
