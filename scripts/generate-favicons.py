@@ -8,7 +8,6 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
-APP = ROOT / "app"
 LOGO_PATH = PUBLIC / "images" / "nagata-juku-logo.png"
 # ロゴは白背景向けデザイン
 BG = (255, 255, 255, 255)
@@ -51,15 +50,15 @@ def main() -> None:
         img = logo_icon(size, mark_only=mark_only)
         if size >= 48:
             img.save(PUBLIC / f"favicon-{size}x{size}.png", optimize=True)
-        if size == 48:
-            img.save(APP / "icon.png", optimize=True)
 
     logo_icon(32, mark_only=True).save(PUBLIC / "favicon-32x32.png", optimize=True)
-    logo_icon(180, mark_only=False).save(APP / "apple-icon.png", optimize=True)
+    logo_icon(180, mark_only=False).save(PUBLIC / "apple-icon.png", optimize=True)
 
     ico_base = logo_icon(48, mark_only=False)
-    for path in (APP / "favicon.ico", PUBLIC / "favicon.ico"):
-        ico_base.save(path, format="ICO", sizes=[(48, 48), (32, 32), (16, 16)])
+    for name in ("favicon.ico", "nagata-juku-icon.ico"):
+        ico_base.save(PUBLIC / name, format="ICO", sizes=[(48, 48), (32, 32), (16, 16)])
+
+    logo_icon(48, mark_only=False).save(PUBLIC / "nagata-juku-icon.png", optimize=True)
 
     print("Favicons generated from", LOGO_PATH.name)
 

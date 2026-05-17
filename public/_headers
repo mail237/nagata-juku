@@ -8,3 +8,17 @@
 
 /images/*
   Cache-Control: public, max-age=86400
+
+# ファビコンは再検証（ブラウザの強いキャッシュ対策）
+/favicon.ico
+  Cache-Control: public, max-age=0, must-revalidate
+/favicon-*.png
+  Cache-Control: public, max-age=0, must-revalidate
+/nagata-juku-icon.ico
+  Cache-Control: public, max-age=0, must-revalidate
+/nagata-juku-icon.png
+  Cache-Control: public, max-age=0, must-revalidate
+/apple-icon.png
+  Cache-Control: public, max-age=0, must-revalidate
+/icon.png
+  Cache-Control: public, max-age=0, must-revalidate
