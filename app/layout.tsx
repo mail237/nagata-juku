@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google';
+import LineFloatingButton from '@/components/LineFloatingButton';
 import './globals.css';
 
 const notoSansJP = Noto_Sans_JP({
@@ -61,6 +62,7 @@ export default function RootLayout({
     >
       <body className="bg-white font-sans text-[#393939] antialiased">
         {children}
+        <LineFloatingButton />
       </body>
     </html>
   );
