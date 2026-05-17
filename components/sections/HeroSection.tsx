@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import FloatingDoodles from '@/components/home/FloatingDoodles';
 import HeroCatchphraseEasterEgg from '@/components/home/HeroCatchphraseEasterEgg';
 
 /** 画像差し替え時はクエリを変えるとキャッシュを避けられる */
@@ -19,7 +18,6 @@ export default function HeroSection() {
           priority
           unoptimized
         />
-        <FloatingDoodles />
 
         <div className="absolute left-0 right-0 bottom-[18%] bg-white/80 backdrop-blur-[2px] z-[2]">
           <div className="max-w-5xl mx-auto px-4 py-2.5 sm:py-4 lg:py-5 text-center">
