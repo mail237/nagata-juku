@@ -5,35 +5,33 @@ import FadeInSection from '@/components/ui/FadeInSection';
 const problems = [
   {
     label: 'つまずき',
-    textLine1: '文章題・応用',
-    textLine2: 'で手が止まる',
+    lines: ['文章題・応用', 'で手が止まる'],
     desc:
       '計算の型はなんとなくわかるのに、問題文を読むと「何を求められているか」が掴めず、そこで止まってしまう。式に落とすまでの一歩が抜けていることが多いです。',
   },
   {
     label: '直前勉強',
-    text: 'テスト前に頑張っても点数が上がらない',
+    lines: ['テスト前に頑張っても', '点数が上がらない'],
     desc:
       '一夜漬けで「覚えた気」になっても、単元同士のつながりが整理できていないと、別の出題形式では再現できません。復習の回し方が課題です。',
   },
   {
     label: '優先順位',
-    text: '勉強しようとしても何から始めるか決められない',
+    lines: ['勉強しようとしても', '何から始めるか', '決められない'],
     desc:
       '教科書・プリント・問題集の山の前でフリーズする。やる気はあるのに「今日は何を何分」が決められず、結局後回しにしてしまう。',
   },
   {
     label: '塾とのギャップ',
-    text: '塾に通っているのに成績が伸びない',
+    lines: ['塾に通っているのに', '成績が伸びない'],
     desc:
       '「通っている安心」だけで、自習で弱点を掘る時間や、授業の復習が足りていないケースがあります。塾と家の両方で学習がつながっていますか。',
   },
-];
+] as const;
 
 export default function ProblemSection() {
   return (
     <section className="relative pt-12 pb-16 md:pt-16 md:pb-24 bg-gradient-to-b from-white via-[#FAFCFC] to-white overflow-hidden">
-      {/* 背景の淡い装飾 */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35]"
         aria-hidden
@@ -60,7 +58,7 @@ export default function ProblemSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {problems.map((p, i) => (
-            <FadeInSection key={i} delay={i * 0.06}>
+            <FadeInSection key={p.label} delay={i * 0.06}>
               <div className="card-playful group relative h-full bg-white rounded-2xl p-6 md:p-7 border border-[#C7E5EB]/70 shadow-[0_4px_20px_rgba(28,74,82,0.06)] hover:border-[#45B1C7]/35">
                 <div className="mb-4">
                   <span className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase text-[#45B1C7] bg-[#45B1C7]/10 px-2.5 py-1 rounded-md">
@@ -68,14 +66,11 @@ export default function ProblemSection() {
                   </span>
                 </div>
                 <h3 className="font-serif font-black text-[#1C4A52] text-base md:text-lg leading-snug mb-3 [overflow-wrap:normal] [word-break:keep-all]">
-                  {'textLine1' in p ? (
-                    <>
-                      <span className="block">{p.textLine1}</span>
-                      <span className="block">{p.textLine2}</span>
-                    </>
-                  ) : (
-                    p.text
-                  )}
+                  {p.lines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </h3>
                 <p className="text-xs md:text-sm text-[#555555] leading-[1.75]">{p.desc}</p>
 

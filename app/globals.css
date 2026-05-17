@@ -188,11 +188,3 @@ a:focus-visible {
 .card-playful {
   @apply transition-all duration-300 ease-out hover:-translate-y-0.5 hover:-rotate-1 hover:shadow-[0_12px_36px_rgba(28,74,82,0.1)];
 }
-
-@media (pointer: fine) {
-  body.playful-cursor,
-  body.playful-cursor a,
-  body.playful-cursor button {
-    cursor: none;
-  }
-}
