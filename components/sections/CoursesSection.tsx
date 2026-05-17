@@ -55,7 +55,7 @@ export default function CoursesSection() {
                   <h3 className="font-serif font-black text-2xl text-white mb-1">
                     {feature.name}
                   </h3>
-                  <p className="text-sm text-white/70">{feature.subtitle}</p>
+                  <p className="text-sm text-white/70 whitespace-nowrap">{feature.subtitle}</p>
                 </div>
 
                 {/* ボディ */}
