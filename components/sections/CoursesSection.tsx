@@ -36,7 +36,7 @@ export default function CoursesSection() {
             永田塾の特長
           </h2>
           <p className="mt-3 text-sm text-[#777777]">
-            他の学習塾とは一線を画す、永田塾ならではの3つの特長をご紹介します。
+            永田塾の指導を支える、3つの特長をご紹介します。
           </p>
         </FadeInSection>
 

@@ -8,9 +8,9 @@ import PlayfulCtaLink from '@/components/home/PlayfulCtaLink';
 const highlights = [
   '志望校に合わせた受験指導',
   '学校の進度に合わせた定期テスト対策',
-  'できるところまで遡っての指導',
-  '好きな時間・曜日に通える',
-  '苦手科目克服＆得意教科の成績アップに対応',
+  'つまずいたところから遡って学べる',
+  '通える曜日・時間を選べる',
+  '苦手克服と得意科目の伸長に対応',
 ];
 
 export default function HighlightsSection() {
@@ -23,7 +23,7 @@ export default function HighlightsSection() {
               <span className="w-6 h-px bg-[#45B1C7]" />永田塾のここが魅力！
             </span>
             <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-black text-[#1C4A52] leading-snug mb-6">
-              あなたの目標に合わせた個別指導を提供します
+              お子さまの目標に合わせた個別指導
             </h2>
             <ul className="flex flex-col gap-3 mb-8">
               {highlights.map((item, i) => (
@@ -73,9 +73,9 @@ export default function HighlightsSection() {
               <div className="space-y-3 text-sm text-[#393939] leading-loose mb-5">
                 <p>大阪・八尾市の個別指導塾、永田塾です。</p>
                 <p>
-                  本気で成績を上げ、人生の目標に向かうために。勉強を吸収できる態度を整え、徹底的な繰り返し学習で点数をアップさせます。
+                  本気で成績を上げたいお子さまのために、学ぶ姿勢を整え、くり返し学ぶことで実力を伸ばします。
                 </p>
-                <p>勉強を通した成功体験から人生を変える塾です。お気軽にご相談ください。</p>
+                <p>勉強を通じた成功体験が、これからの自信につながるようサポートします。お気軽にご相談ください。</p>
               </div>
               <Link
                 href="/greeting"

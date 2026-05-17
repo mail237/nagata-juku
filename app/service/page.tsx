@@ -65,11 +65,11 @@ export default function ServicePage() {
               <p className="mt-2 text-sm text-[#777777]">表内の金額はすべて月額・税込です</p>
             </FadeInSection>
 
-            {/* 通いホーダイ料金表 */}
+            {/* 通い放題料金表 */}
             <FadeInSection className="mb-10">
               <div className="bg-[#F2F9FA] rounded-2xl overflow-hidden border border-[#C7E5EB]/60">
                 <div className="bg-[#45B1C7] px-6 py-4 flex items-center gap-3">
-                  <span className="text-white font-black font-serif text-lg">通いホーダイコース</span>
+                  <span className="text-white font-black font-serif text-lg">通い放題コース</span>
                   <span className="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-bold">週何回でも定額</span>
                 </div>
                 <div className="overflow-x-auto">
@@ -118,7 +118,7 @@ export default function ServicePage() {
                       '授業料は定額で週に何度でも通えます',
                       '別途、入塾金（10,000円）・教材費・教室維持費（1,000円/月）がかかります',
                       '高校生は卒業生または塾生紹介のみの募集となります',
-                      'プログラミング（10,500円/月）は通いホーダイの学習塾料金とは別コースです',
+                      'プログラミング（10,500円/月）は通い放題の学習塾料金とは別コースです',
                     ].map((note, i) => (
                       <li key={i} className="text-xs text-[#777777] flex items-start gap-1.5">
                         <span className="text-[#45B1C7] shrink-0">※</span>{note}

@@ -80,10 +80,10 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-5 space-y-2">
               <span className="block text-[#1C4A52]/90">
-                満席の場合は、キャンセル待ち（順番待ち）としてご案内しております。
+                満席の場合は、キャンセル待ち（順番待ち）としてご案内しています。
               </span>
               <span className="block">
-                状況は随時変わります。最終のご確認はお電話またはお問合せフォームにてお願いいたします。
+                空席は随時変わります。最新の状況はお電話またはお問合せフォームでご確認ください。
               </span>
             </p>
             <div className="flex flex-wrap gap-3">

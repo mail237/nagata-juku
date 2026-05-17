@@ -6,28 +6,28 @@ import FadeInSection from '@/components/ui/FadeInSection';
 
 const faqs = [
   {
-    q: '主要教科を全て履修しなくてはいけませんか？',
-    a: '一教科から履修可能です。現在の成績に合わせて、強化したい科目を選択いただきますので、まずはお気軽にご相談ください。',
+    q: '主要教科をすべて受講しなければいけませんか？',
+    a: '一教科から受講できます。現在の成績や目標に合わせて、重点的に学びたい科目を選べます。まずはお気軽にご相談ください。',
   },
   {
-    q: '現在、中学3年生ですが、数学の基礎が全くできていません。中学2年生の内容を復習することはできますか？',
-    a: '可能です。前学年の内容まで遡り、お子さまの習得具合を確認しながら丁寧に授業を進めてまいりますので、どうぞご安心ください。できるところまで遡っての指導を行っています。',
+    q: '中学3年生ですが、数学の基礎があまりできていません。前の学年の内容から復習できますか？',
+    a: '可能です。つまずいたところから遡って、習得度を確認しながら丁寧に進めます。前の学年の内容に戻る指導も日常的に行っています。',
   },
   {
     q: '授業料はどのくらいですか？',
-    a: '月謝定額制で、通い放題・複数科目OKのプランをご用意しています。具体的な料金は、学年やご希望の科目によって異なりますので、まずは無料体験にお越しいただき、直接ご説明いたします。別途、入塾金（10,000円）・教材費・教室維持費などがかかります。詳細はお問合せの際にご説明いたします。',
+    a: '月謝定額制で、通い放題・複数科目OKのプランをご用意しています。学年や科目によって異なるため、無料体験の際に詳しくご説明します。別途、入塾金（10,000円）・教材費・教室維持費などがかかります。',
   },
   {
     q: '無料体験はどのように申し込みますか？',
-    a: 'お問合せフォームまたはお電話（072-940-7683）にてお申し込みいただけます。受付時間は15:00〜22:00（日曜・祝日定休）です。お気軽にご連絡ください。',
+    a: 'お問合せフォームまたはお電話（072-940-7683）からお申し込みいただけます。受付時間は15:00〜22:00（日曜・祝日定休）です。',
   },
   {
     q: '小学生でも通えますか？',
-    a: 'はい、小学生から高校生まで幅広く対応しています。実際に小学6年生から長年通い続けている卒業生も多くいます。お子さまの学年・目標に合わせたカリキュラムを組みます。',
+    a: 'はい、小学生から高校生まで対応しています。小学6年生から長年通い続けた卒業生も多く、学年や目標に合わせてカリキュラムを組みます。',
   },
   {
     q: '好きな曜日・時間に通えますか？',
-    a: 'はい、好きな時間・曜日に通っていただけます。学校行事や部活に合わせて柔軟にスケジュールを組めますので、「第一志望合格も部活も」両立できる環境を整えています。',
+    a: 'はい、ご都合のよい曜日・時間で通えます。部活や学校行事に合わせてスケジュールを組めるので、勉強と部活の両立もしやすくなります。',
   },
 ];
 
@@ -48,6 +48,9 @@ export default function FAQSection() {
           <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1C4A52] leading-tight">
             よくある質問
           </h2>
+          <p className="mt-3 text-sm text-[#777777]">
+            ほかにもご不明点があれば、お気軽にお問合せください。
+          </p>
         </FadeInSection>
 
         <div className="flex flex-col gap-3">
@@ -82,19 +85,19 @@ export default function FAQSection() {
                 <AnimatePresence>
                   {openIndex === i && (
                     <motion.div
-                      initial={{ height: 0, opacity: 1 }}
+                      initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 1 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: 'easeOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-5 flex gap-3">
-                        <span className="shrink-0 font-serif font-black text-[#1C4A52]/30 text-lg leading-none mt-0.5">
-                          A
-                        </span>
-                        <p className="text-sm text-[#393939] leading-relaxed">
-                          {faq.a}
-                        </p>
+                      <div className="px-6 pb-5 pt-0">
+                        <div className="flex items-start gap-3 border-t border-[#E0F2F4] pt-4">
+                          <span className="shrink-0 font-serif font-black text-[#1C4A52]/30 text-sm leading-none mt-0.5">
+                            A
+                          </span>
+                          <p className="text-sm text-[#555555] leading-relaxed">{faq.a}</p>
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -103,6 +106,18 @@ export default function FAQSection() {
             </FadeInSection>
           ))}
         </div>
+
+        <FadeInSection className="text-center mt-10">
+          <a
+            href="/faq"
+            className="inline-flex items-center gap-2 rounded-md text-sm font-bold text-[#45B1C7] transition-all duration-300 ease-out hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+          >
+            すべての質問を見る
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </FadeInSection>
       </div>
     </section>
   );
