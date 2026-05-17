@@ -1,6 +1,7 @@
 'use client';
 
 import FadeInSection from '@/components/ui/FadeInSection';
+import LineLink from '@/components/LineLink';
 import PlayfulCtaLink from '@/components/home/PlayfulCtaLink';
 import { SCHOOL } from '@/lib/constants';
 
@@ -66,14 +67,9 @@ export default function ContactCTASection() {
               </svg>
             </PlayfulCtaLink>
             {SCHOOL.lineUrl ? (
-              <a
-                href={SCHOOL.lineUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-black rounded-full text-sm transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-              >
+              <LineLink className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-black rounded-full text-sm transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
                 LINEでお問い合わせ
-              </a>
+              </LineLink>
             ) : null}
             <p className="text-white/60 text-xs sm:w-full sm:order-last">
               ※ 無料体験・体験後の勧誘なし

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FadeInSection from '@/components/ui/FadeInSection';
+import LineLink from '@/components/LineLink';
 import ContactForm from './ContactForm';
 import { SCHOOL } from '@/lib/constants';
 
@@ -63,7 +64,7 @@ const quickInfo = [
           ),
           label: 'LINE',
           value: '友だち追加して相談',
-          note: '無料体験のご相談もどうぞ',
+          note: 'スマホではLINEアプリが開きます',
           href: SCHOOL.lineUrl,
         },
       ]
@@ -134,14 +135,20 @@ export default function ContactPage() {
                             <div>
                               <p className="text-xs text-[#777777]">{info.label}</p>
                               {'href' in info && info.href ? (
-                                <a
-                                  href={info.href}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="font-bold text-[#1C4A52] text-sm hover:text-[#45B1C7] hover:underline inline-block"
-                                >
-                                  {info.value}
-                                </a>
+                                info.href.includes('line.me') ? (
+                                  <LineLink className="font-bold text-[#1C4A52] text-sm hover:text-[#45B1C7] hover:underline inline-block">
+                                    {info.value}
+                                  </LineLink>
+                                ) : (
+                                  <a
+                                    href={info.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold text-[#1C4A52] text-sm hover:text-[#45B1C7] hover:underline inline-block"
+                                  >
+                                    {info.value}
+                                  </a>
+                                )
                               ) : (
                                 <p className="font-bold text-[#1C4A52] text-sm">{info.value}</p>
                               )}
@@ -162,14 +169,9 @@ export default function ContactPage() {
                           電話で問合せる
                         </a>
                         {SCHOOL.lineUrl ? (
-                          <a
-                            href={SCHOOL.lineUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 w-full px-5 py-3 border-2 border-[#06C755] text-[#06C755] font-bold rounded-xl text-sm hover:bg-[#06C755]/10 transition-colors"
-                          >
+                          <LineLink className="flex items-center justify-center gap-2 w-full px-5 py-3 border-2 border-[#06C755] text-[#06C755] font-bold rounded-xl text-sm hover:bg-[#06C755]/10 transition-colors">
                             LINEで問合せる
-                          </a>
+                          </LineLink>
                         ) : null}
                       </div>
                     </div>
