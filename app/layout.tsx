@@ -37,12 +37,15 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
+    // Google 検索結果は 48px 以上を推奨（https://developers.google.com/search/docs/appearance/favicon-in-search）
     icon: [
+      { url: '/favicon-48x48.png', type: 'image/png', sizes: '48x48' },
+      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
     ],
     apple: '/apple-icon.png',
   },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
