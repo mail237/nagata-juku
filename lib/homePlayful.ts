@@ -7,5 +7,3 @@ export const DAILY_TIPS = [
   '永田塾では、ICTで弱点を把握し、基礎を自分のペースで繰り返し学べる環境を整えています。',
   '志望校の名前をノートやカレンダーに書いておくと、日々の目標がはっきりしやすくなります。',
 ] as const;
-
-export const MARQUEE_SEPARATORS = ['◆', '✦', '★', '▸', '✧'] as const;
