@@ -27,10 +27,11 @@ export const VACANCY_ROWS = [
 ] as const;
 
 /** 最終盤: 「お問合せ」「お問い合わせ」など表記をサイト全体で一度に確定する */
+/** 保護者の検討順に近い並び（授業→声→講師→場所→申込） */
 export const NAV_LINKS = [
   { href: '/service', label: '授業・料金' },
-  { href: '/greeting', label: '講師紹介' },
   { href: '/voice', label: '生徒の声' },
+  { href: '/greeting', label: '講師紹介' },
   { href: '/access', label: '教室案内' },
   { href: '/contact', label: 'お問合せ' },
 ] as const;
