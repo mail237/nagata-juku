@@ -42,6 +42,7 @@ const config: Config = {
       },
       animation: {
         marquee: 'marquee 25s linear infinite',
+        'marquee-slow': 'marquee 42s linear infinite',
         float: 'float 4.5s ease-in-out infinite',
         wiggle: 'wiggle 0.45s ease-in-out infinite',
         'pop-in': 'pop-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both',

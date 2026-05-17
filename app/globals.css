@@ -126,7 +126,8 @@ a:focus-visible {
     scroll-behavior: auto;
   }
   /* マーキーは「動きを減らす」でも完全停止にしない（iOS で帯が静止に見えるのを防ぐ）。速度だけ落とす */
-  .animate-marquee {
+  .animate-marquee,
+  .animate-marquee-slow {
     animation-duration: 70s !important;
     animation-iteration-count: infinite !important;
   }

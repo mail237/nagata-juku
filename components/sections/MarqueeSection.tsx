@@ -11,7 +11,7 @@ export default function MarqueeSection() {
           inline-flex + w-max で幅＝コンテンツ幅に固定（-50% の基準が iOS でも安定）
           transform の別指定は付けない（キーフレームの transform と競合し Safari で止まることがある）
         */}
-        <div className="inline-flex w-max max-w-none flex-nowrap animate-marquee whitespace-nowrap will-change-[transform] shrink-0 [backface-visibility:hidden]">
+        <div className="inline-flex w-max max-w-none flex-nowrap animate-marquee md:animate-marquee-slow whitespace-nowrap will-change-[transform] shrink-0 [backface-visibility:hidden]">
           {repeated.map((item, i) => (
             <span key={i} className="inline-flex items-center gap-4 mx-6">
               <span className="text-xs md:text-sm font-bold tracking-widest text-[#2D8FA4] uppercase">
