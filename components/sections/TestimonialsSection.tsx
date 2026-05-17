@@ -128,8 +128,8 @@ export default function TestimonialsSection() {
                   onClick={() => setCurrent(i)}
                   className={`rounded-full transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#45B1C7] ${
                     i === current
-                      ? 'h-2 w-6 bg-[#45B1C7]'
-                      : 'h-2 w-2 bg-[#C7E5EB] hover:bg-[#45B1C7]/40'
+                      ? 'h-1.5 w-5 md:h-2 md:w-6 bg-[#45B1C7]'
+                      : 'h-1.5 w-1.5 md:h-2 md:w-2 bg-[#C7E5EB] hover:bg-[#45B1C7]/40'
                   }`}
                   aria-label={`${i + 1}件目を表示`}
                 />
