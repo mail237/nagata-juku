@@ -21,7 +21,6 @@ export const JUKU_THREE_FEATURES = [
       'ICTで弱点単元の把握や復習の効率化にも取り組み、学習データを活かした指導で実力を伸ばします。',
     ],
     badge: '人気No.1',
-    accent: true,
     subjects: ['数学', '英語', '国語'],
     /** 授業・料金「特長の詳細」内のアンカー（トップ「詳しく見る」と対応） */
     detailAnchor: 'reason-detail-01',
@@ -42,7 +41,6 @@ export const JUKU_THREE_FEATURES = [
       '「うちの子は家では全く勉強しません」という保護者さまの悩みをよく耳にします。「通いホーダイ」なら、宿題達成率の低い生徒でも宿題内容を塾で学習するために通塾日数を増やすという対応が可能です。勉強・学習の習慣がつきます。',
     ],
     badge: '定額で安心',
-    accent: false,
     subjects: ['全科目対応'],
     detailAnchor: 'reason-detail-02',
   },
@@ -62,7 +60,6 @@ export const JUKU_THREE_FEATURES = [
       '週に一度程度通塾していただき、進捗確認・学習指示などのカウンセリングを行います。各学校の定期テスト内容に合わせたカリキュラム作成にも対応します。',
     ],
     badge: '自宅でも受講可',
-    accent: false,
     subjects: ['全科目対応'],
     detailAnchor: 'reason-detail-03',
   },

@@ -43,19 +43,9 @@ export default function CoursesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <FadeInSection key={i} delay={i * 0.15}>
-              <div
-                className={`rounded-2xl overflow-hidden h-full flex flex-col border transition-all duration-300 ease-out hover:-translate-y-1 ${
-                  feature.accent
-                    ? 'border-[#45B1C7] shadow-card-hover hover:shadow-card-hover'
-                    : 'border-[#C7E5EB] shadow-sm hover:shadow-card'
-                }`}
-              >
+              <div className="rounded-2xl overflow-hidden h-full flex flex-col border border-[#C7E5EB] shadow-sm hover:shadow-card hover:-translate-y-1 transition-all duration-300 ease-out">
                 {/* ヘッダー */}
-                <div
-                  className={`px-7 py-6 ${
-                    feature.accent ? 'bg-[#45B1C7]' : 'bg-[#2D8FA4]'
-                  }`}
-                >
+                <div className="px-7 py-6 bg-primary-dark">
                   <div className="flex items-center gap-3 mb-3 text-white/80">
                     {feature.icon}
                     <span className="font-serif font-black text-3xl text-white/20 leading-none">
