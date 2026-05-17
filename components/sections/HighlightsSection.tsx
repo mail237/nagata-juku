@@ -14,7 +14,7 @@ const highlights = [
 
 export default function HighlightsSection() {
   return (
-    <section className="pt-10 pb-14 md:pt-12 md:pb-20 bg-white">
+    <section className="pt-10 pb-14 md:pt-12 md:pb-20 bg-white border-t border-[#C7E5EB]/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <FadeInSection>

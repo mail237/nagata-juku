@@ -24,7 +24,7 @@ const features = JUKU_THREE_FEATURES.map((f, i) => ({
 
 export default function CoursesSection() {
   return (
-    <section className="pt-8 pb-16 md:pt-10 md:pb-24 bg-white">
+    <section className="pt-8 pb-16 md:pt-10 md:pb-24 bg-[#FAFCFC] border-t border-[#C7E5EB]/40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection className="text-center mb-10 md:mb-12">
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
