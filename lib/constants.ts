@@ -10,6 +10,8 @@ export const SCHOOL = {
   closed: '日曜・祝日',
   /** 公式Instagram（プロフィールURL。空文字にするとサイト上では非表示） */
   instagramUrl: 'https://www.instagram.com/nagatajuku.yao/',
+  /** 永田塾 LINE（友だち追加URL。空文字にするとサイト上では非表示） */
+  lineUrl: 'https://line.me/ti/p/SPSxYZrdxy',
   /** フッター等に表示。写真・年齢の誤解防止用 */
   imageDisclaimer:
     'トップページ等の一部の写真・イラストはイメージです。実際の教室・人物の外見・年齢等と異なる場合があります。塾長のセミナー登壇の写真は実際の写真です。塾長（永田知裕）は1987年生まれです。',
