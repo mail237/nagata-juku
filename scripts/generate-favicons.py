@@ -1,62 +1,67 @@
 #!/usr/bin/env python3
-"""永田塾ファビコン生成（ロゴ横長のため、検索結果向けに「永」マークを使用）。"""
+"""永田塾公式ロゴからファビコン一式を生成する。"""
 from __future__ import annotations
 
-import os
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 APP = ROOT / "app"
-BRAND = (69, 177, 199, 255)
-WHITE = (255, 255, 255, 255)
-
-FONT_CANDIDATES = [
-    "/System/Library/Fonts/Hiragino Sans GB.ttc",
-    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
-]
+LOGO_PATH = PUBLIC / "images" / "nagata-juku-logo.png"
+# ロゴは白背景向けデザイン
+BG = (255, 255, 255, 255)
 
 
-def _load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    for path in FONT_CANDIDATES:
-        if os.path.exists(path):
-            try:
-                return ImageFont.truetype(path, size)
-            except OSError:
-                continue
-    return ImageFont.load_default()
+def _load_logo() -> Image.Image:
+    return Image.open(LOGO_PATH).convert("RGBA")
 
 
-def kanji_icon(size: int) -> Image.Image:
-    canvas = Image.new("RGBA", (size, size), BRAND)
-    draw = ImageDraw.Draw(canvas)
-    font = _load_font(int(size * 0.62))
-    text = "永"
-    bbox = draw.textbbox((0, 0), text, font=font)
-    x = (size - (bbox[2] - bbox[0])) // 2 - bbox[0]
-    y = (size - (bbox[3] - bbox[1])) // 2 - bbox[1] - int(size * 0.02)
-    draw.text((x, y), text, fill=WHITE, font=font)
+def _mark_crop(logo: Image.Image) -> Image.Image:
+    """左側の本・えんぴつマーク部分を正方形に切り出す（小サイズ向け）。"""
+    w, h = logo.size
+    side = min(h, int(w * 0.32))
+    return logo.crop((0, 0, side, h))
+
+
+def logo_icon(size: int, *, mark_only: bool = False) -> Image.Image:
+    logo = _load_logo()
+    if mark_only or size <= 32:
+        logo = _mark_crop(logo)
+
+    canvas = Image.new("RGBA", (size, size), BG)
+    pad = int(size * (0.1 if mark_only or size <= 32 else 0.08))
+    inner = size - pad * 2
+    lw, lh = logo.size
+    scale = min(inner / lw, inner / lh)
+    nw, nh = max(1, int(lw * scale)), max(1, int(lh * scale))
+    resized = logo.resize((nw, nh), Image.Resampling.LANCZOS)
+    x, y = (size - nw) // 2, (size - nh) // 2
+    canvas.paste(resized, (x, y), resized)
     return canvas
 
 
 def main() -> None:
+    if not LOGO_PATH.is_file():
+        raise SystemExit(f"Logo not found: {LOGO_PATH}")
+
     for size in (16, 32, 48, 96, 192):
-        img = kanji_icon(size)
+        mark_only = size <= 32
+        img = logo_icon(size, mark_only=mark_only)
         if size >= 48:
             img.save(PUBLIC / f"favicon-{size}x{size}.png", optimize=True)
         if size == 48:
             img.save(APP / "icon.png", optimize=True)
 
-    kanji_icon(32).save(PUBLIC / "favicon-32x32.png", optimize=True)
-    kanji_icon(180).save(APP / "apple-icon.png", optimize=True)
+    logo_icon(32, mark_only=True).save(PUBLIC / "favicon-32x32.png", optimize=True)
+    logo_icon(180, mark_only=False).save(APP / "apple-icon.png", optimize=True)
 
-    ico = kanji_icon(48)
+    ico_base = logo_icon(48, mark_only=False)
     for path in (APP / "favicon.ico", PUBLIC / "favicon.ico"):
-        ico.save(path, format="ICO", sizes=[(48, 48), (32, 32), (16, 16)])
+        ico_base.save(path, format="ICO", sizes=[(48, 48), (32, 32), (16, 16)])
 
-    print("Favicons written to public/ and app/")
+    print("Favicons generated from", LOGO_PATH.name)
 
 
 if __name__ == "__main__":
