@@ -5,13 +5,15 @@ import { DAILY_TIPS } from '@/lib/homePlayful';
 
 const STORAGE_KEY = 'nagata-juku-daily-tip-dismissed';
 
-/** 初回訪問時だけ、右下にひとことメモを表示 */
+/** 初回訪問時だけ、右下にひとことメモを表示（スマホでは非表示・LINEボタンと重ならないように） */
 export default function DailyTipBubble() {
   const [visible, setVisible] = useState(false);
   const [tip, setTip] = useState<(typeof DAILY_TIPS)[number]>(DAILY_TIPS[0]);
 
   useEffect(() => {
     if (sessionStorage.getItem(STORAGE_KEY)) return;
+    const desktop = window.matchMedia('(min-width: 640px)');
+    if (!desktop.matches) return;
 
     const index = Math.floor(Math.random() * DAILY_TIPS.length);
     setTip(DAILY_TIPS[index]);
@@ -30,7 +32,7 @@ export default function DailyTipBubble() {
   return (
     <div
       role="status"
-      className="fixed bottom-5 right-4 left-4 sm:left-auto sm:max-w-xs z-[60] animate-pop-in motion-reduce:animate-none"
+      className="fixed bottom-5 right-4 left-4 z-[60] hidden max-w-xs animate-pop-in motion-reduce:animate-none sm:left-auto sm:block"
     >
       <div className="rounded-2xl border border-[#C7E5EB] bg-white/95 backdrop-blur-sm shadow-[0_12px_40px_rgba(28,74,82,0.12)] px-4 py-3.5 pr-10">
         <p className="text-[10px] font-bold tracking-widest text-[#45B1C7] uppercase mb-1.5">
