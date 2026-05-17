@@ -12,6 +12,7 @@ import VacancyProgrammingSection from '@/components/sections/VacancyProgrammingS
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import ContactCTASection from '@/components/sections/ContactCTASection';
+import HomePlayfulness from '@/components/home/HomePlayfulness';
 
 /**
  * トップページの縦順（保護者の検討フロー）
@@ -22,6 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
+      <HomePlayfulness />
       <main className="scroll-pt-24">
         <HeroSection />
         <MarqueeSection />

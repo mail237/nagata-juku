@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FadeInSection from '@/components/ui/FadeInSection';
+import PlayfulCtaLink from '@/components/home/PlayfulCtaLink';
 
 const highlights = [
   '志望校に合わせた受験指導',
@@ -37,12 +38,12 @@ export default function HighlightsSection() {
               ))}
             </ul>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
+              <PlayfulCtaLink
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#45B1C7] text-white font-bold rounded-full text-sm transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#45B1C7] text-white font-bold rounded-full text-sm hover:bg-[#2D8FA4] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
               >
                 無料体験を申し込む
-              </Link>
+              </PlayfulCtaLink>
               <Link
                 href="/service#reasons-detail"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-[#1C4A52] text-[#1C4A52] font-bold rounded-full text-sm transition-all duration-300 ease-out hover:bg-[#1C4A52] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1C4A52]"

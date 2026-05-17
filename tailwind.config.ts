@@ -42,12 +42,27 @@ const config: Config = {
       },
       animation: {
         marquee: 'marquee 25s linear infinite',
+        float: 'float 4.5s ease-in-out infinite',
+        wiggle: 'wiggle 0.45s ease-in-out infinite',
+        'pop-in': 'pop-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both',
       },
       keyframes: {
         /** translate3d で GPU 合成（iOS Safari でマーキーが止まりにくい） */
         marquee: {
           '0%': { transform: 'translate3d(0, 0, 0)' },
           '100%': { transform: 'translate3d(-50%, 0, 0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translate3d(0, 0, 0) rotate(0deg)' },
+          '50%': { transform: 'translate3d(0, -10px, 0) rotate(6deg)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-2deg)' },
+          '50%': { transform: 'rotate(2deg)' },
+        },
+        'pop-in': {
+          '0%': { opacity: '0', transform: 'scale(0.92) translateY(8px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
         },
       },
       boxShadow: {

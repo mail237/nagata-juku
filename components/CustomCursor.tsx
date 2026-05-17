@@ -18,6 +18,8 @@ export default function CustomCursor() {
     // モバイルデバイスでは表示しない
     if (window.matchMedia('(pointer: coarse)').matches) return;
 
+    document.body.classList.add('playful-cursor');
+
     const handleMouseMove = (e: MouseEvent) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
       if (!isVisible) setIsVisible(true);
@@ -65,6 +67,7 @@ export default function CustomCursor() {
     rafId.current = requestAnimationFrame(animate);
 
     return () => {
+      document.body.classList.remove('playful-cursor');
       cancelAnimationFrame(rafId.current);
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleMouseOver);

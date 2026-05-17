@@ -62,7 +62,7 @@ export default function SolutionSection() {
         <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
           {steps.map((step, i) => (
             <FadeInSection key={i} delay={i * 0.12}>
-              <div className="relative bg-white rounded-2xl p-7 border border-[#C7E5EB]/60 shadow-card transition-all duration-300 ease-out hover:shadow-card-hover hover:-translate-y-0.5 h-full flex flex-col">
+              <div className="card-playful relative bg-white rounded-2xl p-7 border border-[#C7E5EB]/60 shadow-card hover:shadow-card-hover h-full flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-xl bg-[#45B1C7]/10 flex items-center justify-center text-[#45B1C7] shrink-0">
                     {step.icon}

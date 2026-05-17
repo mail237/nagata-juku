@@ -179,3 +179,20 @@ a:focus-visible {
 .section-subtitle {
   @apply text-[#45B1C7] font-bold text-sm tracking-widest uppercase mb-3;
 }
+
+/* トップのCTAなど */
+.btn-playful {
+  @apply transition-all duration-300 ease-out hover:scale-[1.03] active:scale-[0.98];
+}
+
+.card-playful {
+  @apply transition-all duration-300 ease-out hover:-translate-y-0.5 hover:-rotate-1 hover:shadow-[0_12px_36px_rgba(28,74,82,0.1)];
+}
+
+@media (pointer: fine) {
+  body.playful-cursor,
+  body.playful-cursor a,
+  body.playful-cursor button {
+    cursor: none;
+  }
+}

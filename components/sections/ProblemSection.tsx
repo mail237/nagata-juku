@@ -61,7 +61,7 @@ export default function ProblemSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {problems.map((p, i) => (
             <FadeInSection key={i} delay={i * 0.06}>
-              <div className="group relative h-full bg-white rounded-2xl p-6 md:p-7 border border-[#C7E5EB]/70 shadow-[0_4px_20px_rgba(28,74,82,0.06)] hover:shadow-[0_12px_36px_rgba(28,74,82,0.1)] hover:border-[#45B1C7]/35 hover:-translate-y-0.5 transition-all duration-300">
+              <div className="card-playful group relative h-full bg-white rounded-2xl p-6 md:p-7 border border-[#C7E5EB]/70 shadow-[0_4px_20px_rgba(28,74,82,0.06)] hover:border-[#45B1C7]/35">
                 <div className="mb-4">
                   <span className="inline-flex items-center text-[10px] font-bold tracking-[0.2em] uppercase text-[#45B1C7] bg-[#45B1C7]/10 px-2.5 py-1 rounded-md">
                     {p.label}

@@ -1,4 +1,5 @@
 import { MARQUEE_ITEMS } from '@/lib/constants';
+import { MARQUEE_SEPARATORS } from '@/lib/homePlayful';
 
 const repeated = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
 
@@ -16,7 +17,9 @@ export default function MarqueeSection() {
               <span className="text-xs md:text-sm font-bold tracking-widest text-[#2D8FA4] uppercase">
                 {item}
               </span>
-              <span aria-hidden className="text-[#45B1C7]/40 text-sm md:text-base">◆</span>
+              <span aria-hidden className="text-[#45B1C7]/50 text-sm md:text-base">
+                {MARQUEE_SEPARATORS[i % MARQUEE_SEPARATORS.length]}
+              </span>
             </span>
           ))}
         </div>

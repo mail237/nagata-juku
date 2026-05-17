@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import FadeInSection from '@/components/ui/FadeInSection';
+import PlayfulCtaLink from '@/components/home/PlayfulCtaLink';
 import { SCHOOL } from '@/lib/constants';
 
 export default function ContactCTASection() {
@@ -56,15 +56,15 @@ export default function ContactCTASection() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
+            <PlayfulCtaLink
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#45B1C7] font-black rounded-full text-sm shadow-md transition-all duration-300 ease-out hover:bg-[#F8FCFC] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#45B1C7] font-black rounded-full text-sm shadow-md hover:bg-[#F8FCFC] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               無料体験フォームへ
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </PlayfulCtaLink>
             <p className="text-white/60 text-xs">
               ※ 無料体験・体験後の勧誘なし
             </p>
