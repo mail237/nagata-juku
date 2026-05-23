@@ -1,13 +1,15 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import walk0 from '../../public/images/nodoka/walk-0.png';
+import walk1 from '../../public/images/nodoka/walk-1.png';
 import {
   NODOKA_MESSAGES,
   NODOKA_TALK_MS,
   NODOKA_WALK_FRAME_MS,
 } from '@/lib/nodokaWidget';
 
-const FRAMES = ['/images/nodoka/walk-0.png', '/images/nodoka/walk-1.png'] as const;
+const FRAMES = [walk0.src, walk1.src] as const;
 
 /** トップ右下に常駐するのどか（歩きアニメ・タップでセリフ） */
 export default function NodokaWidget() {
@@ -47,7 +49,7 @@ export default function NodokaWidget() {
       type="button"
       onClick={handleClick}
       aria-label="のどかちゃん。タップすると話します"
-      className="fixed z-[54] right-3 w-[7.5rem] cursor-pointer select-none border-0 bg-transparent p-0 text-center sm:right-4 sm:w-[8.125rem] bottom-[calc(env(safe-area-inset-bottom,0px)+0.5rem)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+      className="fixed z-[56] right-3 w-[7.5rem] cursor-pointer select-none border-0 bg-transparent p-0 text-center sm:right-4 sm:w-[8.125rem] bottom-[calc(env(safe-area-inset-bottom,0px)+0.5rem)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
     >
       {message ? (
         <p
