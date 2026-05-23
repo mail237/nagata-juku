@@ -32,7 +32,7 @@ export default function DailyTipBubble() {
   return (
     <div
       role="status"
-      className="fixed bottom-5 right-4 left-4 z-[60] hidden max-w-xs animate-pop-in motion-reduce:animate-none sm:left-auto sm:block"
+      className="fixed bottom-5 right-4 left-4 z-[60] hidden max-w-xs animate-pop-in motion-reduce:animate-none sm:left-auto sm:bottom-44 sm:block"
     >
       <div className="rounded-2xl border border-[#C7E5EB] bg-white/95 backdrop-blur-sm shadow-[0_12px_40px_rgba(28,74,82,0.12)] px-4 py-3.5 pr-10">
         <p className="text-[10px] font-bold tracking-widest text-[#45B1C7] uppercase mb-1.5">
