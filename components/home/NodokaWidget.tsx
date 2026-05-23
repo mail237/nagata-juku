@@ -1,18 +1,34 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import walk0 from '../../public/images/nodoka/walk-0.png';
 import walk1 from '../../public/images/nodoka/walk-1.png';
 import { NODOKA_MESSAGES, NODOKA_TALK_MS } from '@/lib/nodokaWidget';
 
+const SPRITE_CLASS =
+  'absolute inset-0 h-full w-full object-contain [image-rendering:pixelated] [-webkit-image-rendering:pixelated] [backface-visibility:hidden]';
+
 /** トップ右下に常駐するのどか（歩きアニメ・タップでセリフ） */
 export default function NodokaWidget() {
+  const [frame, setFrame] = useState(0);
   const [isTalking, setIsTalking] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isTalking) {
+      setFrame(0);
+      return;
+    }
+    const id = window.setInterval(() => {
+      setFrame((f) => (f === 0 ? 1 : 0));
+    }, 400);
+    return () => window.clearInterval(id);
+  }, [isTalking]);
 
   const handleClick = useCallback(() => {
     if (isTalking) return;
     setIsTalking(true);
+    setFrame(0);
     setMessage(NODOKA_MESSAGES[Math.floor(Math.random() * NODOKA_MESSAGES.length)]);
 
     window.setTimeout(() => {
@@ -20,6 +36,9 @@ export default function NodokaWidget() {
       setIsTalking(false);
     }, NODOKA_TALK_MS);
   }, [isTalking]);
+
+  const show0 = isTalking || frame === 0;
+  const show1 = !isTalking && frame === 1;
 
   return (
     <button
@@ -36,19 +55,23 @@ export default function NodokaWidget() {
           {message}
         </p>
       ) : null}
-      <div className="relative mx-auto max-sm:h-[2.625rem] max-sm:w-[3.25rem] max-sm:origin-bottom sm:h-[5.125rem] sm:w-[6.875rem] [transform:translateZ(0)]">
-        {/* eslint-disable-next-line @next/next/no-img-element -- ドット絵は pixelated 指定が必要 */}
+      <div
+        className="relative mx-auto max-sm:h-[2.625rem] max-sm:w-[3.25rem] sm:h-[5.125rem] sm:w-[6.875rem]"
+        style={{ transform: 'translateZ(0)' }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={walk0.src}
           alt=""
           width={110}
           height={82}
           draggable={false}
-          className={
-            isTalking
-              ? 'absolute inset-0 h-full w-full object-contain opacity-100 [image-rendering:pixelated] [-webkit-image-rendering:pixelated]'
-              : 'absolute inset-0 h-full w-full object-contain animate-nodoka-walk-a [image-rendering:pixelated] [-webkit-image-rendering:pixelated] motion-reduce:opacity-100 motion-reduce:animate-none'
-          }
+          className={SPRITE_CLASS}
+          style={{
+            opacity: show0 ? 1 : 0,
+            visibility: show0 ? 'visible' : 'hidden',
+            zIndex: show0 ? 2 : 0,
+          }}
         />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -57,11 +80,12 @@ export default function NodokaWidget() {
           width={110}
           height={82}
           draggable={false}
-          className={
-            isTalking
-              ? 'absolute inset-0 h-full w-full object-contain opacity-0 [image-rendering:pixelated] [-webkit-image-rendering:pixelated]'
-              : 'absolute inset-0 h-full w-full object-contain animate-nodoka-walk-b [image-rendering:pixelated] [-webkit-image-rendering:pixelated] motion-reduce:opacity-0 motion-reduce:animate-none'
-          }
+          className={SPRITE_CLASS}
+          style={{
+            opacity: show1 ? 1 : 0,
+            visibility: show1 ? 'visible' : 'hidden',
+            zIndex: show1 ? 2 : 0,
+          }}
         />
       </div>
     </button>
