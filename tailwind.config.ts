@@ -46,6 +46,8 @@ const config: Config = {
         float: 'float 4.5s ease-in-out infinite',
         wiggle: 'wiggle 0.45s ease-in-out infinite',
         'pop-in': 'pop-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both',
+        'nodoka-walk-a': 'nodoka-walk-a 0.8s steps(1, end) infinite',
+        'nodoka-walk-b': 'nodoka-walk-b 0.8s steps(1, end) infinite',
       },
       keyframes: {
         /** translate3d で GPU 合成（iOS Safari でマーキーが止まりにくい） */
@@ -64,6 +66,14 @@ const config: Config = {
         'pop-in': {
           '0%': { opacity: '0', transform: 'scale(0.92) translateY(8px)' },
           '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
+        'nodoka-walk-a': {
+          '0%, 49.99%': { opacity: '1' },
+          '50%, 100%': { opacity: '0' },
+        },
+        'nodoka-walk-b': {
+          '0%, 49.99%': { opacity: '0' },
+          '50%, 100%': { opacity: '1' },
         },
       },
       boxShadow: {

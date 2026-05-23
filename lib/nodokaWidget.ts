@@ -8,5 +8,4 @@ export const NODOKA_MESSAGES = [
   'よしよし！',
 ] as const;
 
-export const NODOKA_WALK_FRAME_MS = 400;
 export const NODOKA_TALK_MS = 2200;

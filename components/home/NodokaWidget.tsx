@@ -1,39 +1,18 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import walk0 from '../../public/images/nodoka/walk-0.png';
 import walk1 from '../../public/images/nodoka/walk-1.png';
-import {
-  NODOKA_MESSAGES,
-  NODOKA_TALK_MS,
-  NODOKA_WALK_FRAME_MS,
-} from '@/lib/nodokaWidget';
-
-const FRAMES = [walk0.src, walk1.src] as const;
+import { NODOKA_MESSAGES, NODOKA_TALK_MS } from '@/lib/nodokaWidget';
 
 /** トップ右下に常駐するのどか（歩きアニメ・タップでセリフ） */
 export default function NodokaWidget() {
-  const [frameIdx, setFrameIdx] = useState(0);
   const [isTalking, setIsTalking] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
-  const [reduceMotion, setReduceMotion] = useState(false);
-
-  useEffect(() => {
-    setReduceMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  }, []);
-
-  useEffect(() => {
-    if (isTalking || reduceMotion) return;
-    const id = window.setInterval(() => {
-      setFrameIdx((i) => (i + 1) % FRAMES.length);
-    }, NODOKA_WALK_FRAME_MS);
-    return () => window.clearInterval(id);
-  }, [isTalking, reduceMotion]);
 
   const handleClick = useCallback(() => {
     if (isTalking) return;
     setIsTalking(true);
-    setFrameIdx(0);
     setMessage(NODOKA_MESSAGES[Math.floor(Math.random() * NODOKA_MESSAGES.length)]);
 
     window.setTimeout(() => {
@@ -41,8 +20,6 @@ export default function NodokaWidget() {
       setIsTalking(false);
     }, NODOKA_TALK_MS);
   }, [isTalking]);
-
-  const displaySrc = FRAMES[isTalking ? 0 : frameIdx];
 
   return (
     <button
@@ -59,15 +36,34 @@ export default function NodokaWidget() {
           {message}
         </p>
       ) : null}
-      {/* eslint-disable-next-line @next/next/no-img-element -- ドット絵は pixelated 指定が必要 */}
-      <img
-        src={displaySrc}
-        alt=""
-        width={110}
-        height={82}
-        draggable={false}
-        className="mx-auto block h-auto w-[6.875rem] [image-rendering:pixelated] sm:w-[6.875rem]"
-      />
+      <div className="relative mx-auto h-[5.125rem] w-[6.875rem] [transform:translateZ(0)]">
+        {/* eslint-disable-next-line @next/next/no-img-element -- ドット絵は pixelated 指定が必要 */}
+        <img
+          src={walk0.src}
+          alt=""
+          width={110}
+          height={82}
+          draggable={false}
+          className={
+            isTalking
+              ? 'absolute inset-0 h-full w-full object-contain opacity-100 [image-rendering:pixelated] [-webkit-image-rendering:pixelated]'
+              : 'absolute inset-0 h-full w-full object-contain animate-nodoka-walk-a [image-rendering:pixelated] [-webkit-image-rendering:pixelated] motion-reduce:opacity-100 motion-reduce:animate-none'
+          }
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={walk1.src}
+          alt=""
+          width={110}
+          height={82}
+          draggable={false}
+          className={
+            isTalking
+              ? 'absolute inset-0 h-full w-full object-contain opacity-0 [image-rendering:pixelated] [-webkit-image-rendering:pixelated]'
+              : 'absolute inset-0 h-full w-full object-contain animate-nodoka-walk-b [image-rendering:pixelated] [-webkit-image-rendering:pixelated] motion-reduce:opacity-0 motion-reduce:animate-none'
+          }
+        />
+      </div>
     </button>
   );
 }

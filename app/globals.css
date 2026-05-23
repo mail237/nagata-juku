@@ -131,6 +131,10 @@ a:focus-visible {
     animation-duration: 70s !important;
     animation-iteration-count: infinite !important;
   }
+  .animate-nodoka-walk-a,
+  .animate-nodoka-walk-b {
+    animation-duration: 1.6s !important;
+  }
 }
 
 /* ============================================================
