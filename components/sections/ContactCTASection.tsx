@@ -56,22 +56,22 @@ export default function ContactCTASection() {
             </a>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-3 w-full max-w-sm mx-auto md:max-w-none md:flex-row md:flex-wrap md:gap-4">
             <PlayfulCtaLink
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#45B1C7] font-black rounded-full text-sm shadow-md hover:bg-[#F8FCFC] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex w-full md:w-auto shrink-0 items-center justify-center gap-2 whitespace-nowrap px-6 py-3.5 md:px-8 md:py-4 bg-white text-[#45B1C7] font-black rounded-full text-sm shadow-md hover:bg-[#F8FCFC] hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               無料体験フォームへ
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </PlayfulCtaLink>
             {SCHOOL.lineUrl ? (
-              <LineLink className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-black rounded-full text-sm transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
-                LINEでお問い合わせ
+              <LineLink className="inline-flex w-full md:w-auto shrink-0 items-center justify-center gap-2 whitespace-nowrap px-6 py-3.5 md:px-8 md:py-4 border-2 border-white text-white font-black rounded-full text-sm transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                LINEでお問合せ
               </LineLink>
             ) : null}
-            <p className="text-white/60 text-xs sm:w-full sm:order-last">
+            <p className="text-white/60 text-xs md:w-full md:order-last">
               ※ 無料体験・体験後の勧誘なし
             </p>
           </div>
