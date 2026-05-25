@@ -5,6 +5,34 @@ import Image from 'next/image';
 import FadeInSection from '@/components/ui/FadeInSection';
 import { SCHOOL, CODE_ADVENTURE_YAO_LP, VACANCY_ROWS } from '@/lib/constants';
 
+function vacancyStatusTone(status: string) {
+  if (status.includes('残り') || status.includes('空席あり') || status.includes('空き')) {
+    return 'available' as const;
+  }
+  if (status === '満席' || status === '空席なし') {
+    return 'full' as const;
+  }
+  return 'other' as const;
+}
+
+function VacancyStatusBadge({ status }: { status: string }) {
+  const tone = vacancyStatusTone(status);
+  const className =
+    tone === 'available'
+      ? 'bg-[#E8F7FA] text-[#1C4A52] ring-1 ring-[#C7E5EB]'
+      : tone === 'full'
+        ? 'bg-gray-100 text-gray-600'
+        : 'bg-gray-50 text-gray-700';
+
+  return (
+    <span
+      className={`inline-flex min-w-[4.75rem] justify-center rounded-full px-3 py-1 text-xs font-semibold tabular-nums ${className}`}
+    >
+      {status}
+    </span>
+  );
+}
+
 type Props = {
   /** 授業・料金ページでは余白を少し詰める */
   compact?: boolean;
@@ -29,52 +57,43 @@ export default function VacancyProgrammingSection({ compact }: Props) {
               role="region"
               aria-label="空席案内一覧"
             >
-              <table className="w-full text-left text-sm">
+              <table className="w-full text-left text-[0.9375rem]">
+                <colgroup>
+                  <col />
+                  <col className="w-[5.75rem]" />
+                </colgroup>
                 <thead>
                   <tr className="bg-[#E8F7FA]/80 border-b border-[#C7E5EB]">
-                    <th scope="col" className="px-4 py-3 font-bold text-[#1C4A52]">
+                    <th scope="col" className="px-5 py-3 font-bold text-[#1C4A52]">
                       対象
                     </th>
-                    <th scope="col" className="px-4 py-3 font-bold text-[#1C4A52]">
+                    <th scope="col" className="px-5 py-3 font-bold text-[#1C4A52] text-center">
                       状況
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {VACANCY_ROWS.map((row, i) => {
-                    const status = row.status as string;
-                    const isLimited =
-                      status.includes('残り') || status.includes('空席あり');
-                    const isFull = status === '満席' || status === '空席なし';
-                    return (
-                      <tr
-                        key={row.label}
-                        className={
-                          i < VACANCY_ROWS.length - 1 ? 'border-b border-[#C7E5EB]/60' : ''
-                        }
+                  {VACANCY_ROWS.map((row, i) => (
+                    <tr
+                      key={row.label}
+                      className={[
+                        i < VACANCY_ROWS.length - 1 ? 'border-b border-[#C7E5EB]/60' : '',
+                        i % 2 === 1 ? 'bg-[#FAFCFC]/80' : 'bg-white',
+                      ]
+                        .filter(Boolean)
+                        .join(' ')}
+                    >
+                      <th
+                        scope="row"
+                        className="px-5 py-3.5 font-semibold text-[#1C4A52] align-middle"
                       >
-                        <th
-                          scope="row"
-                          className="px-4 py-3 font-medium text-gray-800 align-middle"
-                        >
-                          {row.label}
-                        </th>
-                        <td className="px-4 py-3 align-middle">
-                          <span
-                            className={
-                              isLimited
-                                ? 'inline-block font-bold text-[#1C4A52] bg-[#C7E5EB]/40 px-2.5 py-0.5 rounded-md'
-                                : isFull
-                                  ? 'text-gray-500 font-medium'
-                                  : 'text-gray-700'
-                            }
-                          >
-                            {row.status}
-                          </span>
-                        </td>
-                      </tr>
-                    );
-                  })}
+                        {row.label}
+                      </th>
+                      <td className="px-5 py-3.5 align-middle text-center">
+                        <VacancyStatusBadge status={row.status} />
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
