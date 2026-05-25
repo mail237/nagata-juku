@@ -35,7 +35,10 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                     <th scope="col" className="px-4 py-3 font-bold text-[#1C4A52]">
                       対象
                     </th>
-                    <th scope="col" className="px-4 py-3 font-bold text-[#1C4A52]">
+                    <th
+                      scope="col"
+                      className="px-4 py-3 font-bold text-[#1C4A52] text-center w-[6.5rem] sm:w-[7.5rem]"
+                    >
                       状況
                     </th>
                   </tr>
@@ -61,14 +64,14 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                         >
                           {row.label}
                         </th>
-                        <td className="px-4 py-3 align-middle">
+                        <td className="px-4 py-3 align-middle text-center">
                           <span
                             className={
                               isLimited
                                 ? 'inline-block font-bold text-[#1C4A52] bg-[#C7E5EB]/40 px-2.5 py-0.5 rounded-md'
                                 : isFull
-                                  ? 'text-gray-500 font-medium'
-                                  : 'text-gray-700'
+                                  ? 'inline-block text-gray-500 font-medium'
+                                  : 'inline-block text-gray-700'
                             }
                           >
                             {row.status}
