@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import HeroCatchphraseEasterEgg from '@/components/home/HeroCatchphraseEasterEgg';
 
-/** 画像差し替え時はクエリを変えるとキャッシュを避けられる */
-const HERO_BANNER_SRC = '/images/hero-banner.png?v=restore-pre-edit';
+/** 以前の画像: /images/hero-banner.png?v=restore-pre-edit（タグ snapshot-before-hero-2026-05） */
+const HERO_BANNER_SRC = '/images/hero-banner-2026-05.png';
 
 export default function HeroSection() {
   return (
@@ -12,9 +12,9 @@ export default function HeroSection() {
       <div className="relative w-full h-[240px] sm:h-[280px] lg:h-0 lg:pt-[min(42vw,520px)] lg:max-h-[520px]">
         <Image
           src={HERO_BANNER_SRC}
-          alt="永田塾 生徒と先生の授業風景"
+          alt="タブレットとノートで学習する様子（イメージ）"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_35%] sm:object-center"
           priority
           unoptimized
         />
