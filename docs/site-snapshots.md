@@ -27,7 +27,8 @@ git checkout snapshot-before-hero-2026-05 -- components/sections/HeroSection.tsx
 
 | ファイル | 内容 |
 |----------|------|
-| `hero-banner-2026-05-uniform.png` | **現行**（制服・タブレット学習） |
-| `hero-banner-2026-05-gemini.png` | 私服・タブレット学習 |
-| `hero-banner-2026-05.png` | 1枚前（ChatGPT・私服） |
+| `hero-banner-2026-05-hq.png` | **現行**（1枚目・私服、2048px 高画質） |
+| `hero-banner-2026-05-uniform.png` | 制服・タブレット学習 |
+| `hero-banner-2026-05-gemini.png` | 私服・タブレット学習（Gemini） |
+| `hero-banner-2026-05.png` | 1枚目の元（1024px） |
 | `hero-banner.png` | タグ `snapshot-before-hero-2026-05` 以前 |
