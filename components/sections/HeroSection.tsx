@@ -4,7 +4,7 @@ import Image from 'next/image';
 import HeroCatchphraseEasterEgg from '@/components/home/HeroCatchphraseEasterEgg';
 
 /** 以前の画像: /images/hero-banner.png?v=restore-pre-edit（タグ snapshot-before-hero-2026-05） */
-const HERO_BANNER_SRC = '/images/hero-banner-2026-05.png';
+const HERO_BANNER_SRC = '/images/hero-banner-2026-05-gemini.png';
 
 export default function HeroSection() {
   return (

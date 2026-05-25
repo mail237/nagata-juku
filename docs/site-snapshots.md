@@ -23,7 +23,10 @@ git checkout snapshot-before-hero-2026-05
 git checkout snapshot-before-hero-2026-05 -- components/sections/HeroSection.tsx
 ```
 
-## 新しいヒーロー画像
+## ヒーロー画像
 
-- ファイル: `public/images/hero-banner-2026-05.png`
-- 以前の画像: `public/images/hero-banner.png`（そのまま残しています）
+| ファイル | 内容 |
+|----------|------|
+| `hero-banner-2026-05-gemini.png` | **現行**（Gemini・タブレット学習） |
+| `hero-banner-2026-05.png` | 1枚前（ChatGPT版） |
+| `hero-banner.png` | タグ `snapshot-before-hero-2026-05` 以前 |
