@@ -35,26 +35,25 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                     <th scope="col" className="px-4 py-3 font-bold text-[#1C4A52]">
                       対象
                     </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-3 font-bold text-[#1C4A52] text-right w-[7.5rem] sm:w-[8.5rem]"
-                    >
+                    <th scope="col" className="px-4 py-3 font-bold text-[#1C4A52]">
                       状況
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {VACANCY_ROWS.map((row, i) => {
-                    const isAvailable = row.kind === 'available';
+                    const status = row.status as string;
+                    const isLimited =
+                      status.includes('残り') ||
+                      status.includes('空席あり') ||
+                      status.includes('空き');
+                    const isFull = status === '満席' || status === '空席なし';
                     return (
                       <tr
                         key={row.label}
-                        className={[
-                          i < VACANCY_ROWS.length - 1 ? 'border-b border-[#C7E5EB]/60' : '',
-                          isAvailable ? 'bg-[#F4FAFB]' : '',
-                        ]
-                          .filter(Boolean)
-                          .join(' ')}
+                        className={
+                          i < VACANCY_ROWS.length - 1 ? 'border-b border-[#C7E5EB]/60' : ''
+                        }
                       >
                         <th
                           scope="row"
@@ -62,20 +61,18 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                         >
                           {row.label}
                         </th>
-                        <td className="px-4 py-3 align-middle text-right">
-                          {isAvailable && 'slots' in row ? (
-                            <span
-                              className="inline-flex items-baseline justify-end gap-1 tabular-nums"
-                              aria-label={row.status}
-                            >
-                              <span className="text-sm font-medium text-[#358FA3]">空き</span>
-                              <span className="text-sm font-semibold text-[#1C4A52]">
-                                {row.slots}名
-                              </span>
-                            </span>
-                          ) : (
-                            <span className="text-sm text-gray-500">{row.status}</span>
-                          )}
+                        <td className="px-4 py-3 align-middle">
+                          <span
+                            className={
+                              isLimited
+                                ? 'inline-block font-bold text-[#1C4A52] bg-[#C7E5EB]/40 px-2.5 py-0.5 rounded-md'
+                                : isFull
+                                  ? 'text-gray-500 font-medium'
+                                  : 'text-gray-700'
+                            }
+                          >
+                            {row.status}
+                          </span>
                         </td>
                       </tr>
                     );

@@ -22,10 +22,10 @@ export const CODE_ADVENTURE_YAO_LP = 'https://codeadventure.jp/lp/yao/' as const
 
 /** 空席案内（随時ここを更新してください） */
 export const VACANCY_ROWS = [
-  { label: '高校生', status: '満席', kind: 'full' },
-  { label: '中学生', status: '満席', kind: 'full' },
-  { label: '小学生', status: '空き 1名', kind: 'available', slots: 1 },
-  { label: 'プログラミング', status: '満席', kind: 'full' },
+  { label: '高校生', status: '満席' },
+  { label: '中学生', status: '満席' },
+  { label: '小学生', status: '空き1名' },
+  { label: 'プログラミング', status: '満席' },
 ] as const;
 
 /** 表記をサイト全体で統一（お問合せ） */
