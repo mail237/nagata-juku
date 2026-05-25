@@ -57,7 +57,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
               role="region"
               aria-label="空席案内一覧"
             >
-              <table className="w-full table-fixed text-left text-[0.9375rem]">
+              <table className="w-full table-fixed text-center text-[0.9375rem]">
                 <colgroup>
                   <col className="w-1/2" />
                   <col className="w-1/2" />
@@ -70,7 +70,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                     >
                       対象
                     </th>
-                    <th scope="col" className="px-5 py-3 font-bold text-[#1C4A52] text-center">
+                    <th scope="col" className="px-5 py-3 font-bold text-[#1C4A52]">
                       状況
                     </th>
                   </tr>
@@ -92,7 +92,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                       >
                         {row.label}
                       </th>
-                      <td className="px-5 py-3.5 align-middle text-center">
+                      <td className="px-5 py-3.5 align-middle">
                         <VacancyStatusBadge status={row.status} />
                       </td>
                     </tr>
