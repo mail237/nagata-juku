@@ -4,8 +4,8 @@ import Image from 'next/image';
 import HeroCatchphraseEasterEgg from '@/components/home/HeroCatchphraseEasterEgg';
 
 /** 以前の画像: /images/hero-banner.png?v=restore-pre-edit（タグ snapshot-before-hero-2026-05） */
-/** 1枚目（ChatGPT・私服）を 2048px に高画質化 */
-const HERO_BANNER_SRC = '/images/hero-banner-2026-05-hq.png';
+/** 1枚目（ChatGPT・私服）EDSR 4x → 2560px、WebP 配信 */
+const HERO_BANNER_SRC = '/images/hero-banner-2026-05-hq.webp';
 
 export default function HeroSection() {
   return (
