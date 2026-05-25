@@ -44,7 +44,9 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                   {VACANCY_ROWS.map((row, i) => {
                     const status = row.status as string;
                     const isLimited =
-                      status.includes('残り') || status.includes('空席あり');
+                      status.includes('残り') ||
+                      status.includes('空席あり') ||
+                      status.includes('空き');
                     const isFull = status === '満席' || status === '空席なし';
                     return (
                       <tr
