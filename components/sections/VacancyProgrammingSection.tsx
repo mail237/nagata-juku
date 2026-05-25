@@ -25,63 +25,49 @@ export default function VacancyProgrammingSection({ compact }: Props) {
               現在の空席状況
             </h2>
             <div
-              className="rounded-xl border border-[#C7E5EB] bg-white shadow-sm overflow-hidden mb-5"
+              className="inline-block max-w-full rounded-xl border border-[#C7E5EB] bg-white shadow-sm overflow-hidden mb-5"
               role="region"
               aria-label="空席案内一覧"
             >
-              <table className="w-full text-left text-sm">
-                <thead>
-                  <tr className="bg-[#E8F7FA]/80 border-b border-[#C7E5EB]">
-                    <th scope="col" className="px-4 py-3 font-bold text-[#1C4A52]">
-                      対象
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-3 font-bold text-[#1C4A52] text-center w-[6.5rem] sm:w-[7.5rem]"
+              <div
+                className="grid grid-cols-[auto_auto] gap-x-5 sm:gap-x-6 px-4 py-2.5 bg-[#E8F7FA]/80 border-b border-[#C7E5EB] text-sm font-bold text-[#1C4A52]"
+                aria-hidden
+              >
+                <span>対象</span>
+                <span className="w-[4.25rem] text-center">状況</span>
+              </div>
+              <ul className="divide-y divide-[#C7E5EB]/60 text-sm">
+                {VACANCY_ROWS.map((row) => {
+                  const status = row.status as string;
+                  const isLimited =
+                    status.includes('残り') ||
+                    status.includes('空席あり') ||
+                    status.includes('空き');
+                  const isFull = status === '満席' || status === '空席なし';
+                  return (
+                    <li
+                      key={row.label}
+                      className="grid grid-cols-[auto_auto] gap-x-5 sm:gap-x-6 items-center px-4 py-2.5"
                     >
-                      状況
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {VACANCY_ROWS.map((row, i) => {
-                    const status = row.status as string;
-                    const isLimited =
-                      status.includes('残り') ||
-                      status.includes('空席あり') ||
-                      status.includes('空き');
-                    const isFull = status === '満席' || status === '空席なし';
-                    return (
-                      <tr
-                        key={row.label}
-                        className={
-                          i < VACANCY_ROWS.length - 1 ? 'border-b border-[#C7E5EB]/60' : ''
-                        }
+                      <span className="font-medium text-gray-800 whitespace-nowrap">
+                        {row.label}
+                      </span>
+                      <span
+                        className={[
+                          'w-[4.25rem] text-center whitespace-nowrap',
+                          isLimited
+                            ? 'font-semibold text-[#1C4A52]'
+                            : isFull
+                              ? 'text-gray-500 font-medium'
+                              : 'text-gray-700',
+                        ].join(' ')}
                       >
-                        <th
-                          scope="row"
-                          className="px-4 py-3 font-medium text-gray-800 align-middle"
-                        >
-                          {row.label}
-                        </th>
-                        <td className="px-4 py-3 align-middle text-center">
-                          <span
-                            className={
-                              isLimited
-                                ? 'inline-block font-bold text-[#1C4A52] bg-[#C7E5EB]/40 px-2.5 py-0.5 rounded-md'
-                                : isFull
-                                  ? 'inline-block text-gray-500 font-medium'
-                                  : 'inline-block text-gray-700'
-                            }
-                          >
-                            {row.status}
-                          </span>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                        {row.status}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-5 space-y-2">
               <span className="block text-[#1C4A52]/90">
