@@ -57,14 +57,17 @@ export default function VacancyProgrammingSection({ compact }: Props) {
               role="region"
               aria-label="空席案内一覧"
             >
-              <table className="w-full text-left text-[0.9375rem]">
+              <table className="w-full table-fixed text-left text-[0.9375rem]">
                 <colgroup>
-                  <col />
-                  <col className="w-[5.75rem]" />
+                  <col className="w-1/2" />
+                  <col className="w-1/2" />
                 </colgroup>
                 <thead>
                   <tr className="bg-[#E8F7FA]/80 border-b border-[#C7E5EB]">
-                    <th scope="col" className="px-5 py-3 font-bold text-[#1C4A52]">
+                    <th
+                      scope="col"
+                      className="px-5 py-3 font-bold text-[#1C4A52] border-r border-[#C7E5EB]"
+                    >
                       対象
                     </th>
                     <th scope="col" className="px-5 py-3 font-bold text-[#1C4A52] text-center">
@@ -85,7 +88,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                     >
                       <th
                         scope="row"
-                        className="px-5 py-3.5 font-semibold text-[#1C4A52] align-middle"
+                        className="px-5 py-3.5 font-semibold text-[#1C4A52] align-middle border-r border-[#C7E5EB]"
                       >
                         {row.label}
                       </th>
