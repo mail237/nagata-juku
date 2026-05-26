@@ -3,9 +3,8 @@
 import Image from 'next/image';
 import HeroCatchphraseEasterEgg from '@/components/home/HeroCatchphraseEasterEgg';
 
-/** 以前の画像: /images/hero-banner.png?v=restore-pre-edit（タグ snapshot-before-hero-2026-05） */
-/** 1枚目（ChatGPT・私服）EDSR 4x → 2560px、WebP 配信 */
-const HERO_BANNER_SRC = '/images/hero-banner-2026-05-hq.webp';
+/** 画像差し替え時はクエリを変えるとキャッシュを避けられる */
+const HERO_BANNER_SRC = '/images/hero-banner.png?v=restore-pre-edit';
 
 export default function HeroSection() {
   return (
@@ -13,9 +12,9 @@ export default function HeroSection() {
       <div className="relative w-full h-[240px] sm:h-[280px] lg:h-0 lg:pt-[min(42vw,520px)] lg:max-h-[520px]">
         <Image
           src={HERO_BANNER_SRC}
-          alt="タブレットとノートで学習する様子（イメージ）"
+          alt="永田塾 生徒と先生の授業風景"
           fill
-          className="object-cover object-[center_35%] sm:object-center"
+          className="object-cover object-center"
           priority
           unoptimized
         />
