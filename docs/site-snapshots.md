@@ -37,8 +37,8 @@ git checkout snapshot-before-hero-2026-05
 
 | ファイル | 内容 |
 |----------|------|
-| `hero-banner-2026-05-29.png` | **現行**（「個別指導の永田塾です」バナー） |
-| `hero-banner.png` | 授業風景＋キャッチコピー帯（`snapshot-before-hero-2026-05-29`） |
+| `hero-banner.png?v=restore-pre-edit` | **現行**（授業風景＋キャッチコピー帯） |
+| `hero-banner-2026-05-29.png` | 「個別指導の永田塾です」バナー |
 | `hero-banner-2026-05-hq.webp` | 1枚目・私服、EDSR 2560px |
 | `hero-banner-2026-05-uniform.png` | 制服・学習イメージ |
 | `hero-banner-2026-05-gemini.png` | 私服・学習（Gemini） |
