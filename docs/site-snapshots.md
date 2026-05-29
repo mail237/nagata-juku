@@ -6,7 +6,9 @@
 
 | タグ名 | 内容 |
 |--------|------|
-| `snapshot-before-hero-no-logo-2026-05` | **直前の状態**。ヒーローは `hero-banner.png` ＋ 白いキャッチコピー帯 |
+| `snapshot-before-hero-home-study-2026-05` | **直前の状態**。授業風景（生徒と先生）＋キャッチコピー帯 |
+| `snapshot-hero-home-study-2026-05` | **現行**（2026-05）。自宅・タブレット学習のヒーロー写真 |
+| `snapshot-before-hero-no-logo-2026-05` | ヒーローは `hero-banner.png` ＋ 白いキャッチコピー帯 |
 | `snapshot-before-hero-yellow-2026-05` | 同上（授業風景＋キャッチコピー帯） |
 | `snapshot-before-hero-hq-2026-05` | 同上（授業風景＋キャッチコピー帯） |
 | `snapshot-before-hero-junior-banner` | 同上（授業風景＋キャッチコピー帯） |
@@ -15,19 +17,37 @@
 
 ## この状態に戻す
 
-### いまのヒーロー（バナー画像）をやめて、直前に戻す
+### いまのヒーロー（自宅・タブレット）をやめて、直前（授業風景＋先生）に戻す
 
 ```bash
 cd /Users/tomohiro/Projects/nagata-juku
-git fetch origin
-git checkout snapshot-before-hero-no-logo-2026-05 -- components/sections/HeroSection.tsx
-# 本番に反映する場合
-git add components/sections/HeroSection.tsx
-git commit -m "ヒーローを差し替え前の授業風景＋キャッチコピーに戻す"
+./scripts/restore-hero-previous.sh
+git add public/images/hero-banner.png components/sections/HeroSection.tsx
+git commit -m "ヒーローを授業風景＋キャッチコピーに戻す"
 git push origin main
 ```
 
-`hero-banner.png` はリポジトリに残しています（削除していません）。
+**差し替え前の画像（削除しない・リポジトリに常備）**
+
+| ファイル | 内容 |
+|----------|------|
+| `hero-banner-restore-pre-edit.png` | 授業風景＋先生（1376×768）メインのバックアップ |
+| `hero-banner-classroom-teacher.png` | 上と同一の予備コピー |
+
+Git タグ `snapshot-before-hero-home-study-2026-05` にも同じ画像が入っています。
+
+### いまのヒーロー（自宅・タブレット）に再度切り替える
+
+```bash
+git checkout snapshot-hero-home-study-2026-05 -- components/sections/HeroSection.tsx public/images/hero-banner.png
+```
+
+### その他（旧タグ）
+
+```bash
+git fetch origin
+git checkout snapshot-before-hero-no-logo-2026-05 -- components/sections/HeroSection.tsx
+```
 
 ### さらに以前（2026-05 実験前）に戻す
 
@@ -42,7 +62,9 @@ git checkout snapshot-before-hero-2026-05
 | ファイル | 内容 |
 |----------|------|
 | `hero-banner-no-logo.png` | 永田塾バナー・引き伸ばしなし |
-| `hero-banner.png?v=restore-pre-edit` | **現行**（授業風景＋キャッチコピー帯） |
+| `hero-banner.png` | **現行**（自宅・タブレット学習） |
+| `hero-banner-restore-pre-edit.png` | **保管用**・差し替え前（授業風景＋先生） |
+| `hero-banner-classroom-teacher.png` | **保管用**・同上の予備コピー |
 | `hero-banner.png?v=restore-pre-edit` | 授業風景＋キャッチコピー帯（`snapshot-before-hero-no-logo-2026-05`） |
 | `hero-banner-1920x800.png` | 黄色バナー・引き伸ばしなし表示 |
 | `hero-banner-yellow.png` | 黄色バナー（1024×438） |
