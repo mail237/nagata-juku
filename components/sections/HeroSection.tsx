@@ -9,7 +9,7 @@ const HERO_BANNER_HEIGHT = 426;
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full mt-20 bg-[#FFF8E8]">
+    <section className="relative w-full mt-20 bg-white">
       <div className="mx-auto w-full max-w-[1024px] px-0">
         <Image
           src={HERO_BANNER_SRC}
