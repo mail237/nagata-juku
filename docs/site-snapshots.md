@@ -40,7 +40,8 @@ git checkout snapshot-before-hero-2026-05
 
 | ファイル | 内容 |
 |----------|------|
-| `hero-banner-1920x800.png` | **現行**（黄色バナー・引き伸ばしなし表示） |
+| `hero-banner.png?v=restore-pre-edit` | **現行**（授業風景＋キャッチコピー帯） |
+| `hero-banner-1920x800.png` | 黄色バナー・引き伸ばしなし表示 |
 | `hero-banner-yellow.png` | 黄色バナー（1024×438） |
 | `hero-banner.png?v=restore-pre-edit` | 授業風景＋キャッチコピー帯（`snapshot-before-hero-yellow-2026-05`） |
 | `hero-banner-hq.png` | 永田塾バナー・1024×571 |
