@@ -38,7 +38,8 @@ git checkout snapshot-before-hero-2026-05
 
 | ファイル | 内容 |
 |----------|------|
-| `hero-banner-junior-student.png` | **現行**（中学生バナー・1024×434） |
+| `hero-banner-1920x800.png` | **現行**（中学生バナー・HD版） |
+| `hero-banner-junior-student.png` | 中学生バナー（1024×434） |
 | `hero-banner.png?v=restore-pre-edit` | 授業風景＋キャッチコピー帯（`snapshot-before-hero-junior-banner`） |
 | `hero-banner-2026-05-hq.webp` | 1枚目・私服、EDSR 2560px |
 | `hero-banner-2026-05-uniform.png` | 制服・学習イメージ |

@@ -3,9 +3,9 @@
 import Image from 'next/image';
 
 /** 戻すとき: タグ snapshot-before-hero-junior-banner（docs/site-snapshots.md） */
-const HERO_BANNER_SRC = '/images/hero-banner-junior-student.png?v=2';
+const HERO_BANNER_SRC = '/images/hero-banner-1920x800.png?v=1';
 const HERO_BANNER_WIDTH = 1024;
-const HERO_BANNER_HEIGHT = 434;
+const HERO_BANNER_HEIGHT = 426;
 
 export default function HeroSection() {
   return (
