@@ -6,7 +6,8 @@
 
 | タグ名 | 内容 |
 |--------|------|
-| `snapshot-before-hero-junior-banner` | **直前の状態**。ヒーローは `hero-banner.png` ＋ 白いキャッチコピー帯 |
+| `snapshot-before-hero-hq-2026-05` | **直前の状態**。ヒーローは `hero-banner.png` ＋ 白いキャッチコピー帯 |
+| `snapshot-before-hero-junior-banner` | 同上（授業風景＋キャッチコピー帯） |
 | `snapshot-before-hero-2026-05-29` | 同上（授業風景＋キャッチコピー帯） |
 | `snapshot-before-hero-2026-05` | のどか常駐・LINEボタン・きょうのひとこと削除後。旧ヒーロー画像 |
 
@@ -17,7 +18,7 @@
 ```bash
 cd /Users/tomohiro/Projects/nagata-juku
 git fetch origin
-git checkout snapshot-before-hero-junior-banner -- components/sections/HeroSection.tsx
+git checkout snapshot-before-hero-hq-2026-05 -- components/sections/HeroSection.tsx
 # 本番に反映する場合
 git add components/sections/HeroSection.tsx
 git commit -m "ヒーローを差し替え前の授業風景＋キャッチコピーに戻す"
@@ -38,7 +39,8 @@ git checkout snapshot-before-hero-2026-05
 
 | ファイル | 内容 |
 |----------|------|
-| `hero-banner.png?v=restore-pre-edit` | **現行**（授業風景＋キャッチコピー帯） |
+| `hero-banner-hq.png` | **現行**（永田塾バナー・1024×571） |
+| `hero-banner.png?v=restore-pre-edit` | 授業風景＋キャッチコピー帯（`snapshot-before-hero-hq-2026-05`） |
 | `hero-banner-1920x800.png` | 中学生バナー・HD版 |
 | `hero-banner-junior-student.png` | 中学生バナー（1024×434） |
 | `hero-banner.png?v=restore-pre-edit` | 授業風景＋キャッチコピー帯（`snapshot-before-hero-junior-banner`） |
