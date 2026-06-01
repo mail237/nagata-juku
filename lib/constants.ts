@@ -17,6 +17,14 @@ export const SCHOOL = {
     'トップページ等の一部の写真・イラストはイメージです。実際の教室・人物の外見・年齢等と異なる場合があります。塾長のセミナー登壇の写真は実際の写真です。塾長（永田知裕）は1987年生まれです。',
 } as const;
 
+/** トップ等に小さく載せる「個別指導の永田塾です」バナー（ヒーローでは使わない） */
+export const WELCOME_BANNER = {
+  src: '/images/hero-banner-junior-student.png?v=welcome-2026-06',
+  alt: '個別指導の永田塾です。アクセスありがとうございます（イメージ・今年で12年）',
+  width: 1024,
+  height: 434,
+} as const;
+
 /** コードアドベンチャー八尾校（マイクラプログラミングコース）特設ページ */
 export const CODE_ADVENTURE_YAO_LP = 'https://codeadventure.jp/lp/yao/' as const;
 
