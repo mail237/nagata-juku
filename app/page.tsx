@@ -2,7 +2,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import MarqueeSection from '@/components/sections/MarqueeSection';
-import WelcomeBannerSection from '@/components/sections/WelcomeBannerSection';
 import ProblemSection from '@/components/sections/ProblemSection';
 import SolutionSection from '@/components/sections/SolutionSection';
 import CommitmentStripSection from '@/components/sections/CommitmentStripSection';
@@ -28,7 +27,6 @@ export default function HomePage() {
       <main className="scroll-pt-24">
         <HeroSection />
         <MarqueeSection />
-        <WelcomeBannerSection />
         <ProblemSection />
         <SolutionSection />
         <CommitmentStripSection />

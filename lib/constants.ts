@@ -19,7 +19,7 @@ export const SCHOOL = {
 
 /** トップ等に小さく載せる「個別指導の永田塾です」バナー（ヒーローでは使わない） */
 export const WELCOME_BANNER = {
-  src: '/images/hero-banner-junior-student.png?v=welcome-2026-06',
+  src: '/images/hero-banner-junior-student.png?v=welcome-greeting-sharp-2026-06',
   alt: '個別指導の永田塾です。アクセスありがとうございます（イメージ・今年で12年）',
   width: 1024,
   height: 434,
