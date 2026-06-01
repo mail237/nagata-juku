@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FadeInSection from '@/components/ui/FadeInSection';
-import NagataWelcomeBanner from '@/components/ui/NagataWelcomeBanner';
 import PlayfulCtaLink from '@/components/home/PlayfulCtaLink';
 
 const highlights = [
@@ -71,14 +70,13 @@ export default function HighlightsSection() {
                   <p className="font-serif font-black text-lg text-[#1C4A52]">永田 知裕</p>
                 </div>
               </div>
-              <div className="space-y-3 text-sm text-[#393939] leading-loose mb-4">
+              <div className="space-y-3 text-sm text-[#393939] leading-loose mb-5">
                 <p>大阪・八尾市の個別指導塾、永田塾です。</p>
                 <p>
                   本気で成績を上げたいお子さまのために、学ぶ姿勢を整え、くり返し学ぶことで実力を伸ばします。
                 </p>
                 <p>勉強を通じた成功体験が、これからの自信につながるようサポートします。お気軽にご相談ください。</p>
               </div>
-              <NagataWelcomeBanner className="mb-4" />
               <Link
                 href="/greeting"
                 className="inline-flex items-center gap-2 rounded-md text-sm font-bold text-[#45B1C7] transition-all duration-300 ease-out hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"

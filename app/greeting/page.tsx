@@ -4,7 +4,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import FadeInSection from '@/components/ui/FadeInSection';
-import NagataWelcomeBanner from '@/components/ui/NagataWelcomeBanner';
 import ContactCTASection from '@/components/sections/ContactCTASection';
 import Link from 'next/link';
 
@@ -98,8 +97,6 @@ export default function GreetingPage() {
                   <p>勉強を通じてお子さまに伝えたいのは、学力向上だけではありません。自分の「やりたいこと」を追い続ける楽しさ──そんな生き方の一端を、少しでも感じてもらえたらと思っています。「こういう大人もいるんだ」と思えるきっかけになれば、私にとってこれ以上の喜びはありません。</p>
                   <p>自分の道を切り開き、人生をまっすぐに楽しむ。そんな大人へと成長していけるよう、これからも精一杯サポートしていきます。</p>
                 </div>
-
-                <NagataWelcomeBanner className="my-7" />
 
                 <div className="mt-7 pt-6 border-t border-[#C7E5EB]/60 text-right">
                   <p className="font-serif font-black text-lg text-[#1C4A52]">永田塾 代表 永田 知裕</p>
