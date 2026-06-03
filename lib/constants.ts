@@ -34,6 +34,9 @@ export const VACANCY_ROWS: readonly { label: string; status: string; note?: stri
 
 /** 大阪市習い事・塾代助成事業（参画事業者として登録済み） */
 export const OSAKA_SUBSIDY = {
+  /** ページ内リンク用（プログラミング募集などからジャンプ） */
+  anchorId: 'osaka-subsidy',
+  recruitLinkLabel: '大阪市在住の方も大募集！',
   programName: '大阪市習い事・塾代助成事業',
   badgeSrc: '/images/osaka-juku-subsidy-badge.png?v=transparent-2026-06',
   badgeWidth: 1024,

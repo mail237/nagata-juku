@@ -14,7 +14,11 @@ export default function OsakaSubsidySection({ compact }: Props) {
     : 'max-w-[220px] sm:max-w-[240px] md:max-w-[220px] lg:max-w-[240px]';
 
   return (
-    <section className={`${py} bg-white border-y border-[#C7E5EB]/40`} aria-labelledby="osaka-subsidy-heading">
+    <section
+      id={OSAKA_SUBSIDY.anchorId}
+      className={`${py} scroll-mt-24 bg-white border-y border-[#C7E5EB]/40`}
+      aria-labelledby="osaka-subsidy-heading"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <div className="rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 lg:p-9 shadow-[0_4px_24px_rgba(28,74,82,0.06)]">

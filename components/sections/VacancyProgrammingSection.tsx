@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FadeInSection from '@/components/ui/FadeInSection';
-import { SCHOOL, CODE_ADVENTURE_YAO_LP, VACANCY_ROWS } from '@/lib/constants';
+import { SCHOOL, CODE_ADVENTURE_YAO_LP, OSAKA_SUBSIDY, VACANCY_ROWS } from '@/lib/constants';
+import OsakaCityRecruitLink from '@/components/ui/OsakaCityRecruitLink';
 
 function vacancyStatusTone(status: string) {
   if (status.includes('残り') || status.includes('空席あり') || status.includes('空き')) {
@@ -95,7 +96,9 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                       <td className="px-4 sm:px-5 py-3.5 align-middle">
                         <div className="flex flex-col items-center gap-1.5">
                           <VacancyStatusBadge status={row.status} />
-                          {row.note ? (
+                          {row.note === OSAKA_SUBSIDY.recruitLinkLabel ? (
+                            <OsakaCityRecruitLink className="text-[0.6875rem] sm:text-xs leading-snug" />
+                          ) : row.note ? (
                             <span className="text-[0.6875rem] sm:text-xs font-bold text-[#2D8FA4] leading-snug">
                               {row.note}
                             </span>
@@ -140,7 +143,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             </h2>
             <p className="mb-4 inline-flex flex-wrap items-center justify-center md:justify-start gap-2 rounded-xl border border-[#45B1C7]/35 bg-[#E8F7FA] px-4 py-2.5 text-sm font-bold text-[#1C4A52]">
               <span className="rounded-full bg-[#45B1C7] px-2.5 py-0.5 text-xs text-white">空き2枠</span>
-              <span>大阪市在住の方も大募集！</span>
+              <OsakaCityRecruitLink />
             </p>
             {/* 画像小さめ：列は約 9.75rem / lg 10.5rem、本文が主役に寄る */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,9.75rem)_1fr] lg:grid-cols-[minmax(0,10.5rem)_1fr] gap-6 md:gap-7 lg:gap-9 items-start">
@@ -164,7 +167,14 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                   <li className="pl-0.5">小・中学生向け（ご相談により前後も可）</li>
                   <li className="pl-0.5">ビジュアルからコードへ段階的に学べます</li>
                   <li className="pl-0.5">
-                    大阪市在住のご家庭は、習い事・塾代助成事業の利用もご相談ください
+                    大阪市在住のご家庭は、
+                    <Link
+                      href={`/#${OSAKA_SUBSIDY.anchorId}`}
+                      className="font-bold text-[#45B1C7] underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#45B1C7]"
+                    >
+                      習い事・塾代助成事業
+                    </Link>
+                    の利用もご相談ください
                   </li>
                 </ul>
                 <div className="flex justify-center pt-1 md:justify-start">
