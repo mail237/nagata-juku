@@ -24,9 +24,21 @@ export const CODE_ADVENTURE_YAO_LP = 'https://codeadventure.jp/lp/yao/' as const
 export const VACANCY_ROWS = [
   { label: '高校生', status: '満席' },
   { label: '中学生', status: '満席' },
-  { label: '小学生', status: '空き1名' },
+  { label: '小学生', status: '満席' },
   { label: 'プログラミング', status: '満席' },
 ] as const;
+
+/** 大阪市習い事・塾代助成事業（参画事業者として登録済み） */
+export const OSAKA_SUBSIDY = {
+  programName: '大阪市習い事・塾代助成事業',
+  badgeSrc: '/images/osaka-juku-subsidy-sticker.jpg',
+  badgeWidth: 1548,
+  badgeHeight: 1496,
+  /** 大阪市公式ページ */
+  cityUrl: 'https://www.city.osaka.lg.jp/kodomo/page/0000596583.html',
+  /** 利用登録・事業者検索など */
+  portalUrl: 'https://juku-osaka.com/',
+} as const;
 
 /** 表記をサイト全体で統一（お問合せ） */
 /** 保護者の検討順に近い並び（授業→声→講師→場所→申込） */

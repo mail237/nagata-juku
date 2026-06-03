@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import FadeInSection from '@/components/ui/FadeInSection';
 import ContactCTASection from '@/components/sections/ContactCTASection';
 import VacancyProgrammingSection from '@/components/sections/VacancyProgrammingSection';
+import OsakaSubsidySection from '@/components/sections/OsakaSubsidySection';
 import FeaturePointCards from '@/components/sections/FeaturePointCards';
 import ServiceFeatureReasonsDetail from '@/components/sections/ServiceFeatureReasonsDetail';
 import Link from 'next/link';
@@ -142,6 +143,8 @@ export default function ServicePage() {
             </FadeInSection>
           </div>
         </section>
+
+        <OsakaSubsidySection compact />
 
         {/* 入塾の流れ */}
         <section className="py-16 md:py-24 bg-white">

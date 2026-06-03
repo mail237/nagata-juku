@@ -9,6 +9,7 @@ import HighlightsSection from '@/components/sections/HighlightsSection';
 import CoursesSection from '@/components/sections/CoursesSection';
 import FeaturesSection from '@/components/sections/FeaturesSection';
 import VacancyProgrammingSection from '@/components/sections/VacancyProgrammingSection';
+import OsakaSubsidySection from '@/components/sections/OsakaSubsidySection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import ContactCTASection from '@/components/sections/ContactCTASection';
@@ -34,6 +35,7 @@ export default function HomePage() {
         <CoursesSection />
         <FeaturesSection />
         <VacancyProgrammingSection />
+        <OsakaSubsidySection />
         <TestimonialsSection />
         <FAQSection />
         <ContactCTASection />
