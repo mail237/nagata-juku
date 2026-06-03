@@ -92,8 +92,15 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                       >
                         {row.label}
                       </th>
-                      <td className="px-5 py-3.5 align-middle">
-                        <VacancyStatusBadge status={row.status} />
+                      <td className="px-4 sm:px-5 py-3.5 align-middle">
+                        <div className="flex flex-col items-center gap-1.5">
+                          <VacancyStatusBadge status={row.status} />
+                          {row.note ? (
+                            <span className="text-[0.6875rem] sm:text-xs font-bold text-[#2D8FA4] leading-snug">
+                              {row.note}
+                            </span>
+                          ) : null}
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -128,9 +135,13 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             <span className="inline-block text-xs font-bold text-[#45B1C7] tracking-wider uppercase mb-2">
               プログラミングコース
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1C4A52] leading-tight mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1C4A52] leading-tight mb-3">
               コードアドベンチャー 八尾校
             </h2>
+            <p className="mb-4 inline-flex flex-wrap items-center justify-center md:justify-start gap-2 rounded-xl border border-[#45B1C7]/35 bg-[#E8F7FA] px-4 py-2.5 text-sm font-bold text-[#1C4A52]">
+              <span className="rounded-full bg-[#45B1C7] px-2.5 py-0.5 text-xs text-white">空き2枠</span>
+              <span>大阪市在住の方、大募集！</span>
+            </p>
             {/* 画像小さめ：列は約 9.75rem / lg 10.5rem、本文が主役に寄る */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,9.75rem)_1fr] lg:grid-cols-[minmax(0,10.5rem)_1fr] gap-6 md:gap-7 lg:gap-9 items-start">
               <div className="relative mx-auto aspect-square w-full max-w-[9rem] overflow-hidden rounded-full md:mx-0 md:max-w-none md:w-full lg:max-w-[10.5rem]">
@@ -152,6 +163,9 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                 <ul className="text-[0.9375rem] md:text-base text-gray-600 space-y-2.5 list-disc pl-5 text-left marker:text-[#45B1C7] leading-[1.75] max-w-md mx-auto md:mx-0 md:max-w-none">
                   <li className="pl-0.5">小・中学生向け（ご相談により前後も可）</li>
                   <li className="pl-0.5">ビジュアルからコードへ段階的に学べます</li>
+                  <li className="pl-0.5">
+                    大阪市在住のご家庭は、習い事・塾代助成事業の利用もご相談ください
+                  </li>
                 </ul>
                 <div className="flex justify-center pt-1 md:justify-start">
                   <a
