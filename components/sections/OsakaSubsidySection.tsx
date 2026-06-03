@@ -9,14 +9,17 @@ type Props = {
 /** 大阪市習い事・塾代助成事業（当教室で利用可） */
 export default function OsakaSubsidySection({ compact }: Props) {
   const py = compact ? 'py-10 md:py-12' : 'py-12 md:py-16';
+  const badgeMax = compact
+    ? 'max-w-[200px] sm:max-w-[220px] md:max-w-[200px]'
+    : 'max-w-[220px] sm:max-w-[240px] md:max-w-[220px] lg:max-w-[240px]';
 
   return (
     <section className={`${py} bg-white border-y border-[#C7E5EB]/40`} aria-labelledby="osaka-subsidy-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection>
-          <div className="rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 shadow-[0_4px_24px_rgba(28,74,82,0.06)]">
-            <div className="flex flex-col md:flex-row gap-7 md:gap-10 items-center md:items-start">
-              <figure className="shrink-0 w-full max-w-[220px] sm:max-w-[260px] md:max-w-[280px] mx-auto md:mx-0">
+          <div className="rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 lg:p-9 shadow-[0_4px_24px_rgba(28,74,82,0.06)]">
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(0,11.5rem)_1fr] lg:grid-cols-[minmax(0,15rem)_1fr] gap-6 md:gap-8 lg:gap-10 items-center">
+              <figure className="flex justify-center lg:justify-start md:py-1">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={OSAKA_SUBSIDY.badgeSrc}
@@ -25,11 +28,11 @@ export default function OsakaSubsidySection({ compact }: Props) {
                   height={OSAKA_SUBSIDY.badgeHeight}
                   loading="lazy"
                   decoding="async"
-                  className="h-auto w-full drop-shadow-md"
+                  className={`h-auto w-full ${badgeMax} object-contain object-center drop-shadow-md`}
                 />
               </figure>
 
-              <div className="min-w-0 flex-1 text-center md:text-left">
+              <div className="min-w-0 text-center md:text-left">
                 <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-2">
                   <span className="w-5 h-px bg-[#45B1C7]" />
                   お知らせ
@@ -53,7 +56,7 @@ export default function OsakaSubsidySection({ compact }: Props) {
                     <li>助成額：月額上限1万円（制度の詳細は大阪市の案内に準じます）</li>
                     <li>ご利用には、事前の利用登録申請が必要です</li>
                   </ul>
-                  <p className="text-xs text-[#777777]">
+                  <p className="text-xs text-[#777777] text-left max-w-xl mx-auto md:mx-0">
                     ※ 八尾市在住の方は対象外です。手続き・対象学年・利用方法は変更となる場合があります。
                   </p>
                 </div>
