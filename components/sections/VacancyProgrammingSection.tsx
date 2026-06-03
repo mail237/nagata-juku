@@ -140,7 +140,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             </h2>
             <p className="mb-4 inline-flex flex-wrap items-center justify-center md:justify-start gap-2 rounded-xl border border-[#45B1C7]/35 bg-[#E8F7FA] px-4 py-2.5 text-sm font-bold text-[#1C4A52]">
               <span className="rounded-full bg-[#45B1C7] px-2.5 py-0.5 text-xs text-white">空き2枠</span>
-              <span>大阪市在住の方、大募集！</span>
+              <span>大阪市在住の方も大募集！</span>
             </p>
             {/* 画像小さめ：列は約 9.75rem / lg 10.5rem、本文が主役に寄る */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,9.75rem)_1fr] lg:grid-cols-[minmax(0,10.5rem)_1fr] gap-6 md:gap-7 lg:gap-9 items-start">

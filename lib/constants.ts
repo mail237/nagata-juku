@@ -28,7 +28,7 @@ export const VACANCY_ROWS: readonly { label: string; status: string; note?: stri
   {
     label: 'プログラミング',
     status: '空き2枠',
-    note: '大阪市在住の方、大募集！',
+    note: '大阪市在住の方も大募集！',
   },
 ];
 
