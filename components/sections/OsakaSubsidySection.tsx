@@ -57,7 +57,7 @@ export default function OsakaSubsidySection({ compact }: Props) {
                     <li>ご利用には、事前の利用登録申請が必要です</li>
                   </ul>
                   <p className="text-xs text-[#777777] text-left max-w-xl mx-auto md:mx-0">
-                    ※ 八尾市在住の方は対象外です。手続き・対象学年・利用方法は変更となる場合があります。
+                    ※ 八尾市・東大阪市在住の方は対象外です。手続き・対象学年・利用方法は変更となる場合があります。
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center md:justify-start">
