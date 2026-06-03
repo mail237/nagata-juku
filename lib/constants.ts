@@ -31,9 +31,9 @@ export const VACANCY_ROWS = [
 /** 大阪市習い事・塾代助成事業（参画事業者として登録済み） */
 export const OSAKA_SUBSIDY = {
   programName: '大阪市習い事・塾代助成事業',
-  badgeSrc: '/images/osaka-juku-subsidy-sticker.jpg',
-  badgeWidth: 1548,
-  badgeHeight: 1496,
+  badgeSrc: '/images/osaka-juku-subsidy-badge.jpg?v=2026-06',
+  badgeWidth: 1024,
+  badgeHeight: 1024,
   /** 大阪市公式ページ */
   cityUrl: 'https://www.city.osaka.lg.jp/kodomo/page/0000596583.html',
   /** 利用登録・事業者検索など */

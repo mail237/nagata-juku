@@ -16,11 +16,11 @@ export default function OsakaSubsidySection({ compact }: Props) {
         <FadeInSection>
           <div className="rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 shadow-[0_4px_24px_rgba(28,74,82,0.06)]">
             <div className="flex flex-col md:flex-row gap-7 md:gap-10 items-center md:items-start">
-              <figure className="shrink-0 w-full max-w-[200px] sm:max-w-[220px] md:max-w-[240px] mx-auto md:mx-0">
+              <figure className="shrink-0 w-full max-w-[220px] sm:max-w-[260px] md:max-w-[280px] mx-auto md:mx-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={OSAKA_SUBSIDY.badgeSrc}
-                  alt={`${OSAKA_SUBSIDY.programName}のステッカー。当教室でご利用になれます`}
+                  alt={`${OSAKA_SUBSIDY.programName}。当教室でご利用になれます`}
                   width={OSAKA_SUBSIDY.badgeWidth}
                   height={OSAKA_SUBSIDY.badgeHeight}
                   loading="lazy"
