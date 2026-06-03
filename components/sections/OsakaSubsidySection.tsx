@@ -25,7 +25,7 @@ export default function OsakaSubsidySection({ compact }: Props) {
                   height={OSAKA_SUBSIDY.badgeHeight}
                   loading="lazy"
                   decoding="async"
-                  className="h-auto w-full rounded-xl shadow-sm ring-1 ring-[#1C4A52]/[0.08]"
+                  className="h-auto w-full drop-shadow-md"
                 />
               </figure>
 

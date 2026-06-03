@@ -31,7 +31,7 @@ export const VACANCY_ROWS = [
 /** 大阪市習い事・塾代助成事業（参画事業者として登録済み） */
 export const OSAKA_SUBSIDY = {
   programName: '大阪市習い事・塾代助成事業',
-  badgeSrc: '/images/osaka-juku-subsidy-badge.jpg?v=2026-06',
+  badgeSrc: '/images/osaka-juku-subsidy-badge.png?v=transparent-2026-06',
   badgeWidth: 1024,
   badgeHeight: 1024,
   /** 大阪市公式ページ */
