@@ -8,6 +8,7 @@ import CommitmentStripSection from '@/components/sections/CommitmentStripSection
 import HighlightsSection from '@/components/sections/HighlightsSection';
 import CoursesSection from '@/components/sections/CoursesSection';
 import FeaturesSection from '@/components/sections/FeaturesSection';
+import NewClassSlotsSection from '@/components/sections/NewClassSlotsSection';
 import VacancyProgrammingSection from '@/components/sections/VacancyProgrammingSection';
 import OsakaSubsidySection from '@/components/sections/OsakaSubsidySection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
@@ -34,6 +35,7 @@ export default function HomePage() {
         <HighlightsSection />
         <CoursesSection />
         <FeaturesSection />
+        <NewClassSlotsSection />
         <VacancyProgrammingSection />
         <OsakaSubsidySection />
         <TestimonialsSection />
