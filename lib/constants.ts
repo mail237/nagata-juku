@@ -23,13 +23,14 @@ export const CODE_ADVENTURE_YAO_LP = 'https://codeadventure.jp/lp/yao/' as const
 /** 新設授業枠のお知らせ（随時ここを更新してください） */
 export const NEW_CLASS_SLOTS = {
   anchorId: 'new-class-slots',
-  limit: 3,
+  /** ヘッダー表示用の残り枠数 */
+  remainingTotal: 2,
   slots: [
-    { day: '月曜日', time: '18:30〜19:30' },
-    { day: '火曜日', time: '18:00〜19:30' },
-    { day: '水曜日', time: '19:30〜22:00' },
-    { day: '木曜日', time: '18:30〜19:30' },
-    { day: '金曜日', time: '18:30〜19:30' },
+    { day: '月曜日', time: '18:30〜19:30', status: 'available' as const, remaining: 2 },
+    { day: '火曜日', time: '18:00〜19:30', status: 'full' as const },
+    { day: '水曜日', time: '19:30〜22:00', status: 'full' as const },
+    { day: '木曜日', time: '18:30〜19:30', status: 'full' as const },
+    { day: '金曜日', time: '18:30〜19:30', status: 'available' as const, remaining: 2 },
   ],
 } as const;
 

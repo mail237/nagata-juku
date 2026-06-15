@@ -19,7 +19,7 @@ export default function NewClassSlotsSection() {
                 お知らせ
               </span>
               <span className="inline-flex items-center justify-center rounded-full bg-[#45B1C7] px-4 py-1.5 text-sm font-black text-white">
-                限定{NEW_CLASS_SLOTS.limit}名
+                残り{NEW_CLASS_SLOTS.remainingTotal}枠
               </span>
             </div>
 
@@ -50,15 +50,41 @@ export default function NewClassSlotsSection() {
                   新設 授業枠
                 </h3>
                 <ul className="space-y-2.5">
-                  {NEW_CLASS_SLOTS.slots.map((slot) => (
-                    <li
-                      key={slot.day}
-                      className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-4 text-sm md:text-[0.9375rem] border-b border-[#C7E5EB]/50 last:border-0 pb-2.5 last:pb-0"
-                    >
-                      <span className="font-bold text-[#1C4A52] min-w-[4.5rem]">{slot.day}</span>
-                      <span className="text-[#393939] tabular-nums">{slot.time}</span>
-                    </li>
-                  ))}
+                  {NEW_CLASS_SLOTS.slots.map((slot) => {
+                    const isFull = slot.status === 'full';
+                    return (
+                      <li
+                        key={slot.day}
+                        className={`flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-sm md:text-[0.9375rem] border-b border-[#C7E5EB]/50 last:border-0 pb-2.5 last:pb-0 ${
+                          isFull ? 'opacity-70' : ''
+                        }`}
+                      >
+                        <span
+                          className={`font-bold min-w-[4.5rem] ${
+                            isFull ? 'text-gray-500 line-through decoration-gray-400' : 'text-[#1C4A52]'
+                          }`}
+                        >
+                          {slot.day}
+                        </span>
+                        <span
+                          className={`tabular-nums flex-1 ${
+                            isFull ? 'text-gray-500 line-through decoration-gray-400' : 'text-[#393939]'
+                          }`}
+                        >
+                          {slot.time}
+                        </span>
+                        {isFull ? (
+                          <span className="text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-2.5 py-0.5 shrink-0">
+                            満席
+                          </span>
+                        ) : (
+                          <span className="text-xs font-bold text-[#1C4A52] bg-[#E8F7FA] ring-1 ring-[#C7E5EB] rounded-full px-2.5 py-0.5 shrink-0 tabular-nums">
+                            残り{slot.remaining}枠
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
