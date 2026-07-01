@@ -8,7 +8,7 @@ import GradePeriodBadge from '@/components/ui/GradePeriodBadge';
 
 const testimonials = [
   {
-    name: 'S.H くん',
+    name: 'S.H さん',
     photo: '/images/girl-student.png',
     school: '高校3年生（在籍中）',
     gradeRange: '小2〜高3',

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const voices = [
   {
-    name: 'S.H くん',
+    name: 'S.H さん',
     photo: '/images/girl-student.png',
     detail: '高校3年生（在籍中）',
     gradeRange: '小2〜高3',
