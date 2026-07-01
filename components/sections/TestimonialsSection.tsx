@@ -8,6 +8,16 @@ import GradePeriodBadge from '@/components/ui/GradePeriodBadge';
 
 const testimonials = [
   {
+    name: 'S.H くん',
+    photo: '/images/girl-student.png',
+    school: '高校3年生（在籍中）',
+    gradeRange: '小2〜高3',
+    gradeDuration: '約11年間',
+    body: '小学2年生の時からずっとお世話になっています。この記事を載せた時点では高校3年生です。通っている期間が長すぎて、もう永田塾は家みたいになっています。わからないところをその場で聞けるし、部活で忙しい時期も無理のないペースで続けられました。長く通い続けられるのは、先生が一人ひとりを見てくれるからだと思います。',
+    result: '小2から高校3年まで継続して通塾',
+    highlight: '通い続けて、塾が「家」みたいに',
+  },
+  {
     name: 'K.T ちゃん',
     photo: '/images/voice-hs-kt.png',
     school: '天王寺高校卒 → 大阪市立大学 卒業',

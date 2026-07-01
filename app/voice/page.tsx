@@ -14,6 +14,17 @@ export const metadata: Metadata = {
 
 const voices = [
   {
+    name: 'S.H くん',
+    photo: '/images/girl-student.png',
+    detail: '高校3年生（在籍中）',
+    gradeRange: '小2〜高3',
+    gradeDuration: '約11年間',
+    before: '小学2年生の頃から通い始めた',
+    after: '高校3年生。受験に向けて学習を続けている',
+    body: '小学2年生の時からずっとお世話になっています。この記事を載せた時点では高校3年生です。通っている期間が長すぎて、もう永田塾は家みたいになっています。わからないところをその場で聞けるし、部活で忙しい時期も無理のないペースで続けられました。長く通い続けられるのは、先生が一人ひとりを見てくれるからだと思います。',
+    highlight: '通い続けて、塾が「家」みたいに',
+  },
+  {
     name: 'K.T ちゃん',
     photo: '/images/voice-hs-kt.png',
     detail: '天王寺高校卒 → 大阪市立大学 卒業',
