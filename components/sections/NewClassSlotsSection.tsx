@@ -13,13 +13,10 @@ export default function NewClassSlotsSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <div className="rounded-2xl border border-[#45B1C7]/30 bg-white shadow-[0_8px_32px_rgba(28,74,82,0.08)] overflow-hidden">
-            <div className="bg-[#1C4A52] px-6 py-4 md:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="bg-[#1C4A52] px-6 py-4 md:px-8">
               <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#C7E5EB] uppercase">
                 <span className="w-5 h-px bg-[#45B1C7]" />
                 お知らせ
-              </span>
-              <span className="inline-flex items-center justify-center rounded-full bg-[#45B1C7] px-4 py-1.5 text-sm font-black text-white">
-                残り{NEW_CLASS_SLOTS.remainingTotal}枠
               </span>
             </div>
 
@@ -74,7 +71,11 @@ export default function NewClassSlotsSection() {
                           <span className="text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-2.5 py-0.5 shrink-0">
                             満席
                           </span>
-                        ) : null}
+                        ) : (
+                          <span className="text-xs font-bold text-[#1C4A52] bg-[#E8F7FA] ring-1 ring-[#C7E5EB] rounded-full px-2.5 py-0.5 shrink-0 tabular-nums">
+                            残り{slot.remaining}枠
+                          </span>
+                        )}
                       </li>
                     );
                   })}
