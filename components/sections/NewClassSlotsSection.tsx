@@ -67,15 +67,9 @@ export default function NewClassSlotsSection() {
                         >
                           {slot.time}
                         </span>
-                        {isFull ? (
-                          <span className="text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-2.5 py-0.5 shrink-0">
-                            満席
-                          </span>
-                        ) : (
-                          <span className="text-xs font-bold text-[#1C4A52] bg-[#E8F7FA] ring-1 ring-[#C7E5EB] rounded-full px-2.5 py-0.5 shrink-0 tabular-nums">
-                            残り{slot.remaining}枠
-                          </span>
-                        )}
+                        <span className="text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-2.5 py-0.5 shrink-0">
+                          満席
+                        </span>
                       </li>
                     );
                   })}
