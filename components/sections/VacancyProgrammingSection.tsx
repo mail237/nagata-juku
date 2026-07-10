@@ -138,13 +138,9 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             <span className="inline-block text-xs font-bold text-[#45B1C7] tracking-wider uppercase mb-2">
               プログラミングコース
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1C4A52] leading-tight mb-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1C4A52] leading-tight mb-4">
               コードアドベンチャー 八尾校
             </h2>
-            <p className="mb-4 inline-flex flex-wrap items-center justify-center md:justify-start gap-2 rounded-xl border border-[#45B1C7]/35 bg-[#E8F7FA] px-4 py-2.5 text-sm font-bold text-[#1C4A52]">
-              <span className="rounded-full bg-[#45B1C7] px-2.5 py-0.5 text-xs text-white">空き2枠</span>
-              <OsakaCityRecruitLink />
-            </p>
             {/* 画像小さめ：列は約 9.75rem / lg 10.5rem、本文が主役に寄る */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,9.75rem)_1fr] lg:grid-cols-[minmax(0,10.5rem)_1fr] gap-6 md:gap-7 lg:gap-9 items-start">
               <div className="relative mx-auto aspect-square w-full max-w-[9rem] overflow-hidden rounded-full md:mx-0 md:max-w-none md:w-full lg:max-w-[10.5rem]">

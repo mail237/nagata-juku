@@ -24,11 +24,11 @@ export const CODE_ADVENTURE_YAO_LP = 'https://codeadventure.jp/lp/yao/' as const
 export const NEW_CLASS_SLOTS = {
   anchorId: 'new-class-slots',
   slots: [
-    { day: '月曜日', time: '18:30〜19:30', status: 'available' as const, remaining: 1 },
+    { day: '月曜日', time: '18:30〜19:30', status: 'full' as const },
     { day: '火曜日', time: '18:00〜19:30', status: 'full' as const },
     { day: '水曜日', time: '19:30〜22:00', status: 'full' as const },
     { day: '木曜日', time: '18:30〜19:30', status: 'full' as const },
-    { day: '金曜日', time: '18:30〜19:30', status: 'available' as const, remaining: 1 },
+    { day: '金曜日', time: '18:30〜19:30', status: 'full' as const },
   ],
 } as const;
 
@@ -37,11 +37,7 @@ export const VACANCY_ROWS: readonly { label: string; status: string; note?: stri
   { label: '高校生', status: '満席' },
   { label: '中学生', status: '満席' },
   { label: '小学生', status: '満席' },
-  {
-    label: 'プログラミング',
-    status: '空き2枠',
-    note: '大阪市在住の方も大募集！',
-  },
+  { label: 'プログラミング', status: '満席' },
 ];
 
 /** 大阪市習い事・塾代助成事業（参画事業者として登録済み） */
