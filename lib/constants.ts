@@ -37,7 +37,7 @@ export const VACANCY_ROWS: readonly { label: string; status: string; note?: stri
   { label: '高校生', status: '満席' },
   { label: '中学生', status: '満席' },
   { label: '小学生', status: '満席' },
-  { label: 'プログラミング', status: '満席' },
+  { label: 'プログラミング', status: '空き2枠', note: '大阪市在住の方も大募集！' },
 ];
 
 /** 大阪市習い事・塾代助成事業（参画事業者として登録済み） */
