@@ -35,7 +35,7 @@ export const NEW_CLASS_SLOTS = {
 /** 空席案内（随時ここを更新してください） */
 export const VACANCY_ROWS: readonly { label: string; status: string; note?: string }[] = [
   { label: '高校生', status: '満席' },
-  { label: '中学生', status: '満席' },
+  { label: '中学生', status: '残り1席', note: '中２のみ' },
   { label: '小学生', status: '満席' },
   { label: 'プログラミング', status: '残り1席', note: '大阪市在住の方も大募集！' },
 ];
