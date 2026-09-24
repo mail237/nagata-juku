@@ -33,7 +33,7 @@ export default function NewClassSlotsSection() {
                   このたび、多数のお問い合わせをいただいておりますことを受け、新たな授業枠を設けることになりました。
                 </p>
                 <p>
-                  週に何日でも、都合に合わせてご利用いただける体制です。なお、ご入塾は<strong className="font-bold text-[#1C4A52]">先着順</strong>
+                  ご入塾は<strong className="font-bold text-[#1C4A52]">先着順</strong>
                   となりますので、ご希望の方はお早めにご連絡ください。
                 </p>
               </div>
@@ -67,8 +67,14 @@ export default function NewClassSlotsSection() {
                         >
                           {slot.time}
                         </span>
-                        <span className="text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-2.5 py-0.5 shrink-0">
-                          満席
+                        <span
+                          className={`text-xs font-semibold rounded-full px-2.5 py-0.5 shrink-0 ${
+                            isFull
+                              ? 'text-gray-500 bg-gray-100'
+                              : 'text-[#1C4A52] bg-[#E8F7FA] ring-1 ring-[#C7E5EB]'
+                          }`}
+                        >
+                          {isFull ? '満席' : '空きあり'}
                         </span>
                       </li>
                     );
