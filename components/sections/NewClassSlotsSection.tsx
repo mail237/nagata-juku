@@ -30,11 +30,11 @@ export default function NewClassSlotsSection() {
 
               <div className="space-y-4 text-sm md:text-[0.9375rem] text-[#393939] leading-loose mb-7">
                 <p>
-                  このたび、多数のお問い合わせをいただいておりますことを受け、新たな授業枠を設けることになりました。
+                  お問い合わせが増えたため、授業枠を増やしました。
                 </p>
                 <p>
                   ご入塾は<strong className="font-bold text-[#1C4A52]">先着順</strong>
-                  となりますので、ご希望の方はお早めにご連絡ください。
+                  です。希望の方は早めに連絡してください。
                 </p>
               </div>
 

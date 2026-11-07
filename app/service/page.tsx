@@ -12,13 +12,13 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: '授業内容・料金',
   description:
-    '永田塾の授業内容と料金。塾長の直接指導・定額通い放題・ICT活用（自宅オンライン可）の詳しい説明、料金表、入塾の流れ。マイクラプログラミング（コードアドベンチャー八尾校）の案内も。',
+    '永田塾の授業内容と料金。塾長の直接指導・定額通いホーダイ・ICT活用（自宅オンライン可）の説明、料金表、入塾の流れ。マイクラプログラミング（コードアドベンチャー八尾校）の案内も。',
 };
 
 const flow = [
   { step: '01', title: 'お問合せ', desc: 'フォームまたはお電話にてご連絡ください。' },
   { step: '02', title: '無料体験授業', desc: '実際に授業を体験していただきます。完全無料・勧誘なし。' },
-  { step: '03', title: 'カウンセリング', desc: '現状の学習状況・目標をお聞きし、最適なプランをご提案。' },
+  { step: '03', title: 'カウンセリング', desc: '今の成績と目標を聞いて、進め方を決めます。' },
   { step: '04', title: 'ご入塾', desc: '月の途中からでも翌日から授業開始可能。' },
 ];
 
@@ -39,7 +39,7 @@ export default function ServicePage() {
                 授業内容・料金
               </h1>
               <p className="text-[#555555] text-base max-w-xl leading-relaxed">
-                塾長の直接指導・定額通い放題・ICT活用の3つの特長と、料金・入塾の流れをご案内します。まずは無料体験授業からお気軽にスタートできます。
+                特長は3つ。塾長が全部見ること、月謝が定額なこと、ICTで弱点を見つけること。料金と入塾の流れもこのページに載せています。
               </p>
             </FadeInSection>
           </div>
@@ -49,7 +49,7 @@ export default function ServicePage() {
           className="py-16 md:py-24 bg-[#F2F9FA]"
           eyebrow="Features"
           title="永田塾の特長"
-          lead="トップページ「選ばれる3つの理由」と同じレイアウトのあと、下のセクションで詳しくご紹介します。"
+          lead="この3つが永田塾のやり方です。下で1つずつ説明します。"
           cta={{ href: '#reasons-detail', label: '詳しい説明を見る' }}
         />
 
@@ -70,7 +70,7 @@ export default function ServicePage() {
             <FadeInSection className="mb-10">
               <div className="bg-[#F2F9FA] rounded-2xl overflow-hidden border border-[#C7E5EB]/60">
                 <div className="bg-[#45B1C7] px-6 py-4 flex items-center gap-3">
-                  <span className="text-white font-black font-serif text-lg">通い放題コース</span>
+                  <span className="text-white font-black font-serif text-lg">通いホーダイコース</span>
                   <span className="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-bold">週何回でも定額</span>
                 </div>
                 <div className="overflow-x-auto">
@@ -119,7 +119,7 @@ export default function ServicePage() {
                       '授業料は定額で週に何度でも通えます',
                       '別途、入塾金（10,000円）・教材費・教室維持費（1,000円/月）がかかります',
                       '高校生は卒業生または塾生紹介のみの募集となります',
-                      'プログラミング（10,500円/月）は通い放題の学習塾料金とは別コースです',
+                      'プログラミング（10,500円/月）は通いホーダイとは別のコースです',
                     ].map((note, i) => (
                       <li key={i} className="text-xs text-[#777777] flex items-start gap-1.5">
                         <span className="text-[#45B1C7] shrink-0">※</span>{note}
@@ -132,7 +132,7 @@ export default function ServicePage() {
 
             <FadeInSection delay={0.1} className="text-center">
               <p className="text-xs text-[#777777] mb-5">
-                料金についてのご不明点は、お気軽にお問合せください。
+                料金でわからない点は、電話かフォームで聞いてください。
               </p>
               <Link
                 href="/contact"

@@ -112,7 +112,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-5 space-y-2">
               <span className="block text-[#1C4A52]/90">
-                満席の場合は、キャンセル待ち（順番待ち）としてご案内しています。
+                満席の学年は、キャンセル待ちで受け付けています。
               </span>
               <span className="block">
                 空席は随時変わります。最新の状況はお電話またはお問合せフォームでご確認ください。

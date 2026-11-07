@@ -9,7 +9,7 @@ import { SCHOOL } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'お問合せ・無料体験申込み',
   description:
-    '永田塾へのお問合せ・無料体験授業の申込みはこちら。電話・LINE・フォームからお気軽にご連絡ください。',
+    '永田塾へのお問合せ・無料体験の申込み。電話・LINE・フォームからどうぞ。',
 };
 
 const quickInfo = [
@@ -111,7 +111,7 @@ export default function ContactPage() {
                 お問合せ・無料体験申込み
               </h1>
               <p className="text-[#555555] text-base max-w-xl leading-relaxed">
-                お気軽にご連絡ください。無料体験後の勧誘は一切ありません。
+                無料体験後の勧誘はしません。電話・LINE・フォーム、どれでもどうぞ。
               </p>
             </FadeInSection>
           </div>

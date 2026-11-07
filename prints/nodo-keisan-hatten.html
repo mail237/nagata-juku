@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>濃度の計算をマスターしよう〜発展編〜 プリントNo.11</title>
+  <style>
+    @page { size: A4; margin: 0; }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e8e8e8;
+      color: #111;
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px 16px;
+      background: #1f1f1f;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .toolbar button {
+      font: inherit;
+      border: 0;
+      border-radius: 6px;
+      padding: 8px 16px;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+    }
+
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      margin: 12px auto 24px;
+      padding: 12mm 14mm 11mm;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 6mm 8mm;
+      align-items: start;
+      margin-bottom: 4mm;
+    }
+
+    .title {
+      justify-self: center;
+      grid-column: 1;
+      border: 2.5px solid #111;
+      padding: 2.2mm 8mm;
+      font-size: 16pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+    }
+
+    .meta {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: right;
+      font-size: 10.5pt;
+      line-height: 1.45;
+      padding-top: 1mm;
+    }
+
+    .who {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 12pt;
+      letter-spacing: 0.06em;
+      margin: 0;
+    }
+
+    .blank {
+      display: inline-block;
+      border-bottom: 1px solid #111;
+      vertical-align: baseline;
+    }
+
+    .blank.class { width: 12mm; }
+    .blank.num { width: 14mm; }
+    .blank.name { width: 52mm; }
+    .blank.ans { width: 28mm; height: 1.15em; }
+
+    h2 {
+      margin: 0 0 2mm;
+      font-size: 12pt;
+      font-weight: 700;
+    }
+
+    h2::before { content: "●"; margin-right: 0.3em; }
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      margin: 0;
+      padding: 1.6mm 0 2mm;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    li + li { border-top: 1px dashed #c8c8c8; }
+
+    .stem {
+      margin: 0;
+      font-size: 11pt;
+      line-height: 1.55;
+    }
+
+    .no {
+      font-weight: 700;
+    }
+
+    .pair {
+      margin: 1.2mm 0 1.4mm 1.2em;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6mm 6mm;
+      margin: 0 0 1mm 1.2em;
+      font-size: 11pt;
+      line-height: 1.45;
+    }
+
+    .work {
+      flex: 1;
+      margin: 1.5mm 0 0.5mm;
+    }
+
+    .work span {
+      display: block;
+      height: 8mm;
+      border-bottom: 0.6pt solid #bdbdbd;
+    }
+
+    .answer {
+      margin: 0;
+      text-align: right;
+      font-size: 12pt;
+      letter-spacing: 0.08em;
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .toolbar { display: none; }
+      .sheet {
+        margin: 0;
+        box-shadow: none;
+        height: 297mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>濃度の計算〜発展編〜　やり直し用（答えなし）</span>
+    <button type="button" onclick="window.print()">印刷する</button>
+  </div>
+
+  <article class="sheet">
+    <header>
+      <div class="title">濃度の計算をマスターしよう〜発展編〜</div>
+      <div class="meta">
+        プリントNo.11<br />
+        教科書P.165-166
+      </div>
+      <p class="who">
+        1 年（<span class="blank class"></span>）組（<span class="blank num"></span>）番　名前（<span class="blank name"></span>）
+      </p>
+    </header>
+
+    <h2>発展問題</h2>
+
+    <ol>
+      <li>
+        <p class="stem"><span class="no">①</span>海水の塩分濃度を調べると、質量パーセント濃度が 3.4% であった。これと同じ濃度の塩化ナトリウム水溶液 200 g をつくるのに、必要な塩化ナトリウムは何 g か。</p>
+        <div class="work"><span></span><span></span><span></span></div>
+        <p class="answer">答え <span class="blank ans"></span> g</p>
+      </li>
+      <li>
+        <p class="stem"><span class="no">②</span>次の A、B の水溶液の濃さ（濃度）について述べたものとして正しいものを、あとのア〜エから 1 つ選びなさい。</p>
+        <p class="pair">
+          A … 水 75 g に砂糖 25 g をとかした水溶液<br />
+          B … 水 160 g に砂糖 40 g をとかした水溶液
+        </p>
+        <div class="choices">
+          <div>ア．A のほうがこい。</div>
+          <div>イ．B のほうがこい。</div>
+          <div>ウ．A、B どちらも同じこさである。</div>
+          <div>エ．A、B どちらがこいとはいえない。</div>
+        </div>
+        <div class="work"><span></span><span></span></div>
+        <p class="answer">答え <span class="blank ans"></span></p>
+      </li>
+      <li>
+        <p class="stem"><span class="no">③</span>10% の塩化ナトリウム水溶液 120 g に水を加えて、8% の塩化ナトリウム水溶液にしたい。何 g の水を加えればよいか。</p>
+        <div class="work"><span></span><span></span><span></span><span></span></div>
+        <p class="answer">答え <span class="blank ans"></span> g</p>
+      </li>
+      <li>
+        <p class="stem"><span class="no">④</span>3.5% の塩化ナトリウム水溶液をつくるためには、水 1 kg に何 g の塩化ナトリウムを加えればよいか。小数第 2 位を四捨五入して小数第 1 位まで求めなさい。</p>
+        <div class="work"><span></span><span></span><span></span><span></span></div>
+        <p class="answer">答え <span class="blank ans"></span> g</p>
+      </li>
+    </ol>
+  </article>
+
+  <script>
+    document.querySelector("button").addEventListener("click", function () {
+      window.print();
+    });
+  </script>
+</body>
+</html>

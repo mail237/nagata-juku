@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'お役立ち情報',
-  description: '永田塾からの保護者・生徒に役立つ勉強・子育てに関するお役立ち情報をお届けします。',
+  description: '勉強と子育ての悩みについて、塾長が書いています。',
 };
 
 const articles = [
@@ -45,7 +45,7 @@ export default function ColumnPage() {
                 お役立ち情報
               </h1>
               <p className="text-[#555555] text-base max-w-xl">
-                保護者の方・生徒の方に役立つ情報をお届けします。
+                勉強と子育ての悩みについて書いています。
               </p>
             </FadeInSection>
           </div>
@@ -73,7 +73,7 @@ export default function ColumnPage() {
 
             <FadeInSection delay={0.4} className="mt-10 text-center">
               <p className="text-sm text-[#777777] mb-4">
-                勉強や子育てのお悩みは、お気軽にご相談ください。
+                勉強や子育ての悩みは、電話でもフォームでも相談してください。
               </p>
               <Link
                 href="/contact"

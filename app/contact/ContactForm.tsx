@@ -69,7 +69,7 @@ export default function ContactForm() {
       }
       if (payload.code === 'EMAIL_NOT_CONFIGURED') {
         setSubmitError(
-          `フォームからのメール送信は、サーバーに Resend の設定（環境変数）が必要です。公開前に設定するか、お手数ですが ${SCHOOL.email} まで直接メールを送るか、お電話（${SCHOOL.phone}）でご連絡ください。`,
+          `フォームの送信がうまくいきませんでした。お手数ですが、メール（${SCHOOL.email}）かお電話（${SCHOOL.phone}）でご連絡ください。`,
         );
         return;
       }
@@ -110,8 +110,8 @@ export default function ContactForm() {
             </h3>
             <p className="text-sm text-[#777777] leading-relaxed max-w-md mx-auto">
               お問合せを受け付けました。
-              当日〜翌日中に、塾長よりご連絡いたします。
-              お急ぎの場合はお電話（{SCHOOL.phone}）またはメール（{SCHOOL.email}）にてご連絡ください。
+              当日〜翌日中に、塾長から連絡します。
+              お急ぎの場合はお電話（{SCHOOL.phone}）かメール（{SCHOOL.email}）でご連絡ください。
             </p>
           </motion.div>
         ) : (

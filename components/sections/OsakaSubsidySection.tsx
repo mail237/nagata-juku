@@ -53,7 +53,7 @@ export default function OsakaSubsidySection({ compact }: Props) {
                 <div className="space-y-3 text-sm text-[#393939] leading-relaxed mb-5">
                   <p>
                     永田塾は、大阪市の<strong className="font-bold text-[#1C4A52]">習い事・塾代助成事業</strong>
-                    に参画事業者として登録されました。お子さまの通塾費の一部を、制度の範囲内で助成いただけます。
+                    の登録教室です。通塾費の一部に助成が使えます。
                   </p>
                   <ul className="text-left space-y-1.5 list-disc pl-5 marker:text-[#45B1C7] max-w-xl mx-auto md:mx-0">
                     <li>対象：大阪市内在住の小学5年生～中学3年生を養育するご家庭</li>

@@ -8,7 +8,9 @@ import { SCHOOL } from '@/lib/constants';
 export default function LineFloatingButton() {
   const pathname = usePathname();
 
-  if (!SCHOOL.lineUrl || pathname === '/contact') return null;
+  if (!SCHOOL.lineUrl || pathname === '/contact' || pathname.startsWith('/gengoka')) {
+    return null;
+  }
 
   return (
     <LineLink

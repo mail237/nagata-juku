@@ -10,7 +10,7 @@ const highlights = [
   '学校の進度に合わせた定期テスト対策',
   'つまずいたところから遡って学べる',
   '通える曜日・時間を選べる',
-  '苦手克服と得意科目の伸長に対応',
+  '苦手な科目も、得意な科目も見ます',
 ];
 
 export default function HighlightsSection() {
@@ -73,9 +73,9 @@ export default function HighlightsSection() {
               <div className="space-y-3 text-sm text-[#393939] leading-loose mb-5">
                 <p>大阪・八尾市の個別指導塾、永田塾です。</p>
                 <p>
-                  本気で成績を上げたいお子さまのために、学ぶ姿勢を整え、くり返し学ぶことで実力を伸ばします。
+                  まず学ぶ姿勢を整えて、くり返し学んで実力を伸ばします。
                 </p>
-                <p>勉強を通じた成功体験が、これからの自信につながるようサポートします。お気軽にご相談ください。</p>
+                <p>「できた」という体験が、次の自信になります。相談は電話でもフォームでもどうぞ。</p>
               </div>
               <Link
                 href="/greeting"

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TOFAS（計算）実施のお知らせ｜永田塾</title>
+  <style>
+    @page { size: A4; margin: 0; }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e6e6e6;
+      color: #000;
+      font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "MS PGothic", Meiryo, sans-serif;
+      font-weight: 500;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 16px;
+      background: #1f1f1f;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .toolbar button {
+      font: inherit;
+      border: 0;
+      border-radius: 6px;
+      padding: 8px 16px;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+    }
+
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      margin: 12px auto 24px;
+      padding: 11mm 15.4mm 7mm;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      font-size: 10.5pt;
+      line-height: 1.32;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .addr {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin: 0 0 0.85em;
+    }
+
+    .addr .to { margin: 0; }
+    .addr .from { margin: 0; }
+
+    h1 {
+      margin: 0;
+      font-size: 10.5pt;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.55;
+    }
+
+    .salute {
+      margin: 0.55em 0 0.4em;
+    }
+
+    p {
+      margin: 0 0 0.65em;
+      text-align: justify;
+      text-justify: inter-character;
+    }
+
+    .close {
+      margin: 0.05em 0 0.35em;
+      text-align: right;
+    }
+
+    .ki {
+      margin: 0 0 0.3em;
+      text-align: center;
+    }
+
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 0 0 0.4em;
+    }
+
+    .sub {
+      display: block;
+      padding-left: 1.2em;
+    }
+
+    .levels {
+      margin: 0.1em 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .levels li {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    .dots {
+      margin: 0.45em 0 0.45em;
+      line-height: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      letter-spacing: 0.12em;
+    }
+
+    .notes {
+      margin: 0 0 0.2em;
+      text-align: justify;
+      text-justify: inter-character;
+    }
+
+    .slip-wrap {
+      margin-top: auto;
+      padding-top: 4mm;
+    }
+
+    .cut {
+      display: flex;
+      align-items: center;
+      gap: 2.5mm;
+      margin: 0 0 2.2mm;
+      line-height: 1;
+      letter-spacing: 0.12em;
+    }
+
+    .cut .rule {
+      flex: 1;
+      border-top: 1px dashed #000;
+    }
+
+    .slip {
+      border: 1px solid #000;
+      padding: 3.6mm 4.2mm 3.2mm;
+    }
+
+    .slip-head {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: baseline;
+      margin: 0 0 2.4mm;
+    }
+
+    .slip-head p { margin: 0; }
+    .slip-title { letter-spacing: 0.14em; text-align: left; }
+    .slip-due { text-align: center; }
+    .slip-from { text-align: right; }
+
+    .row {
+      margin: 0 0 1.5mm;
+    }
+
+    .grades {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.6mm;
+    }
+
+    .mark {
+      display: inline-block;
+      width: 3.4mm;
+      height: 3.4mm;
+      border: 1px solid #000;
+      margin-right: 0.7mm;
+      vertical-align: -0.4mm;
+    }
+
+    .names {
+      margin: 3.2mm 0 0.6mm;
+    }
+
+    .write {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.5mm;
+    }
+
+    .blank {
+      flex: 1;
+      border-bottom: 1px solid #000;
+      height: 7.2mm;
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .toolbar { display: none; }
+      .sheet {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>TOFAS（計算）実施のお知らせ　A4・1枚</span>
+    <button type="button" onclick="window.print()">印刷する</button>
+  </div>
+
+  <article class="sheet">
+    <div class="letter">
+      <div class="addr">
+        <p class="to">生徒・保護者様の皆様へ</p>
+        <p class="from">永田塾</p>
+      </div>
+
+      <h1>
+        【希望者申込】学力健康診断<br />
+        「国際基礎学力検定 TOFAS（計算）」実施のお知らせ
+      </h1>
+
+      <p class="salute">拝啓</p>
+
+      <p>保護者の皆様におかれましては、日頃より当塾の教育活動にご理解とご協力をいただき、厚く御礼申し上げます。</p>
+
+      <p>さて、昨今の教育現場におきましては、中学校の定期テストで思うように点数が伸び悩む生徒さんが増加傾向にあります。その背景を分析いたしますと、小学生のうちに学んだ計算の解き方や公式の「忘れ」や「抜け・漏れ」が大きく影響していることが分かってまいりました。</p>
+
+      <p>一方で、常に安定して好成績を収める生徒さんは、こうした超基礎の「抜け・漏れ」が極めて少なく、持てる実力をそのまま発揮できております。</p>
+
+      <p>そこで当塾ではこの課題を解決すべく、基礎学力を数値で可視化し、一人ひとりの弱点を正確に把握・管理することで、確実な成績向上へ繋げていく取り組みを開始いたします。</p>
+
+      <p>つきましては、その第一歩として10月19日（月）〜26日（月）の通常授業枠におきまして、受検を希望される方を対象に「TOFAS（国際基礎学力検定・計算）」を実施する運びとなりました。中学3年生もお申し込みいただけます。</p>
+
+      <p>本テストは一般的な模試や実力テストとは異なり、事前対策も不要で、お子様の「今の基礎体力」を気楽に測れるものです。周囲と競い合うためのものではございませんので、リラックスしてご参加ください。</p>
+
+      <p class="close">敬具</p>
+
+      <p class="ki">【 記 】</p>
+
+      <ol>
+        <li>
+          1. 実施期間：2026年10月19日（月）〜 10月26日（月）
+          <span class="sub">※上記の期間中、いつもの通常授業の中で実施いたします。</span>
+        </li>
+        <li>2. 対象科目：計算（CBTオンラインテスト）</li>
+        <li>
+          3. 対象学年：希望者（小学生〜中学3年生）
+          <span class="sub">※中学3年生も受検できます。全員必須ではありません。</span>
+        </li>
+        <li>4. 受検費用：無料（全額塾負担）</li>
+        <li>
+          5. 受検目安レベル（学年ごとの履修範囲に対応）：
+          <ul class="levels">
+            <li>レベル1：小1相当（たし算・ひき算の基本）</li>
+            <li>レベル2：小2相当（くり上がり・くり下がりのある計算）</li>
+            <li>レベル3：小3相当（かけ算・わり算まで）</li>
+            <li>レベル4：小4相当（分数の加減・小数の加減まで）</li>
+            <li>レベル5：小5相当（仮分数・帯分数・計算のきまりまで）</li>
+            <li>レベル6：小6相当（分数の乗除・通分約分まで）</li>
+            <li>レベル7：中1相当（正負の数・文字式・一次方程式まで）</li>
+            <li>レベル8：中2相当（多項式・連立方程式まで）</li>
+            <li>レベル9：中3相当（平方根・因数分解・二次方程式まで）</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p class="dots">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</p>
+      <p class="notes">※希望される方のみの実施です。下の申込書を切り取り、10月17日（土）の授業までにご提出ください。提出がない場合、受検はありません。</p>
+      <p class="notes">※体調不良やご都合によりこの期間中に受検できなかった場合は、次回検定（11月または12月）での振替受検をご案内させていただきます。</p>
+    </div>
+
+    <div class="slip-wrap">
+      <p class="cut"><span>✂</span><span class="rule"></span><span>きりとり</span><span class="rule"></span><span>✂</span></p>
+      <section class="slip">
+        <div class="slip-head">
+          <p class="slip-title">受検申込書</p>
+          <p class="slip-due">提出期限：10月17日（土）授業まで</p>
+          <p class="slip-from">永田塾</p>
+        </div>
+        <div class="row">
+          学年（どれか一つに印）
+          <div class="grades">
+            <span><i class="mark"></i>小1</span>
+            <span><i class="mark"></i>小2</span>
+            <span><i class="mark"></i>小3</span>
+            <span><i class="mark"></i>小4</span>
+            <span><i class="mark"></i>小5</span>
+            <span><i class="mark"></i>小6</span>
+            <span><i class="mark"></i>中1</span>
+            <span><i class="mark"></i>中2</span>
+            <span><i class="mark"></i>中3</span>
+          </div>
+        </div>
+        <div class="names">
+          <div class="write">生徒氏名<span class="blank"></span></div>
+        </div>
+      </section>
+    </div>
+  </article>
+</body>
+</html>

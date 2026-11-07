@@ -30,8 +30,7 @@ export default function ContactCTASection() {
             まずは無料体験からどうぞ
           </h2>
           <p className="text-white/80 text-sm md:text-base mb-8 max-w-lg mx-auto leading-relaxed">
-            まずはお気軽にお問合せください。無料体験後の勧誘は行いません。
-            お子さまの状況を丁寧にお聞きし、合った学び方をご提案します。
+            無料体験後の勧誘はしません。電話でもフォームでも、まずは今の状況を聞かせてください。
           </p>
 
           {/* 電話番号 */}
