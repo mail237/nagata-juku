@@ -84,7 +84,7 @@ export const COMMITMENT_STRIP_ITEMS = [
   { headline: 'ICT×診断', sub: 'つまずきをデータで可視化' },
   { headline: '反復で基礎定着', sub: '飽きずに、繰り返し学べる' },
   { headline: '一人ひとりの指導', sub: '進捗・面談・カリキュラムを塾長が一貫担当' },
-  { headline: '通い放題・定額', sub: '複数科目でも月謝は変わらない' },
+  { headline: '通いホーダイ・定額', sub: '複数科目でも月謝は変わらない' },
 ] as const;
 
 export const MARQUEE_ITEMS = [
@@ -93,7 +93,7 @@ export const MARQUEE_ITEMS = [
   '飽きずに、くり返し',
   '基礎こそが近道',
   '定期テスト対策',
-  '通い放題・定額',
+  '通いホーダイ・定額',
   'わからない箇所をすぐ特定',
   '「できた！」が増えると、勉強が続く',
 ];

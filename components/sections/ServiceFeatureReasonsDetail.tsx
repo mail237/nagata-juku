@@ -18,8 +18,8 @@ export default function ServiceFeatureReasonsDetail() {
             特長の詳しい説明
           </h2>
           <p className="mt-4 text-sm text-[#777777] max-w-3xl mx-auto leading-[1.85] text-left sm:text-center">
-            永田塾の指導は、塾長による直接指導・定額の通い放題・ICTを活かした学習——この3つを柱にしています。
-            下記では、それぞれの考え方や具体的な運用、通塾や家計のイメージがつかるよう整理しています。お子さまの学年やご家庭の状況に合わせて、全体像からご確認ください。
+            永田塾の指導の柱は3つ。塾長による直接指導、定額の通いホーダイ、ICTを活かした学習です。
+            それぞれ実際の運用の仕方と、通い方・月謝のイメージが分かるようにまとめました。
           </p>
         </FadeInSection>
 
