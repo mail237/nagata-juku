@@ -6,10 +6,10 @@ import FadeInSection from '@/components/ui/FadeInSection';
 import PlayfulCtaLink from '@/components/home/PlayfulCtaLink';
 
 const highlights = [
-  '志望校に合わせた受験指導',
-  '学校の進度に合わせた定期テスト対策',
-  'つまずいたところから遡って学べる',
-  '通える曜日・時間を選べる',
+  '志望校に合わせた受験指導をします',
+  '学校の進度に合わせた定期テスト対策をします',
+  'つまずいたところから遡って学べます',
+  '通える曜日・時間を選べます',
   '苦手な科目も、得意な科目も見ます',
 ];
 

@@ -165,7 +165,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                 </p>
                 <ul className="text-[0.9375rem] md:text-base text-gray-600 space-y-2.5 list-disc pl-5 text-left marker:text-[#45B1C7] leading-[1.75] max-w-md mx-auto md:mx-0 md:max-w-none">
                   <li className="pl-0.5">小・中学生向け（ご相談により前後も可）</li>
-                  <li className="pl-0.5">最初はブロックを並べるところから。慣れたらコードを書きます</li>
+                  <li className="pl-0.5">最初はブロックを並べるところから始めます。慣れたらコードを書きます</li>
                   <li className="pl-0.5">
                     大阪市在住のご家庭は、
                     <Link

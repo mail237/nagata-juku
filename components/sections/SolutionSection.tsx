@@ -54,7 +54,7 @@ export default function SolutionSection() {
             </span>
           </h2>
           <p className="mt-4 text-sm text-[#555555] max-w-lg mx-auto leading-relaxed">
-            今の単元がわからない子は、たいてい前の学年でつまずいています。永田塾では、難しい問題の前に、抜けている学年の分からやり直します。
+            今の単元がわからない子は、たいてい前の学年でつまずいています。永田塾では、難しい問題の前に、抜けている学年の分からやり直します。定着するかどうかは、毎日の習慣で決まります。
           </p>
         </FadeInSection>
 

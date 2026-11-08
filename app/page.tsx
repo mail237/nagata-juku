@@ -4,6 +4,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import MarqueeSection from '@/components/sections/MarqueeSection';
 import ProblemSection from '@/components/sections/ProblemSection';
 import SolutionSection from '@/components/sections/SolutionSection';
+import HabitConceptSection from '@/components/sections/HabitConceptSection';
 import CommitmentStripSection from '@/components/sections/CommitmentStripSection';
 import HighlightsSection from '@/components/sections/HighlightsSection';
 import CoursesSection from '@/components/sections/CoursesSection';
@@ -31,6 +32,7 @@ export default function HomePage() {
         <MarqueeSection />
         <ProblemSection />
         <SolutionSection />
+        <HabitConceptSection />
         <CommitmentStripSection />
         <HighlightsSection />
         <CoursesSection />

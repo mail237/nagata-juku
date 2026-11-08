@@ -7,19 +7,19 @@ const problems = [
     label: 'つまずき',
     lines: ['文章題・応用', 'で手が止まる'],
     desc:
-      '計算はできるのに、文章題になると「何を求められているか」がわからず手が止まる。問題文を式に直すところでつまずいています。',
+      '計算はできるのに、文章題になると「何を求められているか」がわからず手が止まります。問題文を式に直すところでつまずいています。',
   },
   {
     label: '直前勉強',
     lines: ['テスト前に頑張っても', '点数が上がらない'],
     desc:
-      '一夜漬けで「覚えた気」になっても、形を変えて出されると答えられない。覚えたことを使い回す練習が足りていません。',
+      '一夜漬けで「覚えた気」になっても、形を変えて出されると答えられません。覚えたことを使い回す練習が足りていません。',
   },
   {
     label: '優先順位',
     lines: ['何から手をつけるか', '決められない'],
     desc:
-      '教科書・プリント・問題集の山の前でフリーズする。やる気はあるのに「今日は何を何分」が決められず、結局後回しにしてしまう。',
+      '教科書・プリント・問題集の山の前でフリーズします。やる気はあるのに「今日は何を何分」が決められず、結局後回しにしてしまいます。',
   },
   {
     label: '塾とのギャップ',
@@ -51,9 +51,6 @@ export default function ProblemSection() {
           <h2 className="font-serif text-2xl sm:text-3xl md:text-[2.1rem] font-black text-[#1C4A52] leading-snug tracking-tight">
             こんなお悩み、ありませんか？
           </h2>
-          <p className="mt-4 text-[#393939] text-sm md:text-base leading-relaxed max-w-2xl mx-auto text-left sm:text-center">
-            成績の悩みは、だいたいこの4つに行き着きます。どれに当てはまるかで、やることは変わります。
-          </p>
         </FadeInSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
