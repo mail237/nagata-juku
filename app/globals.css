@@ -201,3 +201,8 @@ a:focus-visible {
     transform: none;
   }
 }
+
+/* アンカー先が固定ヘッダーに隠れないように */
+[id] {
+  scroll-margin-top: 6rem;
+}

@@ -67,10 +67,10 @@ export default function TestimonialsSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 1, y: -12 }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
-              className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(28,74,82,0.06)] border border-[#E0F2F4] p-6 md:p-8"
+              className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(28,74,82,0.06)] border border-[#C7E5EB]/70 p-6 md:p-8"
             >
               {/* 引用符 */}
-              <div className="text-[#45B1C7]/20 font-serif text-6xl md:text-7xl leading-none select-none -mt-1 mb-1">
+              <div className="text-[#45B1C7]/30 font-serif text-6xl md:text-7xl leading-none select-none -mt-1 mb-1">
                 &ldquo;
               </div>
 

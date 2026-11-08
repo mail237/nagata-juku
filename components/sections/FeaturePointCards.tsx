@@ -33,7 +33,7 @@ export default function FeaturePointCards({ eyebrow, title, lead, cta, className
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {FEATURE_POINT_CARDS.map((f, i) => (
             <FadeInSection key={f.num} delay={i * 0.12}>
-              <article className="group bg-white rounded-2xl overflow-hidden border border-[#C7E5EB]/50 shadow-[0_4px_28px_rgba(28,74,82,0.07)] hover:shadow-[0_12px_40px_rgba(28,74,82,0.12)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+              <article className="group bg-white rounded-2xl overflow-hidden border border-[#C7E5EB] shadow-[0_4px_28px_rgba(28,74,82,0.07)] hover:shadow-[0_12px_40px_rgba(28,74,82,0.12)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                 <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#E5F4F7]">
                   <Image
                     src={f.image}
@@ -48,7 +48,7 @@ export default function FeaturePointCards({ eyebrow, title, lead, cta, className
                     aria-hidden
                   />
                   <div className="absolute bottom-0 left-0 right-0 px-4 pb-3.5 pt-12 flex items-end gap-2">
-                    <span className="font-serif font-black text-[2.75rem] leading-none text-white/[0.38] select-none tabular-nums">
+                    <span className="font-serif font-black text-[2.75rem] leading-none text-white/50 select-none tabular-nums">
                       {f.num}
                     </span>
                     <span className="pb-1 text-[11px] font-bold tracking-[0.28em] text-white/95 uppercase drop-shadow-sm">
