@@ -48,7 +48,7 @@ export default function CommitmentStripSection() {
                 <p className="font-serif font-black text-base sm:text-lg md:text-xl leading-snug text-white tracking-tight">
                   {item.headline}
                 </p>
-                <p className="mt-2.5 text-xs md:text-sm text-white/80 leading-relaxed">
+                <p className="mt-2.5 text-xs md:text-sm text-white/80 leading-relaxed text-balance">
                   {item.sub}
                 </p>
               </div>

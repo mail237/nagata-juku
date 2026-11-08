@@ -5,8 +5,6 @@ import FadeInSection from '@/components/ui/FadeInSection';
 import ContactCTASection from '@/components/sections/ContactCTASection';
 import VacancyProgrammingSection from '@/components/sections/VacancyProgrammingSection';
 import OsakaSubsidySection from '@/components/sections/OsakaSubsidySection';
-import FeaturePointCards from '@/components/sections/FeaturePointCards';
-import ServiceFeatureReasonsDetail from '@/components/sections/ServiceFeatureReasonsDetail';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -39,20 +37,11 @@ export default function ServicePage() {
                 授業内容・料金
               </h1>
               <p className="text-[#555555] text-base max-w-xl leading-relaxed">
-                特長は3つ。塾長が全部見ること、月謝が定額なこと、ICTで弱点を見つけること。
+                月謝は定額です。何科目でも、週に何回通っても、料金は変わりません。
               </p>
             </FadeInSection>
           </div>
         </section>
-
-        <FeaturePointCards
-          className="py-16 md:py-24 bg-[#F2F9FA]"
-          eyebrow="Features"
-          title="永田塾の特長"
-          cta={{ href: '#reasons-detail', label: '詳しい説明を見る' }}
-        />
-
-        <ServiceFeatureReasonsDetail />
 
         {/* 料金表 */}
         <section className="py-16 md:py-20 bg-white">
