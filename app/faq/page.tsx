@@ -19,7 +19,6 @@ export default function FAQPage() {
         <PageHeader
           label="FAQ"
           title="よくあるご質問"
-          description="入塾・授業・料金などについてよくいただくご質問をまとめました。"
         />
 
         <FAQAccordionSection />

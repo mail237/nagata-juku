@@ -20,10 +20,10 @@ export default function HighlightsSection() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <FadeInSection>
             <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#45B1C7] uppercase mb-3">
-              <span className="w-6 h-px bg-[#45B1C7]" />永田塾のここが魅力！
+              <span className="w-6 h-px bg-[#45B1C7]" />Highlights
             </span>
             <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-black text-[#1C4A52] leading-snug mb-6">
-              お子さまの目標に合わせた個別指導
+              進め方は、一人ずつ違います
             </h2>
             <ul className="flex flex-col gap-3 mb-8">
               {highlights.map((item, i) => (

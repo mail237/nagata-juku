@@ -32,11 +32,8 @@ export default function CommitmentStripSection() {
             id="commitment-strip-heading"
             className="font-serif text-2xl md:text-3xl font-black text-white leading-snug"
           >
-            永田塾が大切にしていること
+            永田塾のやり方
           </h2>
-          <p className="mt-2 text-sm text-white/75 max-w-xl mx-auto leading-relaxed">
-            教え方で大事にしていることです。
-          </p>
         </FadeInSection>
 
         {/* スマホは1列にして長い見出しの改行を自然に（2列だと極端に狭くなる） */}

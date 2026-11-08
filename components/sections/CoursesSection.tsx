@@ -35,9 +35,6 @@ export default function CoursesSection() {
           <h2 className="font-serif text-3xl md:text-4xl font-black text-[#1C4A52] leading-tight">
             永田塾の特長
           </h2>
-          <p className="mt-3 text-sm text-[#777777]">
-            永田塾の特長は、この3つです。
-          </p>
         </FadeInSection>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
@@ -55,7 +52,7 @@ export default function CoursesSection() {
                   <h3 className="font-serif font-black text-2xl text-white mb-1">
                     {feature.name}
                   </h3>
-                  <p className="text-sm text-white/85">{feature.subtitle}</p>
+                  <p className="text-sm text-white/85 text-balance">{feature.subtitle}</p>
                 </div>
 
                 {/* ボディ */}

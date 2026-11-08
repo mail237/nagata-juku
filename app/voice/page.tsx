@@ -72,9 +72,6 @@ export default function VoicePage() {
               <h1 className="font-serif text-4xl md:text-5xl font-black text-[#1C4A52] leading-tight mb-4">
                 生徒・卒業生の声
               </h1>
-              <p className="text-[#555555] text-base max-w-xl">
-                卒業生と在校生の声です。
-              </p>
             </FadeInSection>
           </div>
         </section>

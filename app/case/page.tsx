@@ -58,9 +58,6 @@ export default function CasePage() {
               <h1 className="font-serif text-4xl md:text-5xl font-black text-[#1C4A52] leading-tight mb-4">
                 実績紹介
               </h1>
-              <p className="text-[#555555] text-base max-w-xl">
-                成績アップの事例と、進学実績です。
-              </p>
             </FadeInSection>
           </div>
         </section>
@@ -76,7 +73,7 @@ export default function CasePage() {
                 びっくり成績アップ事例！
               </h2>
               <p className="text-sm text-[#777777] mt-2">
-                実際の生徒の成績アップ事例です（敬称略）
+                （敬称略）
               </p>
             </FadeInSection>
 

@@ -18,7 +18,7 @@ export default function ServiceFeatureReasonsDetail() {
             特長の詳しい説明
           </h2>
           <p className="mt-4 text-sm text-[#777777] max-w-3xl mx-auto leading-[1.85] text-left sm:text-center">
-            柱は3つ。塾長が直接教えること、定額の通いホーダイ、ICTで弱点を見つけること。1つずつ、実際のやり方を書きます。
+            柱は3つ。塾長が直接教えること、定額の通いホーダイ、ICTで弱点を見つけること。
           </p>
         </FadeInSection>
 
@@ -60,11 +60,11 @@ export default function ServiceFeatureReasonsDetail() {
                   ))}
                   {reason.num === '03' && (
                     <p className="text-sm text-[#393939] leading-loose">
-                      塾長の全国セミナー講師としてのご経歴や指導実績の詳細は、
+                      塾長のセミナー講師の経歴は、
                       <Link href="/greeting" className="mx-0.5 font-bold text-[#45B1C7] hover:underline">
                         代表者ごあいさつ
                       </Link>
-                      をご覧ください。
+                      に載せています。
                     </p>
                   )}
                 </div>

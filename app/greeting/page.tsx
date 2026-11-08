@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 const seminarIntro = {
   titleLine1: '全国の学習塾向けセミナーでも',
   titleLine2: '講師をしています',
-  lead: '塾長は、塾の先生向けのセミナーでも教えています。',
   highlights: ['講師歴20年目', '全国セミナー講師', '大学在学中から一筋で指導'],
   paragraphs: [
     '全国の塾の先生が集まるセミナーで、永田塾のやり方を話しています。',
@@ -46,7 +45,6 @@ export default function GreetingPage() {
         <PageHeader
           label="Greeting"
           title="代表者ごあいさつ"
-          description="塾長・永田知裕のあいさつです。"
         />
 
         <section className="py-14 md:py-20 bg-white">
@@ -90,12 +88,11 @@ export default function GreetingPage() {
                   <p>皆様、はじめまして。塾長の永田知裕（ながたともひろ）です。当塾のホームページをご覧くださり、ありがとうございます。</p>
                   <h3 className="font-serif text-lg md:text-[1.35rem] font-black text-[#1C4A52] leading-snug pt-1 pb-0.5 text-left">
                     <span className="block">「好きなこと」を仕事にする</span>
-                    <span className="block">喜びを、次の世代へ。</span>
                   </h3>
-                  <p>大学に入った直後、友人の紹介で塾講師の道に足を踏み入れました。正社員として経験を積み、独立してから気づけば、今年で指導20年目を迎えます。</p>
-                  <p>これまで多くのお子さまと出会い、学びを共にし、成長を間近で見守ってきた時間は、私にとってかけがえのない財産です。いま、「好きなこと」を仕事にできる環境に身を置けることに、心から感謝しています。</p>
-                  <p>勉強を通じてお子さまに伝えたいのは、学力向上だけではありません。自分の「やりたいこと」を追い続ける楽しさ──そんな生き方の一端を、少しでも感じてもらえたらと思っています。「こういう大人もいるんだ」と思えるきっかけになれば、私にとってこれ以上の喜びはありません。</p>
-                  <p>自分の道を切り開き、人生をまっすぐに楽しむ。そんな大人へと成長していけるよう、これからも精一杯教えていきます。</p>
+                  <p>大学に入った直後、友人の紹介で塾の講師になりました。その後、正社員として経験を積み、独立して、今年で指導20年目です。</p>
+                  <p>これまで多くの子を教えてきました。好きなことが、そのまま仕事になっています。</p>
+                  <p>勉強を通して伝えたいのは、点数の取り方だけではありません。「こういう大人もいるんだ」と思ってもらえたら、それで十分です。</p>
+                  <p>自分の道を自分で選べる大人になってほしい。その手伝いを、これからも続けていきます。</p>
                 </div>
 
                 <div className="mt-7 pt-6 border-t border-[#C7E5EB]/60 text-right">
@@ -134,7 +131,6 @@ export default function GreetingPage() {
                       <span className="block sm:inline">{seminarIntro.titleLine1}</span>
                       <span className="block sm:inline sm:ml-0">{seminarIntro.titleLine2}</span>
                     </h2>
-                    <p className="mt-3 text-sm text-[#777777] leading-relaxed">{seminarIntro.lead}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {seminarIntro.highlights.map((h) => (
                         <span
