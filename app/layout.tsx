@@ -1,21 +1,13 @@
+import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
-import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google';
 import LineFloatingButton from '@/components/LineFloatingButton';
 import './globals.css';
 
-const notoSansJP = Noto_Sans_JP({
-  subsets: ['latin'],
-  weight: ['400', '500', '700', '900'],
-  variable: '--font-noto-sans',
-  display: 'swap',
-});
-
-const notoSerifJP = Noto_Serif_JP({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '900'],
-  variable: '--font-noto-serif',
-  display: 'swap',
-});
+/** next/font はビルド時に Google へ取りに行き、Cloudflare 上で落ちることがある */
+const fontVars = {
+  '--font-noto-sans': "'Noto Sans JP'",
+  '--font-noto-serif': "'Noto Serif JP'",
+} as CSSProperties;
 
 export const metadata: Metadata = {
   title: {
@@ -56,10 +48,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ja"
-      className={`${notoSansJP.variable} ${notoSerifJP.variable}`}
-    >
+    <html lang="ja" style={fontVars}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="bg-white font-sans text-[#393939] antialiased">
         {children}
         <LineFloatingButton />
