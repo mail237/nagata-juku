@@ -10,7 +10,7 @@ const highlights = [
   '学校の進度に合わせた定期テスト対策をします',
   'つまずいたところから遡って学べます',
   '通える曜日・時間を選べます',
-  '苦手な科目も、得意な科目も見ます',
+  '苦手な科目も、得意な科目も指導致します',
 ];
 
 export default function HighlightsSection() {
@@ -23,7 +23,7 @@ export default function HighlightsSection() {
               <span className="w-6 h-px bg-[#45B1C7]" />Highlights
             </span>
             <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-black text-[#1C4A52] leading-snug mb-6">
-              進め方は、一人ずつ違います
+              進め方は、生徒様一人ずつ違います
             </h2>
             <ul className="flex flex-col gap-3 mb-8">
               {highlights.map((item, i) => (
