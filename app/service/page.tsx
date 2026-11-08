@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 };
 
 const flow = [
-  { step: '01', title: 'お問合せ', desc: 'フォームまたはお電話にてご連絡ください。' },
-  { step: '02', title: '無料体験授業', desc: '実際に授業を体験していただきます。完全無料・勧誘なし。' },
+  { step: '01', title: 'お問合せ', desc: 'フォームか電話で連絡してください。' },
+  { step: '02', title: '無料体験授業', desc: 'いつもの授業をそのまま受けてもらいます。無料・勧誘なし。' },
   { step: '03', title: 'カウンセリング', desc: '今の成績と目標を聞いて、進め方を決めます。' },
-  { step: '04', title: 'ご入塾', desc: '月の途中からでも翌日から授業開始可能。' },
+  { step: '04', title: 'ご入塾', desc: '月の途中からでも、翌日から授業を始められます。' },
 ];
 
 export default function ServicePage() {

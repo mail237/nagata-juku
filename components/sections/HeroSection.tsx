@@ -26,7 +26,7 @@ export default function HeroSection() {
               も部活も！
             </p>
             <p className="font-serif font-bold text-[clamp(1rem,2.4vw,1.35rem)] leading-snug tracking-tight text-[#393939] mt-1 px-1">
-              定期テストから受験まで、一人ひとりのペースで
+              定期テストから受験まで、自分のペースで
             </p>
           </div>
         </div>

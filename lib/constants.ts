@@ -82,7 +82,7 @@ export const FOOTER_LINKS = [
 /** トップ：マルquee直下の濃色帯 */
 export const COMMITMENT_STRIP_ITEMS = [
   { headline: 'ICT×診断', sub: 'つまずいた単元をデータで特定' },
-  { headline: '反復で基礎定着', sub: '飽きずに、繰り返し学べる' },
+  { headline: '反復で基礎定着', sub: '飽きずに何度もくり返せる' },
   { headline: '塾長が直接指導', sub: '進捗・面談・カリキュラムは全部、塾長' },
   { headline: '通いホーダイ・定額', sub: '複数科目でも月謝は変わらない' },
 ] as const;

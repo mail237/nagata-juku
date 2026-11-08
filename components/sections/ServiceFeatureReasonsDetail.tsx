@@ -18,8 +18,7 @@ export default function ServiceFeatureReasonsDetail() {
             特長の詳しい説明
           </h2>
           <p className="mt-4 text-sm text-[#777777] max-w-3xl mx-auto leading-[1.85] text-left sm:text-center">
-            永田塾の指導の柱は3つ。塾長による直接指導、定額の通いホーダイ、ICTを活かした学習です。
-            それぞれ実際の運用の仕方と、通い方・月謝のイメージが分かるようにまとめました。
+            柱は3つ。塾長が直接教えること、定額の通いホーダイ、ICTで弱点を見つけること。1つずつ、実際のやり方を書きます。
           </p>
         </FadeInSection>
 

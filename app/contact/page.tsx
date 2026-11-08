@@ -79,7 +79,7 @@ const quickInfo = [
           ),
           label: 'Instagram',
           value: '公式アカウントを見る',
-          note: '塾の様子・お知らせを発信中',
+          note: '塾の様子やお知らせを出しています',
           href: SCHOOL.instagramUrl,
         },
       ]

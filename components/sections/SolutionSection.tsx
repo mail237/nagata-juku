@@ -7,7 +7,7 @@ const steps = [
   {
     num: '01',
     title: 'ICTで「わからない」を特定',
-    body: 'ICTで、どの単元でつまずいているかを洗い出します。その結果で、やる順番を決めます。',
+    body: 'ICTで、どの単元でつまずいているかを調べます。出た結果で、やる順番を決めます。',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
@@ -17,7 +17,7 @@ const steps = [
   {
     num: '02',
     title: 'ゲーム感覚で基礎を大量反復',
-    body: '計算や英単語は、ゲーム感覚で何度もくり返す仕組みです。基礎は、量をこなした分だけ身につきます。',
+    body: '計算や英単語は、ゲームみたいに何度もくり返します。基礎は、やった分だけ身につきます。',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
@@ -48,14 +48,13 @@ export default function SolutionSection() {
             <span className="w-5 h-px bg-[#45B1C7]" />Solution<span className="w-5 h-px bg-[#45B1C7]" />
           </span>
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-[#1C4A52] leading-snug [overflow-wrap:normal] [word-break:keep-all]">
-            <span className="block sm:inline">原因は「難問」ではなく</span>
+            <span className="block sm:inline">つまずく原因は、難問ではなく</span>
             <span className="block sm:inline">
-              <span className="text-[#45B1C7]">「基礎の抜け」</span>
-              にある
+              <span className="text-[#45B1C7]">基礎の抜け</span>
             </span>
           </h2>
           <p className="mt-4 text-sm text-[#555555] max-w-lg mx-auto leading-relaxed">
-            伸び悩む原因は、たいてい前の学年の基礎の抜けです。難問より先に、そこを埋めます。
+            今の単元がわからない子は、たいてい前の学年でつまずいています。永田塾では、難しい問題の前に、抜けている学年の分からやり直します。
           </p>
         </FadeInSection>
 

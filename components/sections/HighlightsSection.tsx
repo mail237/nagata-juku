@@ -73,9 +73,9 @@ export default function HighlightsSection() {
               <div className="space-y-3 text-sm text-[#393939] leading-loose mb-5">
                 <p>大阪・八尾市の個別指導塾、永田塾です。</p>
                 <p>
-                  まず学ぶ姿勢を整えて、くり返し学んで実力を伸ばします。
+                  勉強のやり方から教えて、くり返し解く中で力をつけていきます。
                 </p>
-                <p>「できた」という体験が、次の自信になります。相談は電話でもフォームでもどうぞ。</p>
+                <p>「できた」が増えると、自信もついてきます。相談は電話でもフォームでもどうぞ。</p>
               </div>
               <Link
                 href="/greeting"

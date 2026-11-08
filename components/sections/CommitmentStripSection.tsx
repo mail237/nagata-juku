@@ -35,7 +35,7 @@ export default function CommitmentStripSection() {
             永田塾が大切にしていること
           </h2>
           <p className="mt-2 text-sm text-white/65 max-w-xl mx-auto leading-relaxed">
-            数字ではなく、指導の姿勢と仕組みをまとめてご紹介します。
+            教え方で大事にしていることです。
           </p>
         </FadeInSection>
 

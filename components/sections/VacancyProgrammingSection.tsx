@@ -115,7 +115,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                 満席の学年は、キャンセル待ちで受け付けています。
               </span>
               <span className="block">
-                空席は随時変わります。最新の状況はお電話またはお問合せフォームでご確認ください。
+                空席は変わるので、電話かフォームで聞いてください。
               </span>
             </p>
             <div className="flex flex-wrap gap-3">
@@ -159,13 +159,13 @@ export default function VacancyProgrammingSection({ compact }: Props) {
               </div>
               <div className="min-w-0 space-y-4 text-center md:text-left">
                 <p className="text-gray-600 text-[0.9375rem] md:text-base leading-[1.75]">
-                  マインクラフトを教材にしたプログラミングコースです。授業では
+                  マインクラフトで学ぶプログラミングコースです。
                   <strong className="font-bold text-[#1C4A52]">エージェント</strong>
-                  をプログラムで動かしながら学びます。永田塾代表が指導にあたります。
+                  をプログラムで動かしながら覚えます。指導は塾長です。
                 </p>
                 <ul className="text-[0.9375rem] md:text-base text-gray-600 space-y-2.5 list-disc pl-5 text-left marker:text-[#45B1C7] leading-[1.75] max-w-md mx-auto md:mx-0 md:max-w-none">
                   <li className="pl-0.5">小・中学生向け（ご相談により前後も可）</li>
-                  <li className="pl-0.5">ビジュアルからコードへ段階的に学べます</li>
+                  <li className="pl-0.5">最初はブロックを並べるところから。慣れたらコードを書きます</li>
                   <li className="pl-0.5">
                     大阪市在住のご家庭は、
                     <Link
