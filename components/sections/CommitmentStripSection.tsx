@@ -34,7 +34,7 @@ export default function CommitmentStripSection() {
           >
             永田塾が大切にしていること
           </h2>
-          <p className="mt-2 text-sm text-white/65 max-w-xl mx-auto leading-relaxed">
+          <p className="mt-2 text-sm text-white/75 max-w-xl mx-auto leading-relaxed">
             教え方で大事にしていることです。
           </p>
         </FadeInSection>
@@ -51,7 +51,7 @@ export default function CommitmentStripSection() {
                 <p className="font-serif font-black text-base sm:text-lg md:text-xl leading-snug text-white tracking-tight">
                   {item.headline}
                 </p>
-                <p className="mt-2.5 text-xs md:text-sm text-white/70 leading-relaxed">
+                <p className="mt-2.5 text-xs md:text-sm text-white/80 leading-relaxed">
                   {item.sub}
                 </p>
               </div>

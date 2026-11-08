@@ -55,7 +55,7 @@ export default function CoursesSection() {
                   <h3 className="font-serif font-black text-2xl text-white mb-1">
                     {feature.name}
                   </h3>
-                  <p className="text-sm text-white/70 whitespace-nowrap">{feature.subtitle}</p>
+                  <p className="text-sm text-white/85">{feature.subtitle}</p>
                 </div>
 
                 {/* ボディ */}
@@ -85,7 +85,7 @@ export default function CoursesSection() {
 
                   <Link
                     href={`/service#${feature.detailAnchor}`}
-                    className="mt-auto inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold border-2 border-[#45B1C7] text-[#45B1C7] transition-all duration-300 ease-out hover:bg-[#45B1C7] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+                    className="mt-auto inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold border-2 border-[#45B1C7] text-[#45B1C7] transition-all duration-300 ease-out hover:bg-[#45B1C7] hover:text-white active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
                   >
                     詳しく見る
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

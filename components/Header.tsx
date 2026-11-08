@@ -109,7 +109,7 @@ export default function Header() {
           {/* デスクトップ CTA */}
           <Link
             href="/contact"
-            className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-[#45B1C7] text-white text-sm font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
+            className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-[#45B1C7] text-white text-sm font-bold rounded-full transition-all duration-300 ease-out hover:bg-[#2D8FA4] hover:shadow-cta active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
           >
             無料体験を申し込む
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -190,7 +190,7 @@ export default function Header() {
                       href={link.href}
                       className={`flex items-center py-3.5 px-3 rounded-lg text-sm font-medium transition-colors ${
                         active
-                          ? 'text-[#45B1C7] bg-blue-50'
+                          ? 'text-[#45B1C7] bg-[#F2F9FA]'
                           : 'text-[#1C4A52] hover:text-[#45B1C7] hover:bg-[#F2F9FA]'
                       }`}
                     >

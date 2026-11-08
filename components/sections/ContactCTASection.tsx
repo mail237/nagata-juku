@@ -11,7 +11,7 @@ export default function ContactCTASection() {
       {/* 背景装飾 */}
       <div
         aria-hidden
-        className="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-white/8 pointer-events-none"
+        className="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-white/10 pointer-events-none"
       />
       <div
         aria-hidden
@@ -20,7 +20,7 @@ export default function ContactCTASection() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
         <FadeInSection>
-          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white/60 uppercase mb-4">
+          <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white/70 uppercase mb-4">
             <span className="w-6 h-px bg-white/40" />
             Contact
             <span className="w-6 h-px bg-white/40" />
@@ -48,7 +48,7 @@ export default function ContactCTASection() {
                 <p className="text-3xl md:text-4xl font-black tracking-wider leading-none">
                   {SCHOOL.phone}
                 </p>
-                <p className="text-xs text-white/60 mt-1">
+                <p className="text-xs text-white/70 mt-1">
                   受付時間: {SCHOOL.hours}（定休: {SCHOOL.closed}）
                 </p>
               </div>
@@ -70,7 +70,7 @@ export default function ContactCTASection() {
                 LINEでお問合せ
               </LineLink>
             ) : null}
-            <p className="text-white/60 text-xs md:w-full md:order-last">
+            <p className="text-white/70 text-xs md:w-full md:order-last">
               ※ 無料体験・体験後の勧誘なし
             </p>
           </div>
