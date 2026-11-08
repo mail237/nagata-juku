@@ -32,7 +32,7 @@ export default function CommitmentStripSection() {
             id="commitment-strip-heading"
             className="font-serif text-2xl md:text-3xl font-black text-white leading-snug"
           >
-            永田塾のやり方
+            永田塾の指導方法
           </h2>
         </FadeInSection>
 

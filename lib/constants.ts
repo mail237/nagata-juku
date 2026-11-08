@@ -81,9 +81,9 @@ export const FOOTER_LINKS = [
 
 /** トップ：マルquee直下の濃色帯 */
 export const COMMITMENT_STRIP_ITEMS = [
-  { headline: 'ICT×診断', sub: 'つまずいた単元をデータで特定します' },
+  { headline: '映像授業', sub: '自分のペースで進めます' },
+  { headline: '補足説明', sub: '分からないところは塾長が説明します' },
   { headline: '反復で基礎定着', sub: '飽きずに何度もくり返せます' },
-  { headline: '塾長が直接指導', sub: '進捗・面談・カリキュラムは全部、塾長が担当します' },
   { headline: '通いホーダイ・定額', sub: '複数科目でも月謝は変わりません' },
 ] as const;
 
