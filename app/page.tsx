@@ -7,7 +7,6 @@ import SolutionSection from '@/components/sections/SolutionSection';
 import HabitConceptSection from '@/components/sections/HabitConceptSection';
 import CommitmentStripSection from '@/components/sections/CommitmentStripSection';
 import HighlightsSection from '@/components/sections/HighlightsSection';
-import CoursesSection from '@/components/sections/CoursesSection';
 import FeaturesSection from '@/components/sections/FeaturesSection';
 import NewClassSlotsSection from '@/components/sections/NewClassSlotsSection';
 import VacancyProgrammingSection from '@/components/sections/VacancyProgrammingSection';
@@ -35,7 +34,6 @@ export default function HomePage() {
         <HabitConceptSection />
         <CommitmentStripSection />
         <HighlightsSection />
-        <CoursesSection />
         <FeaturesSection />
         <NewClassSlotsSection />
         <VacancyProgrammingSection />

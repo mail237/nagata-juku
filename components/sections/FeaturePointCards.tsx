@@ -63,6 +63,24 @@ export default function FeaturePointCards({ eyebrow, title, lead, cta, className
                   </h3>
                   <p className="text-sm font-bold text-[#45B1C7] leading-snug mb-3.5">{f.summary}</p>
                   <p className="text-sm text-[#393939] leading-[1.75] flex-1">{f.body}</p>
+                  <ul className="mt-5 flex flex-col gap-2.5 border-t border-[#C7E5EB]/60 pt-5">
+                    {f.points.map((point) => (
+                      <li key={point} className="flex items-start gap-2.5 text-sm text-[#1C4A52]">
+                        <svg
+                          className="w-4 h-4 text-[#45B1C7] shrink-0 mt-0.5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </article>
             </FadeInSection>
