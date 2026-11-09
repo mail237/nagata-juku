@@ -27,7 +27,7 @@ const steps = [
   {
     num: '03',
     title: '土台ができたら応用・入試問題へ',
-    body: '基礎が固まってから、応用・入試問題に進みます。土台なしで難問を解いても、点にはなりません。',
+    body: '基礎が固まってから、応用・入試問題に進みます。土台ができてくると、難問にも手が届くようになります。',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
