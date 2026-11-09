@@ -71,7 +71,7 @@ export default function GreetingPage() {
                       <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">大学</span>関西学院大学 商学部 卒業</div>
                       <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">中学</span>八尾市立成法中学校 卒業</div>
                       <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">趣味</span>ドラム・フットサル・部屋の模様替え</div>
-                      <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">好物</span>アクアパッツァ</div>
+                      <div className="flex gap-2"><span className="text-[#45B1C7] font-bold shrink-0">好物</span>豚平焼き</div>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-4">
