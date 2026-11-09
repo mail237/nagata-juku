@@ -37,7 +37,7 @@ export default function ServicePage() {
                 授業内容・料金
               </h1>
               <p className="text-[#555555] text-base max-w-xl leading-relaxed">
-                月謝は定額です。何科目でも、週に何回通っても、料金は変わりません。
+                月謝は定額で、何科目でも、週に何回通っても料金は変わりません。
               </p>
             </FadeInSection>
           </div>
