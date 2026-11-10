@@ -48,7 +48,7 @@ export default function HighlightsSection() {
                 href="/service"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-[#1C4A52] text-[#1C4A52] font-bold rounded-full text-sm transition-all duration-300 ease-out hover:bg-[#1C4A52] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1C4A52]"
               >
-                特長・料金を詳しく見る
+                料金を詳しく見る
               </Link>
             </div>
           </FadeInSection>
