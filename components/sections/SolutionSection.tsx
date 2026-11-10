@@ -92,7 +92,7 @@ export default function SolutionSection() {
             href="/service"
             className="inline-flex items-center gap-2 rounded-md text-sm font-bold text-[#45B1C7] transition-all duration-300 ease-out hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#45B1C7]"
           >
-            授業内容・料金を見る
+            料金を見る
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

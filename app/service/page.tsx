@@ -8,7 +8,7 @@ import OsakaSubsidySection from '@/components/sections/OsakaSubsidySection';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '授業内容・料金',
+  title: '料金',
   description:
     '永田塾の授業内容と料金。塾長の直接指導・定額通いホーダイ・ICT活用（自宅オンライン可）の説明、料金表、入塾の流れ。マイクラプログラミング（コードアドベンチャー八尾校）の案内も。',
 };
@@ -34,7 +34,7 @@ export default function ServicePage() {
                 <span className="w-6 h-px bg-[#45B1C7]" />Service & Price
               </span>
               <h1 className="font-serif text-4xl md:text-5xl font-black text-[#1C4A52] leading-tight mb-4">
-                授業内容・料金
+                料金
               </h1>
               <p className="text-[#555555] text-base max-w-xl leading-relaxed">
                 月謝は定額で、何科目でも、週に何回通っても料金は変わりません。

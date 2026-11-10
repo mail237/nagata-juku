@@ -58,7 +58,7 @@ export const OSAKA_SUBSIDY = {
 /** 表記をサイト全体で統一（お問合せ） */
 /** 保護者の検討順に近い並び（授業→声→講師→場所→申込） */
 export const NAV_LINKS = [
-  { href: '/service', label: '授業・料金' },
+  { href: '/service', label: '料金' },
   { href: '/voice', label: '生徒の声' },
   { href: '/greeting', label: '講師紹介' },
   { href: '/access', label: '教室案内' },
