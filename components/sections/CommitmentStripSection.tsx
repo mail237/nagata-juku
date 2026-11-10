@@ -25,7 +25,7 @@ export default function CommitmentStripSection() {
         <FadeInSection className="text-center mb-6 md:mb-8">
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#7DD3E8] uppercase mb-2">
             <span className="w-6 h-px bg-[#45B1C7]/80" />
-            Our Promise
+            Lesson Flow
             <span className="w-6 h-px bg-[#45B1C7]/80" />
           </span>
           <h2
