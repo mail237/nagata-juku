@@ -20,23 +20,11 @@ export const SCHOOL = {
 /** コードアドベンチャー八尾校（マイクラプログラミングコース）特設ページ */
 export const CODE_ADVENTURE_YAO_LP = 'https://codeadventure.jp/lp/yao/' as const;
 
-/** 新設授業枠のお知らせ（随時ここを更新してください） */
-export const NEW_CLASS_SLOTS = {
-  anchorId: 'new-class-slots',
-  slots: [
-    { day: '月曜日', time: '18:30〜19:30', status: 'open' as const },
-    { day: '火曜日', time: '18:00〜19:30', status: 'full' as const },
-    { day: '水曜日', time: '19:30〜22:00', status: 'full' as const },
-    { day: '木曜日', time: '18:30〜19:30', status: 'full' as const },
-    { day: '金曜日', time: '18:30〜19:30', status: 'full' as const },
-  ],
-} as const;
-
 /** 空席案内（随時ここを更新してください） */
 export const VACANCY_ROWS: readonly { label: string; status: string; note?: string }[] = [
   { label: '高校生', status: '満席' },
   { label: '中学生', status: '空き1名', note: '11月から' },
-  { label: '小学生', status: '空き2名', note: '11月から' },
+  { label: '小学生', status: '空き1名', note: '11月から' },
   { label: 'プログラミング', status: '残り1席', note: '大阪市在住の方も大募集！' },
 ];
 
