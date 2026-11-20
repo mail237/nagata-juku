@@ -30,7 +30,8 @@ export default function KisoKozaSection() {
                   基礎講座
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#1C4A52] leading-tight mb-4">
-                  【新設】（数・英）基礎講座 ― 冬期講習から募集
+                  【新設】（数・英）基礎講座 ―<br />
+                  冬期講習から募集
                 </h2>
                 <div className="space-y-3.5 text-sm sm:text-base text-[#393939] leading-relaxed">
                   <p>
