@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import MarqueeSection from '@/components/sections/MarqueeSection';
+import KisoKozaSection from '@/components/sections/KisoKozaSection';
 import ProblemSection from '@/components/sections/ProblemSection';
 import SolutionSection from '@/components/sections/SolutionSection';
 import HabitConceptSection from '@/components/sections/HabitConceptSection';
@@ -28,6 +29,7 @@ export default function HomePage() {
       <main className="scroll-pt-24">
         <HeroSection />
         <MarqueeSection />
+        <KisoKozaSection />
         <ProblemSection />
         <SolutionSection />
         <HabitConceptSection />

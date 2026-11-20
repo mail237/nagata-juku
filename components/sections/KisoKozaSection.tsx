@@ -1,0 +1,75 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import FadeInSection from '@/components/ui/FadeInSection';
+import { SCHOOL } from '@/lib/constants';
+
+export default function KisoKozaSection() {
+  return (
+    <section className="pt-10 pb-14 md:pt-12 md:pb-20 bg-white border-b border-[#C7E5EB]/40">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FadeInSection>
+          <div className="rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 lg:p-10 shadow-[0_4px_24px_rgba(28,74,82,0.06)]">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-[#C7E5EB] shadow-sm">
+                  <Image
+                    src="/images/kiso-kouza.jpg"
+                    alt="【新設】（数・英）基礎講座 ― 冬期講習から募集"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-7">
+                <span className="inline-block text-xs font-bold text-[#45B1C7] tracking-wider uppercase mb-2">
+                  基礎講座
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1C4A52] leading-tight mb-4">
+                  【新設】（数・英）基礎講座 ― 冬期講習から募集
+                </h2>
+                <div className="space-y-3.5 text-sm sm:text-base text-[#393939] leading-relaxed">
+                  <p>
+                    「勉強しているのに、テストで80点に届かない」。その原因は、応用力ではなく基礎です。計算でつまずけば数学は積み上がりませんし、英単語を知らなければ英語は読めません。
+                  </p>
+                  <p>
+                    この講座では、はじめにTOFAS（国際基礎学力検定）を受けてもらいます。TOFASは世界各国で実施されている検定で、計算や英単語といった基礎学力がどこまで身についているかを判定します。その結果をもとに一人ひとりのスタート位置を決め、つまずきが小学生の内容にあれば、学年を問わず、そこまでさかのぼって学習します。遠回りに見えて、これが一番の近道です。
+                  </p>
+                  <p>
+                    授業は平日30分／教科、週2〜5回です。まずは、平日毎日30分通うことを目標にします。短い時間を毎日続けることで、「基礎×習慣」を身につけます。
+                  </p>
+                  <p>
+                    基礎ができていれば、なんとかなります。まずは冬期講習で、TOFASの判定から始めてみませんか。
+                  </p>
+                  <div className="pt-1">
+                    <span className="inline-block rounded-lg bg-[#E8F7FA] border border-[#C7E5EB] px-3.5 py-1.5 text-sm sm:text-base font-bold text-[#1C4A52]">
+                      対象：テストで80点以下の生徒
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-full bg-[#1C4A52] text-white px-6 py-2.5 text-sm font-bold shadow-cta hover:bg-[#358FA3] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2"
+                  >
+                    お問合せ
+                  </Link>
+                  <a
+                    href={`tel:${SCHOOL.phone}`}
+                    className="inline-flex items-center justify-center rounded-full border-2 border-[#45B1C7] text-[#1C4A52] px-5 py-2 text-sm font-bold hover:bg-[#E8F7FA] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2"
+                  >
+                    {SCHOOL.phone} に電話
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeInSection>
+      </div>
+    </section>
+  );
+}
