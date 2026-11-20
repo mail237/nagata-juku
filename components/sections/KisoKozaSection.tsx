@@ -45,7 +45,13 @@ export default function KisoKozaSection() {
                   <p>
                     基礎ができていれば、なんとかなります。まずは冬期講習で、TOFASの判定から始めてみませんか。
                   </p>
-                  <div className="pt-1">
+                  <div className="pt-1 flex flex-wrap gap-2">
+                    <span className="inline-block rounded-lg bg-[#1C4A52] px-3.5 py-1.5 text-sm sm:text-base font-bold text-white">
+                      12月開講
+                    </span>
+                    <span className="inline-block rounded-lg bg-[#1C4A52] px-3.5 py-1.5 text-sm sm:text-base font-bold text-white">
+                      先着10名
+                    </span>
                     <span className="inline-block rounded-lg bg-[#E8F7FA] border border-[#C7E5EB] px-3.5 py-1.5 text-sm sm:text-base font-bold text-[#1C4A52]">
                       対象：テストで80点以下の生徒
                     </span>
