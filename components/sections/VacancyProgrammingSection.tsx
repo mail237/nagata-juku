@@ -159,7 +159,7 @@ export default function VacancyProgrammingSection({ compact }: Props) {
               </div>
               <div className="min-w-0 space-y-4 text-center md:text-left">
                 <p className="text-gray-600 text-[0.9375rem] md:text-base leading-[1.75]">
-                  塾長が教える、マインクラフトで学ぶプログラミングコースです。
+                  マインクラフトで学ぶプログラミングコースです。
                   <strong className="font-bold text-[#1C4A52]">エージェント</strong>
                   をプログラムで動かしながら覚えます。
                 </p>
