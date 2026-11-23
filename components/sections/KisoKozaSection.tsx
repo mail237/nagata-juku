@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import FadeInSection from '@/components/ui/FadeInSection';
 import { SCHOOL } from '@/lib/constants';
 
@@ -10,6 +11,15 @@ export default function KisoKozaSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <div className="rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 lg:p-10 shadow-[0_4px_24px_rgba(28,74,82,0.06)]">
+            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-6">
+              <Image
+                src="/images/feature-card-thinking.jpg?v=kiso-2026-11-23"
+                alt="考える生徒"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
             <span className="inline-block text-xs font-bold text-[#45B1C7] tracking-wider uppercase mb-2">
               基礎講座
             </span>
