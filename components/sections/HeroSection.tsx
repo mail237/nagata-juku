@@ -4,7 +4,7 @@ import Image from 'next/image';
 import HeroCatchphraseEasterEgg from '@/components/home/HeroCatchphraseEasterEgg';
 
 /** 画像差し替え時はクエリを変えるとキャッシュを避けられる */
-const HERO_BANNER_SRC = '/images/hero-banner-ponytail.jpg?v=ponytail-2026-11-23';
+const HERO_BANNER_SRC = '/images/hero-banner-ponytail-film.jpg?v=film-2026-11-23';
 
 export default function HeroSection() {
   return (
