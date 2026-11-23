@@ -13,8 +13,8 @@ export const FEATURE_POINT_CARDS = [
       'カリキュラムは塾長が作成します',
       '担当が変わらず、指導がぶれません',
     ],
-    image: '/images/feature-2.png?v=teacher-back',
-    imageAlt: '塾長による個別指導（イメージ・先生は後ろ姿）',
+    image: '/images/feature-card-classroom.jpg?v=real-2026-11-23',
+    imageAlt: '教室で勉強する生徒',
   },
   {
     num: '02',
@@ -27,8 +27,8 @@ export const FEATURE_POINT_CARDS = [
       '通える曜日・時間を選べます',
       '自習利用もできます',
     ],
-    image: '/images/feature-1.png?v=close-up',
-    imageAlt: '定額・通いホーダイで学ぶイメージ（清潔な教室・通常の机・アップ）',
+    image: '/images/feature-card-thinking.jpg?v=real-2026-11-23',
+    imageAlt: '考える生徒',
   },
   {
     num: '03',
@@ -41,7 +41,7 @@ export const FEATURE_POINT_CARDS = [
       'ICTで弱点単元を把握します',
       '自宅からオンライン受講できます（PC・タブレット）',
     ],
-    image: '/images/feature-ict.png?v=ict-closeup',
-    imageAlt: 'ICTで学習するイメージ（教材と画面のアップ）',
+    image: '/images/feature-card-tablet.jpg?v=real-2026-11-23',
+    imageAlt: 'タブレットで学習する生徒',
   },
 ] as const;
