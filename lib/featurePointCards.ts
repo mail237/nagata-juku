@@ -27,8 +27,8 @@ export const FEATURE_POINT_CARDS = [
       '通える曜日・時間を選べます',
       '自習利用もできます',
     ],
-    image: '/images/feature-card-thinking.jpg?v=real-2026-11-23',
-    imageAlt: '考える生徒',
+    image: '/images/feature-1.png?v=close-up',
+    imageAlt: '定額・通いホーダイで学ぶイメージ（清潔な教室・通常の机・アップ）',
   },
   {
     num: '03',
