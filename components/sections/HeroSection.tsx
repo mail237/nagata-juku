@@ -21,10 +21,10 @@ export default function HeroSection() {
         <div className="absolute left-0 right-0 bottom-[18%] bg-white/80 backdrop-blur-sm shadow-[0_10px_36px_rgba(28,74,82,0.10)] z-[2]">
           <div className="max-w-5xl mx-auto px-4 py-2.5 sm:py-4 lg:py-5 text-center">
             <p className="font-serif font-black text-[clamp(1.4rem,3.5vw,2.4rem)] leading-tight tracking-tight text-[#1C1C1C]">
-              塾長が、全生徒を直接指導します
+              第一志望合格も部活も！
             </p>
             <p className="font-serif font-bold text-[clamp(1rem,2.4vw,1.35rem)] leading-snug tracking-tight text-[#393939] mt-1 px-1">
-              定期テストから受験まで、通いホーダイ・定額で、自分のペースで進めます
+              通いホーダイ・定額制の個別指導です
             </p>
           </div>
         </div>
