@@ -111,7 +111,7 @@ export default function ContactPage() {
                 お問合せ・無料体験申込み
               </h1>
               <p className="text-[#555555] text-base max-w-xl leading-relaxed">
-                無料体験後の勧誘はしません。電話・LINE・フォーム、どれでもどうぞ。
+                電話・LINE・フォームからご連絡ください。
               </p>
             </FadeInSection>
           </div>

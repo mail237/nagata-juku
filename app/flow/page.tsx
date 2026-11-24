@@ -57,7 +57,7 @@ const steps = [
   {
     num: '05',
     title: '入塾',
-    body: '入ってからも、進み具合は塾長が見ます。保護者面談は定期的にやって、様子を伝えます。',
+    body: '入ってからも、進み具合は塾長が見ます。保護者面談は定期的に行い、様子をお伝えします。',
     note: '月の途中からでもOK・翌日から授業できます',
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
