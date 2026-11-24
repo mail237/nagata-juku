@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import FadeInSection from '@/components/ui/FadeInSection';
 import { SCHOOL } from '@/lib/constants';
 
@@ -56,15 +55,6 @@ export default function KisoKozaSection() {
               >
                 {SCHOOL.phone} に電話
               </a>
-            </div>
-            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mt-6">
-              <Image
-                src="/images/feature-card-thinking.jpg?v=kiso-2026-11-23"
-                alt="考える生徒"
-                fill
-                className="object-cover object-[50%_10%]"
-                unoptimized
-              />
             </div>
           </div>
         </FadeInSection>

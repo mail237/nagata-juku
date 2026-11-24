@@ -23,7 +23,7 @@ export default function HighlightsSection() {
               <span className="w-6 h-px bg-[#45B1C7]" />Highlights
             </span>
             <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-black text-[#1C4A52] leading-snug mb-6">
-              進め方は、生徒様一人ずつ違います
+              進め方は一人ひとり違います
             </h2>
             <ul className="flex flex-col gap-3 mb-8">
               {highlights.map((item, i) => (

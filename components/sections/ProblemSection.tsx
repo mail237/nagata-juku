@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import FadeInSection from '@/components/ui/FadeInSection';
 
 const problems = [
@@ -76,6 +77,18 @@ export default function ProblemSection() {
             </FadeInSection>
           ))}
         </div>
+
+        <FadeInSection delay={0.25} className="mt-8 md:mt-12 max-w-3xl mx-auto">
+          <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(28,74,82,0.06)] border border-[#C7E5EB]/60">
+            <Image
+              src="/images/feature-card-thinking.jpg?v=kiso-2026-11-23"
+              alt="考える生徒"
+              fill
+              className="object-cover object-[50%_10%]"
+              unoptimized
+            />
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );
