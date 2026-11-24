@@ -36,7 +36,7 @@ export default function HomePage() {
         <CommitmentStripSection />
         <HighlightsSection />
         <FeaturesSection />
-        <VacancyProgrammingSection />
+        <VacancyProgrammingSection hideVacancy />
         <OsakaSubsidySection />
         <TestimonialsSection />
         <FAQSection />

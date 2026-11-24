@@ -37,10 +37,111 @@ function VacancyStatusBadge({ status }: { status: string }) {
 type Props = {
   /** 授業・料金ページでは余白を少し詰める */
   compact?: boolean;
+  /** トップページ用：空席案内と残り席表示を非表示にし、プログラミングコース案内を中央に整える */
+  hideVacancy?: boolean;
 };
 
-export default function VacancyProgrammingSection({ compact }: Props) {
+export default function VacancyProgrammingSection({ compact, hideVacancy }: Props) {
   const py = compact ? 'py-12 md:py-16' : 'pt-10 pb-14 md:pt-12 md:pb-20';
+
+  if (hideVacancy) {
+    return (
+      <section className={`${py} bg-[#FAFCFC] border-y border-[#C7E5EB]/50`}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeInSection>
+            <div className="text-center mb-8">
+              <span className="inline-block text-xs font-bold text-[#45B1C7] tracking-wider uppercase mb-2">
+                プログラミングコース
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1C4A52] leading-tight mb-4">
+                コードアドベンチャー 八尾校
+              </h2>
+              <p className="inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border border-[#45B1C7]/35 bg-[#E8F7FA] px-4 py-2 text-sm font-bold text-[#1C4A52]">
+                <OsakaCityRecruitLink />
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(0,10.5rem)_1fr] gap-6 md:gap-8 items-start mb-8">
+              <div className="relative mx-auto aspect-square w-full max-w-[9rem] overflow-hidden rounded-full md:mx-0 md:max-w-none md:w-full">
+                <Image
+                  src="/images/minecraft-agent-kun.png"
+                  alt="マインクラフト教育版のエージェント（プログラミング教材のキャラクター）"
+                  fill
+                  className="object-contain object-center"
+                  sizes="(max-width: 768px) 144px, 168px"
+                  unoptimized
+                />
+              </div>
+              <div className="min-w-0 space-y-4 text-center md:text-left">
+                <p className="text-gray-600 text-[0.9375rem] md:text-base leading-[1.75]">
+                  マインクラフトで学ぶプログラミングコースです。
+                  <strong className="font-bold text-[#1C4A52]">エージェント</strong>
+                  をプログラムで動かしながら覚えます。
+                </p>
+                <ul className="text-[0.9375rem] md:text-base text-gray-600 space-y-2.5 list-disc pl-5 text-left marker:text-[#45B1C7] leading-[1.75] max-w-md mx-auto md:mx-0 md:max-w-none">
+                  <li className="pl-0.5">小・中学生向け（ご相談により前後も可）</li>
+                  <li className="pl-0.5">最初はブロックを並べるところから始めて、慣れてきたらコードを書きます</li>
+                  <li className="pl-0.5">
+                    大阪市在住のご家庭は、
+                    <Link
+                      href={`/#${OSAKA_SUBSIDY.anchorId}`}
+                      className="font-bold text-[#45B1C7] underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#45B1C7]"
+                    >
+                      習い事・塾代助成事業
+                    </Link>
+                    の利用もご相談ください
+                  </li>
+                </ul>
+                <div className="flex justify-center pt-1 md:justify-start">
+                  <a
+                    href={CODE_ADVENTURE_YAO_LP}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[#45B1C7] font-bold text-[0.9375rem] md:text-base hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2 rounded"
+                  >
+                    詳細・無料体験のご案内（特設ページ）
+                    <span aria-hidden>→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* プログラミング無料体験会 案内 */}
+            <div className="rounded-2xl border border-[#C7E5EB] bg-white p-6 sm:p-8 shadow-sm text-left">
+              <h3 className="text-lg md:text-xl font-bold text-[#1C4A52] mb-3">
+                プログラミング無料体験会
+              </h3>
+              <div className="space-y-3.5 text-sm md:text-[0.9375rem] text-gray-600 leading-relaxed">
+                <p>
+                  マインクラフトで学ぶプログラミングコース（コードアドベンチャー 八尾校）の無料体験会です。
+                </p>
+                <p>
+                  体験では、マインクラフトに出てくるエージェントをプログラムで動かして、ダイヤモンドをゲットします。最初はブロックを並べるところから始めるので、プログラミングが初めてでも大丈夫です。
+                </p>
+                <div className="rounded-xl bg-[#F2F9FA] border border-[#C7E5EB]/70 p-4 sm:p-5 space-y-2 text-xs sm:text-sm text-[#1C4A52]">
+                  <p>
+                    日時：12月2日（水）17:00から<br />
+                    {'　　　'}12月9日（水）17:00から
+                  </p>
+                  <p>
+                    対象：小・中学生（ご相談により前後も可）
+                  </p>
+                  <p>
+                    お申込み：お電話かお問合せフォームからお願いします。お席に限りがありますので、お早めにお申込みください。
+                  </p>
+                </div>
+                <div className="pt-1">
+                  <p className="inline-block rounded-lg bg-[#E8F7FA] border border-[#45B1C7]/40 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-[#1C4A52]">
+                    12月キャンペーン：入会金無料、1ヶ月目の月謝半額
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className={`${py} bg-[#FAFCFC] border-y border-[#C7E5EB]/50`}>
