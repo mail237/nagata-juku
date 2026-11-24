@@ -175,7 +175,7 @@ export default function ServicePage() {
           </div>
         </section>
 
-        <VacancyProgrammingSection compact />
+        <VacancyProgrammingSection compact hideVacancy />
 
         <ContactCTASection />
       </main>
