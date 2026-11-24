@@ -30,7 +30,7 @@ export default function ContactCTASection() {
             まずは無料体験からどうぞ
           </h2>
           <p className="text-white/80 text-sm md:text-base mb-8 max-w-lg mx-auto leading-relaxed">
-            無料体験後の勧誘はしません。電話でもフォームでも、まずは今の状況を聞かせてください。
+            電話でもフォームでも、まずは今の状況を聞かせてください。
           </p>
 
           {/* 電話番号 */}
@@ -70,9 +70,6 @@ export default function ContactCTASection() {
                 LINEでお問合せ
               </LineLink>
             ) : null}
-            <p className="text-white/70 text-xs md:w-full md:order-last">
-              ※ 無料体験・体験後の勧誘なし
-            </p>
           </div>
         </FadeInSection>
       </div>
