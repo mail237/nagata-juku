@@ -13,7 +13,7 @@ export const FEATURE_POINT_CARDS = [
       'カリキュラムは塾長が作成します',
       '担当が変わらず、指導がぶれません',
     ],
-    image: '/images/feature-card-classroom.jpg?v=real-2026-11-23',
+    image: '/images/feature-card-teacher.jpg',
     imageAlt: '教室で勉強する生徒',
   },
   {
@@ -27,7 +27,7 @@ export const FEATURE_POINT_CARDS = [
       '通える曜日・時間を選べます',
       '自習利用もできます',
     ],
-    image: '/images/feature-1.png?v=close-up',
+    image: '/images/feature-card-classroom.jpg?v=real-2026-11-23',
     imageAlt: '定額・通いホーダイで学ぶイメージ（清潔な教室・通常の机・アップ）',
   },
   {
