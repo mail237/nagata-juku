@@ -190,6 +190,37 @@ export default function VacancyProgrammingSection({ compact }: Props) {
                 </div>
               </div>
             </div>
+
+            <div className="mt-6 rounded-2xl border border-[#C7E5EB] bg-white p-5 sm:p-6 shadow-sm text-left">
+              <h3 className="text-lg md:text-xl font-bold text-[#1C4A52] mb-3">
+                プログラミング無料体験会
+              </h3>
+              <div className="space-y-3 text-sm md:text-[0.9375rem] text-gray-600 leading-relaxed">
+                <p>
+                  マインクラフトで学ぶプログラミングコース（コードアドベンチャー 八尾校）の無料体験会です。
+                </p>
+                <p>
+                  体験では、マインクラフトに出てくるエージェントをプログラムで動かして、ダイヤモンドをゲットします。最初はブロックを並べるところから始めるので、プログラミングが初めてでも大丈夫です。
+                </p>
+                <div className="rounded-xl bg-[#F2F9FA] border border-[#C7E5EB]/70 p-4 space-y-1.5 text-xs sm:text-sm text-[#1C4A52]">
+                  <p>
+                    日時：12月2日（水）17:00から<br />
+                    {'　　　'}12月9日（水）17:00から
+                  </p>
+                  <p>
+                    対象：小・中学生（ご相談により前後も可）
+                  </p>
+                  <p>
+                    お申込み：お電話かお問合せフォームからお願いします。お席に限りがありますので、お早めにお申込みください。
+                  </p>
+                </div>
+                <div className="pt-1">
+                  <p className="inline-block rounded-lg bg-[#E8F7FA] border border-[#45B1C7]/40 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-[#1C4A52]">
+                    12月キャンペーン：入会金無料、1ヶ月目の月謝半額
+                  </p>
+                </div>
+              </div>
+            </div>
           </FadeInSection>
         </div>
       </div>
