@@ -8,7 +8,7 @@ import ContactCTASection from '@/components/sections/ContactCTASection';
 export const metadata: Metadata = {
   title: 'よくあるご質問',
   description:
-    '永田塾の授業・入塾・通塾・料金などについてよくいただくご質問と回答をまとめました。',
+    '永田塾（大阪・八尾市の個別指導塾）のよくある質問です。授業の進め方、通いホーダイの料金、入塾の条件などをまとめています。',
 };
 
 export default function FAQPage() {

@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import HeroCatchphraseEasterEgg from '@/components/home/HeroCatchphraseEasterEgg';
 
 /** 画像差し替え時はクエリを変えるとキャッシュを避けられる */
 const HERO_BANNER_SRC = '/images/hero-banner-megaphone.jpg?v=megaphone-2026-11-24';
@@ -22,11 +21,10 @@ export default function HeroSection() {
         <div className="absolute left-0 right-0 bottom-[18%] bg-white/80 backdrop-blur-sm shadow-[0_10px_36px_rgba(28,74,82,0.10)] z-[2]">
           <div className="max-w-5xl mx-auto px-4 py-2.5 sm:py-4 lg:py-5 text-center">
             <p className="font-serif font-black text-[clamp(1.4rem,3.5vw,2.4rem)] leading-tight tracking-tight text-[#1C1C1C]">
-              <HeroCatchphraseEasterEgg />
-              も部活も！
+              塾長が、全生徒を直接指導します
             </p>
             <p className="font-serif font-bold text-[clamp(1rem,2.4vw,1.35rem)] leading-snug tracking-tight text-[#393939] mt-1 px-1">
-              定期テストから受験まで、自分のペースで
+              定期テストから受験まで、通いホーダイ・定額で、自分のペースで進めます
             </p>
           </div>
         </div>
