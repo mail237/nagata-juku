@@ -9,7 +9,7 @@ export default function KisoKozaSection() {
     <section className="pt-10 pb-14 md:pt-12 md:pb-20 bg-white border-b border-[#C7E5EB]/40">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection>
-          <div className="rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 lg:p-10 shadow-[0_4px_24px_rgba(28,74,82,0.06)]">
+          <div className="relative rounded-2xl border border-[#C7E5EB]/70 bg-gradient-to-br from-[#FFFBF0] via-white to-[#F2F9FA] p-6 md:p-8 lg:p-10 shadow-[0_4px_24px_rgba(28,74,82,0.06)]" style={{ backgroundImage: 'linear-gradient(to right, rgba(28,74,82,0.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(28,74,82,0.055) 1px, transparent 1px), linear-gradient(to bottom right, #FFFBF0, #FFFFFF, #F2F9FA)', backgroundSize: '28px 28px, 28px 28px, auto' }}>
             <span className="inline-block text-xs font-bold text-[#45B1C7] tracking-wider uppercase mb-2">
               基礎講座
             </span>
@@ -55,6 +55,13 @@ export default function KisoKozaSection() {
               >
                 {SCHOOL.phone} に電話
               </a>
+            </div>
+            <div aria-hidden="true" className="pointer-events-none absolute bottom-4 right-4 md:bottom-6 md:right-8 rotate-[8deg] opacity-90 mix-blend-multiply">
+              <div className="flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-[4px] border-[2.5px] border-[#E03C31] bg-white/40 p-[3px]">
+                <div className="flex h-full w-full items-center justify-center rounded-[2px] border border-[#E03C31]">
+                  <span className="[writing-mode:vertical-rl] text-sm md:text-lg font-black tracking-[0.15em] text-[#E03C31]">新設</span>
+                </div>
+              </div>
             </div>
           </div>
         </FadeInSection>
