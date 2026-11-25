@@ -121,7 +121,8 @@ export default function VacancyProgrammingSection({ compact, hideVacancy }: Prop
                 <div className="rounded-xl bg-[#F2F9FA] border border-[#C7E5EB]/70 p-4 sm:p-5 space-y-2 text-xs sm:text-sm text-[#1C4A52]">
                   <p>
                     日時：12月2日（水）17:00から<br />
-                    {'　　　'}12月9日（水）17:00から
+                    {'　　　'}12月9日（水）17:00から<br />
+                    {'　　　'}12月16日（水）17:00から
                   </p>
                   <p>
                     対象：小・中学生（ご相談により前後も可）
@@ -320,7 +321,8 @@ export default function VacancyProgrammingSection({ compact, hideVacancy }: Prop
                 <div className="rounded-xl bg-[#F2F9FA] border border-[#C7E5EB]/70 p-4 space-y-1.5 text-xs sm:text-sm text-[#1C4A52]">
                   <p>
                     日時：12月2日（水）17:00から<br />
-                    {'　　　'}12月9日（水）17:00から
+                    {'　　　'}12月9日（水）17:00から<br />
+                    {'　　　'}12月16日（水）17:00から
                   </p>
                   <p>
                     対象：小・中学生（ご相談により前後も可）
