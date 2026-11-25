@@ -14,10 +14,12 @@ export default function HabitConceptSection() {
             基礎 × 習慣
           </h2>
           <p className="mt-5 text-sm md:text-base text-[#393939] leading-[1.9] max-w-2xl mx-auto">
-            塾で基礎を固めても、家でも続けないと定着はしません。永田塾では、毎日机に向かう習慣をつけます。
+            <span className="block">塾で基礎を固めても、家でも続けないと定着はしません。</span>
+            <span className="block mt-1">永田塾では、毎日机に向かう習慣をつけます。</span>
           </p>
           <p className="mt-4 text-sm md:text-base text-[#393939] leading-[1.9] max-w-2xl mx-auto">
-            家庭学習は専用アプリ「つづける」に記録します。勉強した時間と内容が残り、保護者の方も「おうちの画面」で確認できます。
+            <span className="block">家庭学習は専用アプリ「つづける」に記録します。</span>
+            <span className="block mt-1">勉強した時間と内容が残り、保護者の方も「おうちの画面」で確認できます。</span>
           </p>
         </FadeInSection>
       </div>

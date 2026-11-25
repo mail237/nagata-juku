@@ -135,6 +135,20 @@ export default function VacancyProgrammingSection({ compact, hideVacancy }: Prop
                     12月キャンペーン：入会金無料、1ヶ月目の月謝半額
                   </p>
                 </div>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <a
+                    href={`tel:${SCHOOL.phone}`}
+                    className="inline-flex items-center justify-center rounded-full bg-[#1C4A52] text-white px-5 py-2.5 text-sm font-bold shadow-cta hover:bg-[#358FA3] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2"
+                  >
+                    {SCHOOL.phone} に電話
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-full border-2 border-[#45B1C7] text-[#1C4A52] px-5 py-2.5 text-sm font-bold hover:bg-[#E8F7FA] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45B1C7] focus-visible:ring-offset-2"
+                  >
+                    お問合せ
+                  </Link>
+                </div>
               </div>
             </div>
           </FadeInSection>
